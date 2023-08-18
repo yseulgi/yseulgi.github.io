@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.3 97.57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #0a1478;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7px;
+      }
+
+      .cls-2 {
+        fill: #f4f5f7;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" x=".85" y="4.66" width="84.6" height="92.06" rx="10.29" ry="10.29"/>
+      <path class="cls-1" d="M16.45,11.97h53.4c4.74,0,8.58,3.85,8.58,8.58v60.29c0,4.74-3.85,8.58-8.58,8.58H16.45c-4.74,0-8.58-3.85-8.58-8.58V20.55c0-4.74,3.85-8.58,8.58-8.58Z"/>
+      <rect class="cls-2" x="24.35" y=".85" width="37.6" height="15.28" rx="4.26" ry="4.26"/>
+      <polygon class="cls-1" points="52.99 30.96 47.32 30.96 47.32 25.14 38.98 25.14 38.98 30.96 33.31 30.96 33.31 39.54 38.98 39.54 38.98 45.37 47.32 45.37 47.32 39.54 52.99 39.54 52.99 30.96"/>
+      <line class="cls-1" x1="26.4" y1="57.47" x2="59.9" y2="57.47"/>
+      <line class="cls-1" x1="26.4" y1="65.22" x2="59.9" y2="65.22"/>
+      <line class="cls-1" x1="26.4" y1="72.97" x2="59.9" y2="72.97"/>
+    </g>
+  </g>
+</svg>

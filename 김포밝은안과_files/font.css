@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:'CormorantGaramondLight';
+    font-style:normal;
+    font-weight:normal;
+    src: url('./font/CormorantGaramond-Light.eot');
+    src:local(''),
+    url('/font/CormorantGaramond-Light.eot') format('embedded-opentype'),
+    url('/font/CormorantGaramond-Light.woff2') format("woff2"),
+    url('/font/CormorantGaramond-Light.woff') format("woff"),
+    url('/font/CormorantGaramond-Light.ttf') format("truetype");
+}
+
+@font-face {
+    font-family:'CormorantGaramondRegular';
+    font-style:normal;
+    font-weight:normal;
+    src: url('/font/CormorantGaramond-Regular.eot');
+    src:local(''),
+    url('/font/CormorantGaramond-Regular.eot') format('embedded-opentype'),
+    url('/font/CormorantGaramond-Regular.woff2') format("woff2"),
+    url('/font/CormorantGaramond-Regular.woff') format("woff"),
+    url('/font/CormorantGaramond-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family:'CormorantGaramondBold';
+    font-style:normal;
+    font-weight:normal;
+    src: url('/font/CormorantGaramond-Bold.eot');
+    src:local(''),
+    url('/font/CormorantGaramond-Bold.eot') format('embedded-opentype'),
+    url('/font/CormorantGaramond-Bold.woff2') format("woff2"),
+    url('/font/CormorantGaramond-Bold.woff') format("woff"),
+    url('/font/CormorantGaramond-Bold.ttf') format("truetype");
+}
+
+
+
+
+@font-face {
+    font-family:'Eulyoo1945';
+    src:  url("./font/Eulyoo1945-Regular.woff2") format("woff2");
+
+    /*src: url("./font/Eulyoo1945-Regular.eot?#iefix") format("embedded-opentype"),*/
+    /*url("./font/Eulyoo1945-Regular.ttf") format("truetype"),*/
+    /*url("./font/Eulyoo1945-Regular.woff") format("woff"),*/
+    /*url("./font/Eulyoo1945-Regular.woff2") format("woff2");*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family:'NanumSquare';
+    src:  url("./font/NanumSquareR.woff2") format("woff2");
+
+    /*src: url("./font/Eulyoo1945-Regular.eot?#iefix") format("embedded-opentype"),*/
+    /*url("./font/Eulyoo1945-Regular.ttf") format("truetype"),*/
+    /*url("./font/Eulyoo1945-Regular.woff") format("woff"),*/
+    /*url("./font/Eulyoo1945-Regular.woff2") format("woff2");*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+

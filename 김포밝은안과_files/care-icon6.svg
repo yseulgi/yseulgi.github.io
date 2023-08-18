@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.47 82.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #0a1478;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7px;
+      }
+
+      .cls-2 {
+        fill: #f3f4f6;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" x=".85" y=".85" width="57.36" height="71.53"/>
+      <polygon class="cls-1" points="58.21 .85 46.27 .85 58.21 12.72 58.21 .85"/>
+      <polyline class="cls-1" points="8.43 20.71 11.8 24.08 17.98 17.17"/>
+      <polyline class="cls-1" points="8.43 37.42 11.8 40.79 17.98 33.88"/>
+      <polyline class="cls-1" points="8.43 54.13 11.8 57.5 17.98 50.59"/>
+      <line class="cls-3" x1="25.29" y1="20.63" x2="46.59" y2="20.63"/>
+      <line class="cls-3" x1="25.29" y1="38.97" x2="46.59" y2="38.97"/>
+      <line class="cls-3" x1="25.29" y1="57.31" x2="46.59" y2="57.31"/>
+      <circle class="cls-2" cx="53.27" cy="67.66" r="14.36"/>
+      <polyline class="cls-1" points="53.27 59.43 53.27 67.66 58.21 63.54"/>
+    </g>
+  </g>
+</svg>

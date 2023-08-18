@@ -1,0 +1,3212 @@
+@charset "utf-8";
+body {font-size: 17px; line-height: 1.5; color: #393939 ; line-height: 1.5}
+.wrap {overflow: hidden;}
+.header {height: 110px; width: 100%; border-bottom: 1px solid rgba(255,255,255, 0.3) ; position: relative; display: flex; justify-content: space-between; z-index: 3}
+
+body.fixed {overflow-y:hidden !important}
+
+.header .logo{padding-left: 90px}
+.header .logo a{display: flex; align-items: center; height: 100%}
+.header .logo img{width: 180px;  }
+.header .nav {position: absolute; height: 100%; left: 50%; transform: translateX(-50%); top: 0}
+.header .nav .close {display: none}
+.header .nav .deps_1 {height: 100%; display: flex; justify-content: center}
+.header .nav .deps_1 > li {height: 100%; font-size: 18px; font-weight: 500; position: relative}
+.header .nav .deps_1 > li a {padding: 0 40px; display: block; height: 100%; white-space:nowrap; display: flex; align-items: center; color: #fff ; position: relative}
+.header .nav .deps_1 > li > a:before {content: ""; position: absolute; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; border-radius: 50%; bottom: 15px; background-color: #0a1478; transform: translateY(0%); opacity: 0; transition: all .3s; z-index: 5}
+.header .quick-text {display: none}
+.header .nav .deps_1 > li .deps_2 {position: absolute;left: 0; bottom: 15px; transform: translateY(100%); width: 100%; background: #0a1478; opacity: 0; overflow: hidden ;
+transition: all .3s ;padding: 17px 0; visibility: hidden}
+.header .nav .deps_1 > li .deps_2 li > a {padding: 8px 0px;justify-content: center; font-size: 17px; color: #fff}
+
+.header > .icon-box {height: 100%; display: flex; align-items: center; padding-right: 65px}
+.header > .icon-box button {padding: 25px; font-size: 24px; color: #fff}
+.header > .icon-box button.ham {display: none}
+.header .fix_btn_box {position: fixed; right: 40px; bottom: 40px; opacity: 1; z-index: 5 ; transition: all .3s}
+
+.facility-header,
+.totalSearch-header,
+.medicalInformation-header,
+.myPage-header,
+.header.service-header {background-color: #f4f5f7}
+
+.facility-header .nav .deps_1 > li a,
+.totalSearch-header .nav .deps_1 > li a,
+.myPage-header .nav .deps_1 > li a,
+.medicalInformation-header .nav .deps_1 > li a,
+.header.service-header .nav .deps_1 > li a {color: #000 ;}
+
+.facility-header > .icon-box button,
+.totalSearch-header  > .icon-box button,
+.myPage-header > .icon-box button,
+.medicalInformation-header > .icon-box button,
+.header.service-header > .icon-box button {color: #000}
+
+.top_btn_box {width: 100px; height: 100px; border-radius: 50%;box-shadow: 2px 1px 25px rgb(0 0 0 / 15%);background-color: #fff; display: flex; align-items: center; justify-content: center; margin-top: 30px; overflow: hidden; transition: background 0.3s ease-in-out;}
+.top_btn_box .top_btn {font-size: 32px; cursor: pointer; width: 100%; height: 100%; }
+.top_btn_box i {transition: 0.3s ease-in-out;}
+
+.footer .top_btn_box {display: none}
+
+.header .fix_btn_box .menu_btn_box {background-color: #0a1478;; width: 100px; min-height: 100px;border-radius: 50px; display: flex; align-items: center; justify-content: center;
+    padding:  35px 15px; box-shadow: 2px 1px 25px rgb(0 0 0 / 25%);color: #fff; cursor: pointer; position: relative; transition: all .3s}
+.header .fix_btn_box .menu_btn_box > i {display: block; font-size: 32px; position: absolute; left: 50%; top: 50%;transform: translate(-50%,-50%);transition: all .3s}
+.header .fix_btn_box .menu_btn_box ul{max-height: 0; overflow: hidden; transition: max-height 500ms , opacity .3s; opacity: 0}
+
+.header .fix_btn_box .menu_btn_box ul li a{display: flex; align-items: center; justify-content: center; flex-wrap: wrap}
+.header .fix_btn_box .menu_btn_box ul li + li {margin-top: 35px}
+.header .fix_btn_box .menu_btn_box ul li .icon {width: 100%; margin-bottom: 15px; color: #fff; font-size: 32px; display: flex;align-items: center; justify-content: center; opacity: 0.4; transition: all .3s}
+
+.header .fix_btn_box .menu_btn_box ul li .icon img {width: 35px}
+.header .fix_btn_box .menu_btn_box ul li .icon + span {color: #fff;display: block; font-size: 13px}
+
+.search_form_wrap {opacity: 0; pointer-events: none; position: absolute; top:109px; z-index: 99; width: 100%; transition: 0.3s ease-in-out;}
+.search_form_wrap.show {opacity: 1; pointer-events: inherit;}
+.search_form_wrap .search_box {height:300px; display: flex; align-items: center; justify-content: center; background: #0a1478;}
+.search_form_wrap .search_box > .search_area_close {color:#FFFFFF; margin-left:15px; font-size:23px; cursor: pointer; position: relative; z-index: 9;}
+.search_form_wrap .search_box > .search_area_close i {color: #FFFFFF;}
+.search_form_wrap .search_box .input_box {width:460px;}
+
+.search_form_wrap .search_box .input_box {width:340px; height:60px; position: relative;}
+.search_form_wrap .search_box input {width:100%; height:100%; line-height:60px; font-size:14px; padding:0 70px 0 33px; background:#F5F5F6; border-radius: 27.5px; border:none; outline: none;}
+.search_form_wrap .search_box button {font-size:0; position: absolute; top:0; right:0; height:100%; padding:0 30px; color: #000}
+.search_form_wrap .search_box button i {font-size:20px; color: #000}
+
+.main .visual {width: 100%; height: 100vh; margin-top: -110px; position: relative; overflow: hidden ;}
+.main .visual .swiper-container {width: 100%; height: 100%}
+.main .visual .swiper-slide {background-position: center; background-size: cover; height: 100%; width: 100%; position: relative}
+.main .visual .swiper-slide:before {content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.6);z-index: 1;}
+.main .visual .swiper-slide .video_box {width: 100%; height: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%)}
+.main .visual .swiper-slide .video_box video {  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100vw; border: none; border: none; outline: unset; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; filter:contrast(101%); -webkit-filter:contrast(101%); background-color:transparent;}
+
+.main .visual.t2 {height: auto; }
+.main .visual.t2 .swiper-container {width:auto; height:auto}
+
+.main .visual.t2 .swiper-slide .video_box2 video {width: 100%}
+
+
+
+.main .visual .swiper-slide .video_box img {  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);width: 100vw}
+
+@media (max-aspect-ratio: 1920 / 1080){
+    .main .visual .swiper-slide .video_box video {width: auto;height: 100vh;}
+    .main .visual .swiper-slide .video_box img {width: auto;height: 100vh;}
+}
+
+.main .visual .text_box {position: absolute; left: min(30%, 800px); top: 50%; transform: translate(-50%,-50%); color: #fff;z-index: 1; margin-top: -55px; max-width: 100%;}
+.main .visual .text_box span {font-size: 22px;display: block; margin-bottom:15px; font-weight: 200}
+.main .visual .text_box p { font-family: 'Noto Serif KR', serif; font-weight: 400 ; font-size: 60px}
+.main .visual .icon_box {position: absolute; left:200px; top: 50%; transform: translateY(-50%); z-index: 1}
+.main .visual .icon_box a {display: block; padding: 30px 0px; opacity: 0.6; transition: all .3s}
+.main .visual .icon_box a img {width: 22px; max-height: 26px}
+.main .visual .slide_move_box { position: absolute; bottom: 50px; left: 50%; transform: translate(-50%,0) ; z-index: 5 ; color: #fff; display: flex; align-items: center; justify-content: center}
+.main .visual .slide_move_box .swiper-pagination {position: static;}
+.main .visual .swiper-button-prev,.main .visual .swiper-button-next {color: #fff;z-index: 1; font-size: 20px;padding: 5px;position: static; margin: 0; width: auto; height: auto; display: block; transition: all .3s}
+.main .visual .slide_move_box .swiper-pagination-current {font-weight: 700; font-size: 19px; width: 12px;font-family:'NanumSquare';}
+.main .visual .slide_move_box .barSpace {margin: 0 5px}
+.main .visual .slide_move_box .swiper-pagination-total {font-size: 17px}
+.main .visual .swiper-button-prev {transform: rotate(-90deg); margin-right: 30px}
+.main .visual .swiper-button-next {transform: rotate(90deg); margin-left: 30px}
+.main .visual .swiper-button-prev i:before,
+.main .visual .swiper-button-next i:before {transition: all .3s}
+
+.circle_btn { position: absolute; right: 80px; bottom: 80px;z-index: 3; background-color:#0a1478 ; padding: 10px; border-radius: 50%; width: 230px; height: 230px; display: flex; align-items: center; justify-content: center}
+.circle_btn img {animation: rotate_image 10s linear infinite;transform-origin: 50% 50%; width: 90%; }
+.circle_btn i {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 42px; color: #fff}
+
+
+@keyframes rotate_image{ 100% {transform: rotate(360deg);}}
+
+.scroll_animation {position: absolute; bottom: 0;left: 200px;color: #fff;z-index: 2;height:180px;}
+.scroll_animation > span {display: block;transform: rotate(90deg);font-size: 14px;}
+.scroll_animation > .bg {position: relative;height: 100%;width: 1px;margin: 30px auto 0;background: rgba(255,255,255,0.2);}
+.scroll_animation > .bg .animation {width: 100%;background: rgba(255,255,255,1);animation-name: updown;animation-iteration-count: infinite;animation-duration: 3s;animation-timing-function: ease-in-out;}
+
+@keyframes updown { 0% {height:0%} 100% {height:100%} }
+
+.main .sect_title {color: #000}
+.main .sect_title h3{font-size: 120px; font-family: 'Cormorant Garamond', serif; line-height: 1.2; }
+.main .sect_title p {color: #454545; margin-top: 10px; }
+.en{font-family: 'Cormorant Garamond', serif;}
+.serif {font-family: 'Noto Serif KR', serif; }
+.view_btn {font-size: 17px; border-radius: 50px; padding: 13px 35px ; border: 1px solid #000; display: inline-block; transition: all .3s}
+.view_btn.type2 { color: #fff; border-color: #fff}
+
+.swiper-wrapper.disabled {
+    transform: translate3d(0px, 0, 0) !important;
+}
+
+
+.promise_sect {padding-top: 280px; position: relative }
+.promise_sect > .bg_text_box {overflow: hidden;}
+.promise_sect > .bg_text_box .bg_text {font-size: 220px; font-family: 'Cormorant Garamond', serif; color: #f4f5f7; font-weight: 700; white-space: nowrap ;}
+.promise_sect .in {margin-top: -180px}
+.promise_sect .sect_title p {font-size:36px; margin-top:0px;     font-family: 'Noto Serif KR', serif;}
+.promise_sect .promise_text {margin-top: 100px;display: flex; justify-content: flex-end; text-align: right; flex-wrap: wrap}
+.promise_sect .promise_text .title {font-size:38px; display: block; width: 100%}
+.promise_sect .promise_text .text {margin-top: 60px }
+.promise_sect .promise_text .text p + p {margin-top: 25px}
+.promise_sect .medical {padding-top: 320px; position: relative;}
+.promise_sect .medical .title {position: relative}
+.promise_sect .medical .title .bg_text {color: #f4f5f7; font-weight: 700; font-size: 125px; position: absolute; left: 0; top: 30px; margin-top: 0px; transform: translateY(-100%); z-index: -1; white-space: nowrap}
+.promise_sect .medical .title strong {font-size: 40px; display: block}
+.promise_sect .medical .title p {font-size: 18px; margin-top: 10px; color: #686868}
+.promise_sect .medical .slide_box {position: relative;}
+.promise_sect .medical .swiper-container {margin-top: 40px; overflow: hidden}
+.promise_sect .medical .swiper-slide .img-box {width: 100%; padding-top: 70%; position: relative}
+.promise_sect .medical .swiper-slide .img-box img {position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; left: 0; top: 0}
+.promise_sect .medical .swiper-slide .text-box { margin-top: 30px; color: #fff}
+.promise_sect .medical .swiper-slide .text-box span {font-weight: 300; display:block}
+.promise_sect .medical .swiper-slide .text-box strong{font-size: 32px; margin-top: 12px}
+.promise_sect .medical .swiper-slide .text-box p {margin-top: 20px; padding-right: 50px; opacity: 0.8 ; font-weight: 400; height: auto !important}
+.promise_sect .medical .swiper-button-prev i,
+.promise_sect .medical .swiper-button-next i {color: #000; font-size: 46px}
+.promise_sect .medical .swiper-button-prev {left: -50px; transform: translate(-100%,-100%); transition: left .3s}
+
+.promise_sect .medical .swiper-button-next {right: -50px; transform: translate(100%,-100%); transition: right .3s}
+
+.promise_sect .medical .btn_box {position: relative;z-index: 1;  margin-top: 40px; color: #fff; font-size: 42px; display: none}
+/*margin-top: -430px*/
+.main_bg_sect {padding-top: min(105%,2100px); background-position: center; background-size: cover; position: relative;margin-top: -380px}
+.main_bg_sect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://envato-shoebox-0.imgix.net/af43/ab65-bbd7-4377-b4be-8da98c240ea9/2016-11-26-3G0A7797.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=6c93e0475f1f9fda500f3cde8f1e848b');
+    opacity: 0.7; /* 오퍼시티 값 설정 (0부터 1까지) */
+}
+.main_bg_sect .in {position: absolute; left:50%; top: 0; transform: translateX(-50%); padding-bottom: 240px; display: flex; flex-direction: column ; justify-content: flex-end; height: 100%}
+.main_bg_sect .sect_title {text-align: center; color: #fff}
+.main_bg_sect .sect_title p {color:#fff}
+.main_bg_sect .img_cont {margin-top: 70px}
+.main_bg_sect .img_cont .text_box {color: #fff}
+.main_bg_sect .img_cont .text_box strong{font-size: 35px}
+.main_bg_sect .img_cont .text_box p{margin-top: 10px; color: rgba(255,255,255,0.8); font-weight: 200; }
+.main_bg_sect .img_cont .img_box {margin-top: 60px; overflow: hidden}
+.main_bg_sect .img_cont .img_box a{display: block; position: relative; width: 100%; height: 100%}
+.hover_box {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);width: 120px; height: 120px; color: #fff; font-size: 38px; z-index: 1 ; background-color:#0a1478;
+text-align: center; line-height: 118px; transition: all .5s; opacity: 1}
+.hover_box i {line-height: 1}
+
+.story_sect {padding: 240px 0}
+.story_sect .in {display: flex; align-items: flex-start}
+.story_sect .left-wrap {width: 40%; position: relative}
+.story_sect .left-wrap .img_box {overflow: hidden;  }
+.story_sect .left-wrap .img_box img {}
+.story_sect .left-wrap .text { position: absolute; left: 0; bottom: -40px;  width: 100%}
+.story_sect .left-wrap .text > p {color: rgba(0,0,0,0.8); text-align: right; font-size: 17px}
+.story_sect .left-wrap .text > p span {color: #000; font-size: 20px; font-weight: 500; margin-left: 5px}
+.story_sect .right-wrap {width: 60%; margin-left: 160px;padding-top: 0px; display: flex; flex-direction: column }
+.story_sect .right-wrap .text_box {margin-top:100px;}
+.story_sect .right-wrap .text_box > strong {font-size: 34px; display: block }
+.story_sect .right-wrap .text_box .text {margin-top: 60px}
+.story_sect .right-wrap .text_box .text p + p {margin-top: 25px}
+.story_sect .right-wrap .btn_box {margin-top:120px }
+
+
+.main .care_sect {background: #f4f5f7 url('../img/care-bg.png') no-repeat -200px 0 / contain; padding: 240px 0}
+
+.main .care_sect .sect_title {text-align: center}
+.main .care_sect .sect_title p {margin-top: 30px}
+.main .care_sect .cont_wrap {display: flex; margin-top: 160px}
+.main .care_sect .cont_wrap .left_wrap {width: 35%; padding-top: 30px; padding-right: 110px; flex-shrink: 0}
+.main .care_sect .cont_wrap .left_wrap .top_txt > strong{font-size: 34px; display: block}
+.main .care_sect .cont_wrap .left_wrap .top_txt > p{font-size: 19px; color: #757575; margin-top: 10px}
+.main .care_sect .cont_wrap .left_wrap .txt {margin-top: 80px}
+.main .care_sect .cont_wrap .left_wrap .txt span {font-size: 28px; display: block}
+.main .care_sect .cont_wrap .left_wrap .txt P {margin-top: 20px; color: #757575}
+.main .care_sect .cont_wrap .left_wrap .btn_box {margin-top: 80px}
+.main .care_sect .cont_wrap .right_wrap {width: 65%; border-left: 1px solid #e7e9ed; padding-top: 30px}
+.main .care_sect .cont_wrap .right_wrap .icon_box{padding: 0 80px; display: flex; flex-wrap: wrap }
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon {width: calc(50% - 40px); text-align: center}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(2n) {margin-left: 80px}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(n+3) {margin-top: 80px}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon .img {text-align: center }
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon .img img {width: 68px; max-height: 60px}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon .text {margin-top: 20px}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon .text span {display: block; font-size: 23px; font-weight: 500}
+.main .care_sect .cont_wrap .right_wrap .icon_box .icon .text p {color: #757575; margin-top: 15px; font-size: 16px}
+
+.review_sect {padding: 220px 0 200px}
+.review_sect .sect_title {text-align: center}
+.review_sect .cont_wrap {display: flex; position: relative; margin-top:100px ; justify-content: flex-end}
+.review_sect .cont_wrap .left_wrap { width: 50%; }
+/*.review_sect .cont_wrap .left_wrap  .slick-list {margin:0 -20px; position: relative}*/
+/*.review_sect .cont_wrap .left_wrap  .slick-slide {margin:0 20px; }*/
+/*.review_sect .cont_wrap .left_wrap  .slick-slide .img_box {padding-top: 70%; position: relative}*/
+/*.review_sect .cont_wrap .left_wrap  .slick-slide img {position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; object-position: center}*/
+.review_sect .cont_wrap .left_wrap .img_box img {width: 100%}
+.review_sect .cont_wrap .right_wrap {width: 50%;  display: flex; flex-direction: column; padding: 40px 0 60px 120px}
+.review_sect .cont_wrap .right_wrap .slide_box,
+.review_sect .cont_wrap .right_wrap .slider_text ,
+.review_sect .cont_wrap .right_wrap .slick-list ,
+.review_sect .cont_wrap .right_wrap .slick-track {height: 100%}
+.review_sect .cont_wrap .right_wrap .text_box {display: flex; flex-direction: column; height: 100%}
+.review_sect .cont_wrap .right_wrap .text_box .title {font-size: 30px}
+.review_sect .cont_wrap .right_wrap .text_box .text {color: #757575; margin-top: 30px;  overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical; position:relative}
+.review_sect .cont_wrap .right_wrap .text_box .text.no { width: 100%;height: 120px;background-color:#f4f5f7; display:flex; justify-content: center;align-items: center; font-size: 14px }
+.review_sect .cont_wrap .right_wrap .btn_box {margin-top: auto; padding-top: 80px}
+
+.notice_sect {padding: 200px 0 240px}
+.notice_sect .in{ display: flex}
+.notice_sect .left_wrap {width: 400px; min-height: 520px; flex-shrink: 0}
+.notice_sect .left_wrap .btn_box {margin-top: 120px}
+.notice_sect .right_wrap {width: 60%; left: 40%; position: absolute}
+.notice_sect .right_wrap .swiper-slide {width: 325px;; ; margin-right: 60px}
+.notice_sect .right_wrap .swiper-slide .img_box {width: 100%; padding-top: 80%; position: relative;background-color: #f4f5f7}
+.notice_sect .right_wrap .swiper-slide .img_box img {width: 100%;height: 100%; position: absolute; left: 0; top: 0; object-fit: cover; object-position: center}
+.notice_sect .right_wrap .swiper-slide .img_box img.logo {width: 200px; height: auto; left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 0.3}
+.notice_sect .right_wrap .swiper-slide .text_box {margin-top: 20px}
+.notice_sect .right_wrap .swiper-slide .text_box .title {font-size: 22px;   overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.notice_sect .right_wrap .swiper-slide .text_box .text {font-size: 16px; color:#757575 ; margin-top: 10px;  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.map_sect {background-color:#f4f5f7;position: relative;padding: 0px 0 0px ;}
+.map_sect .top_wrap {height: 100%; width: 100%; display: flex; }
+.map_sect .top_wrap .left {display: flex; justify-content: flex-end; width: 50%; padding: 100px 0 100px; position: relative; z-index: 1}
+.map_sect .top_wrap .left_in {width: 800px; padding-left: 20px; padding-right: 40px; max-width: 100%}
+.map_sect .top_wrap .sect_title strong {font-size: 38px}
+.map_sect .top_wrap .sect_title p {margin-top: 15px}
+.map_sect .top_wrap .call {margin-top: 50px; display: flex; align-items: center; }
+.map_sect .top_wrap .call strong{font-size: 50px;margin-right: 20px; display: block; color: #000}
+.map_sect .top_wrap .call .btn {width: 180px; height: 45px; display: flex;align-items: center; justify-content: center;border-radius: 100px; color: #fff ; text-align: center; font-size: 16px;background: #000; transition: all .3s}
+.map_sect .top_wrap .call .btn + .btn {margin-left: 15px}
+.map_sect .top_wrap .call .btn.kakao img {width: 20px; margin-right: 5px}
+
+.map_sect .top_wrap .info {margin-top:45px; }
+.map_sect .top_wrap .info li .top strong{font-size:18px; display: block}
+.map_sect .top_wrap .info li .bot {font-size: 17px}
+.map_sect .top_wrap .info .time .bot{ margin-top: 10px; font-size: 17px}
+.map_sect .top_wrap .info .time .bot p > span {width: 50px; display: inline-block}
+.map_sect .top_wrap .info .time .bot p + p {margin-top: 5px}
+.map_sect .top_wrap .info .time .bot p .night {width: auto;padding: 3px 6px; line-height: 1; font-size: 12px; color: #fff; border-radius: 50px; background-color: #35b194 ; margin-left: 7px; flex-shrink: 0}
+.map_sect .top_wrap .info li + li {margin-top: 45px}
+.map_sect .top_wrap .info .map .top {display: flex; align-items: center}
+.map_sect .top_wrap .info .map .btn {display: block; border:1px solid #000;padding:7px 10px; font-size:13px; border-radius: 50px; line-height: 1; margin-left: 15px}
+.map_sect .top_wrap .info .map .bot {margin-top: 10px; }
+.map_sect .top_wrap .info .map .bot p:last-child {font-size: 16px; display: flex}
+.map_sect .top_wrap .sns_btn { margin-top: 120px; display: none}
+.map_sect .top_wrap .sns_btn .btn {width: 70px; height: 70px; background-color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 50%; position: relative;transition: all .3s}
+.map_sect .top_wrap .sns_btn .btn img {width: 28px; max-height: 28px;position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.map_sect .top_wrap .sns_btn .btn .hover {opacity: 0}
+.map_sect .top_wrap .sns_btn .btn + .btn {margin-left: 20px}
+
+.map_sect .top_wrap .right {display: flex; width: 50%; background:#85bddd url('../img/map_right_bg.png') no-repeat right bottom -150px / 600px; padding: 100px 0 100px}
+.map_sect .top_wrap .right_in {padding-right: 20px; padding-left: 160px}
+.map_sect .top_wrap .right_in .sect_title {color: #fff}
+.map_sect .top_wrap .right_in .sect_title p {color: #fff}
+.map_sect .top_wrap .right_in .inp_list {margin-top: 70px}
+.map_sect .top_wrap .right_in .inp_list > li {display: flex}
+.map_sect .top_wrap .right_in .inp_list > li + li{margin-top: 15px}
+.map_sect .top_wrap .right_in .inp_list > li:first-child .inp_box{width: calc(50% - 7.5px)}
+.map_sect .right_in .inp_box { width: 35%}
+.map_sect .right_in .inp_box + .inp_box {margin-left: 15px; width: 65%}
+.map_sect .right_in .inp_box input{background-color: #3f91bd;;font-size: 18px ; color: #d2fdf3; padding: 0px 20px; border: none; display: flex; align-items: center; justify-content: center; height: 59px; width: 100%}
+.map_sect .right_in .inp_box input::placeholder {color: #d2fdf3}
+.map_sect .right_in .inp_box .nice-select {background-color: #3f91bd;;font-size: 18px ; color: #d2fdf3; padding: 0 35px 0 15px; border: none; display: block; height: 59px; line-height: 59px; border-radius: 0}
+.map_sect .right_in .nice-select:after { border-bottom: 2px solid #d2fdf3;border-right: 2px solid #d2fdf3; width: 7px; height: 7px; right: 15px}
+.map_sect .right_in .nice-select .list {width: 100%;background-color: #3f91bd; color: #d2fdf3; margin-top: 0px; transform: scale(1)}
+.map_sect .right_in .nice-select.open .list {transition: none}
+.map_sect .right_in .nice-select .list li {padding: 5px 15px}
+.map_sect .right_in .nice-select .option.focus, .nice-select .option.selected.focus {    background-color: #0a1478;}
+.map_sect .right_in .text {margin-top: 30px;display: flex; color: #d2fdf3; align-items: center; font-size: 16px}
+.map_sect .right_in .text label {}
+.map_sect .right_in .text label span {background: #3f91bd ;padding:5px 12px ;line-height: 1 ;color: #d2fdf3; border-radius: 50px; font-size: 14px; margin-left: 25px; cursor: pointer ; display: block}
+.map_sect .right_in .text label input:checked + span{color: #fff; background: #000}
+.map_sect .right_in .btn_box {margin-top: 45px}
+.map_sect .right_in .btn_box .btn{ background-color: #fff; display: flex;align-items: center; justify-content: center; font-size: 20px;color: #0a1478; width: 100%; padding: 20px 0; font-weight: 500; transition: all .3s}
+
+
+.map_sect .bg_text {position: absolute; left: -230px; top: -40px; font-size: 120px; font-weight: 600; color: #e8eaee; transform: rotate(90deg) translate(50%,100%)}
+
+.map_sect .bot_wrap {width: 100%;padding-top: 850px; position: relative ;z-index: 2;}
+.map_sect .bot_wrap .in {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); height: 100%;z-index: 2 ;}
+.map_sect .bot_wrap .in .img_cont {display: flex; height: 200px; margin-top: 50px}
+.map_sect .bot_wrap .in .img_cont .img_box {width: 250px; cursor: pointer; position: relative}
+.map_sect .bot_wrap .in .img_cont .img_box + .img_box {margin-left: 20px}
+.map_sect .bot_wrap .in .img_cont .img_box .img {position: relative}
+.map_sect .bot_wrap .in .img_cont .img_box .img_hover_box {position: absolute; width: 100%; height: 100%; left: 0; top: 0 ;background-color: rgba(0,0,0,0.4) ; color:#fff; opacity: 1; transition: .3s}
+.map_sect .bot_wrap .in .img_cont .img_box .img_hover_box i {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 34px}
+
+.map_sect .bot_wrap .in .img_cont .img_box .text {color: #fff; background-color: #000; padding:10px 15px ; font-size: 15px}
+.map_sect .bot_wrap:before {position: absolute; left: 0; top: 0; width: 100%; height: 100%;  content: ""; z-index: 2}
+
+.video_pop {padding: 0 20px; position: relative}
+.video_pop .video_box video{width: 1000px; max-width: 100%}
+
+.intro_2 .consult_sect {background-color: #0a1478; }
+
+
+
+.intro_2 .consult_sect .right {display: flex; width: 100%; background:#0a1478 url('../img/map_right_bg.png') no-repeat right bottom -150px / 600px; padding: 90px 0 100px}
+.intro_2 .consult_sect .right form {width: 100%}
+.intro_2 .consult_sect .right_in .sect_title {color: #fff; }
+.intro_2 .consult_sect .right_in .sect_title strong {font-size: 38px}
+.intro_2 .consult_sect .right_in .sect_title p { font-size: 17px; margin-top: 15px}
+.intro_2 .consult_sect .right_in .inp_list {margin-top: 70px}
+.intro_2 .consult_sect .right_in .inp_list > li {display: flex}
+.intro_2 .consult_sect .right_in .inp_list > li + li{margin-top: 15px}
+.intro_2 .consult_sect .right_in .inp_list > li:first-child .inp_box{width: calc(50% - 7.5px)}
+.intro_2 .consult_sect .right_in .inp_box { width: 35%; max-width: 280px}
+.intro_2 .consult_sect .right_in .inp_box + .inp_box {margin-left: 15px; width: 35%; max-width: 280px}
+.intro_2 .consult_sect .right_in .inp_box input{background-color: #3f91bd;;font-size: 18px ; color: #d2fdf3; padding: 0px 20px; border: none; display: flex; align-items: center; justify-content: center; height: 59px; width: 100%}
+.intro_2 .consult_sect .right_in .inp_box input::placeholder {color: #d2fdf3}
+.intro_2 .consult_sect .right_in .inp_box .nice-select {background-color: #3f91bd;;font-size: 18px ; color: #d2fdf3; padding: 0 35px 0 15px; border: none; display: block; height: 59px; line-height: 59px; border-radius: 0}
+.intro_2 .consult_sect .right_in .nice-select:after { border-bottom: 2px solid #d2fdf3;border-right: 2px solid #d2fdf3; width: 7px; height: 7px; right: 15px}
+.intro_2 .consult_sect .right_in .nice-select .list {width: 100%;background-color: #3f91bd; color: #d2fdf3; margin-top: 0px; transform: scale(1)}
+.intro_2 .consult_sect .right_in .nice-select.open .list {transition: none}
+.intro_2 .consult_sect .right_in .nice-select .list li {padding: 5px 15px}
+
+.intro_2 .consult_sect .right_in .nice-select .option.focus, .nice-select .option.selected.focus {    background-color: #0a1478;}
+.intro_2 .consult_sect .right_in .text {margin-top: 30px;display: flex; color: #d2fdf3; align-items: center; font-size: 16px}
+.intro_2 .consult_sect .right_in .text label {}
+.intro_2 .consult_sect .right_in .text label span {background: #b8e4db ;padding:5px 12px ;line-height: 1 ;color: #000; border-radius: 50px; font-size: 14px; margin-left: 25px; cursor: pointer ; display: block}
+.intro_2 .consult_sect .right_in .text label input:checked + span{color: #fff; background: #000}
+.intro_2 .consult_sect .right_in .btn_box {margin-top: 45px}
+.intro_2 .consult_sect .right_in .btn_box .btn{ background-color: #c4f2e7; display: flex;align-items: center; justify-content: center; font-size: 18px;color: #0a1478; width: 100%; padding: 20px 0; font-weight: 500; transition: all .3s;max-width: 650px}
+
+
+.sub_pb {padding-bottom: 200px}
+
+.sub_visual {width: 100%; height: 900px; margin-top: -110px;  margin-bottom: 100px; position: relative}
+.sub_visual .in2 {height: 100%; z-index: 2; overflow: hidden}
+.sub_visual .img_box {position: absolute; top:0; left:0; width:100%; height:100%; user-select: none;overflow: hidden; }
+.sub_visual .img_box:before{content: "";position: absolute; left: 0; top: 0; width: 100%; height: 100%;background-color: rgba(0,0,0,0.5); z-index: 1}
+.sub_visual .img_box img {width:100%; height:100%; display: block; -webkit-transform:scale(1.1,1.1); transform:scale(1.1,1.1); -webkit-transition:transform 3000ms ease-in-out; transition: transform 3000ms ease-in-out;
+    transition-delay:1s; will-change: transform; user-select: none; object-fit: cover; object-position: center;}
+.sub_visual.on .img_box img {transform:scale(1.0,1.0) rotate(0.002deg);}
+/*.dreamlens .sub_visual .img_box img { object-position: -500px center;}*/
+
+.sub_visual .text_box {position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%); text-align: center; padding-top: 55px}
+.sub_visual .text_box p {color: #fff ; font-size: 54px; font-weight: 700}
+.sub_visual .text_box span {color: #0a1478;font-weight: 900; display: block; text-transform:uppercase}
+.sub_visual .line {padding: 0 20px; display: flex; justify-content: space-between;align-items: center;position: absolute; width: 100%; top: 140px; left: 0}
+.sub_visual .menu_location { }
+.sub_visual .menu_location ul {display: flex; font-size: 15px}
+.sub_visual .menu_location ul li {color: rgba(255,255,255,0.6); display: flex; align-items: center}
+.sub_visual .menu_location ul li.em {color: #fff}
+.sub_visual .menu_location ul li + li:before {content: ""; display: inline-block; width: 4px; height: 4px; background-color: #c5c7cc; border-radius: 50%; margin: 0 10px}
+.sub_visual .share_btn {  color: #fff; font-size: 28px}
+
+.sub_visual .line .btn_box {position: relative}
+.sub_top .bot_line .btn_box {position: relative;}
+.sub .share_area { position: absolute; padding:25px 0 20px; flex-direction: column; justify-content: space-around; align-items: center; opacity: 0; pointer-events: none;
+    width: 70px; height:0px; overflow: hidden; bottom:-10px; left:50%; transform: translate(-50%,100%);background: #000; flex-wrap: wrap; transition: height 0.5s, width 0s ease-in-out, opacity 0.5s; z-index: 3}
+.sub .share_area.on { height:275px; opacity: 1; pointer-events: inherit;}
+.sub .share_area .a_box {display: block; width:100%; padding:0; background: none; border-radius: 0;}
+.sub .share_area a {display: block;  margin:0 auto 0; text-align: center; opacity: 0.8; width:100%; transition: 0.3s ease-in-out; color: #fff; font-size:21px; line-height: 1;}
+.sub .share_area a i {color: #fff;}
+.sub .share_area .a_box + .a_box {margin-top:30px;}
+.sub .share_area a.facebook {width:11px;}
+.sub .share_area a.kakao {width: 21px;}
+.sub .share_area a.blog {width: 23px;}
+.sub .share_area a.youtube {width: 25px;}
+
+
+.sub_top {margin-top: 140px }
+.sub_top .text_box {text-align: center}
+.sub_top .text_box  p {color: #000 ; font-size: 54px; font-weight: 700}
+.sub_top .text_box span {color: #0a1478;font-weight: 900; display: block;text-transform:uppercase}
+.sub_top .bot_line {display: flex; justify-content:space-between; align-items: center; margin-top: 80px}
+.sub_top .menu_location ul {display: flex; font-size: 15px}
+.sub_top .menu_location ul li {color: rgba(0,0,0,0.6); display: flex; align-items: center}
+.sub_top .menu_location ul li.em {color: #000}
+.sub_top .menu_location ul li + li:before {content: ""; display: inline-block; width: 4px; height: 4px; background-color: #c5c7cc; border-radius: 50%; margin: 0 10px}
+.sub_top .share_btn { color:#686868; font-size: 28px}
+
+
+.board_list {display: flex; flex-wrap: wrap;border-top:1px solid #000; padding-top: 45px}
+.board_list li {flex-basis: calc(33.33% - 20px); aspect-ratio: 100/100; transition: 0.1s ease-in-out;}
+.board_list li > a { padding:0px; display: block; height:100%;}
+.board_list li + li {margin-left:30px;}
+.board_list li:nth-of-type(3n+1) {margin-left:0;}
+.board_list li:nth-of-type(n+4) {margin-top:45px;}
+.board_list li .tit {font-size:20px; font-weight:600; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.board_list li .tit:before {content:''; width:7px; height:7px; border-radius: 50%; background: #0a1478; display: block; margin-bottom:15px;}
+.board_list li .content {margin-top:20px; color:#555555; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.board_list li .date {margin-top:85px; display: block; font-size:15px; color:#555555;}
+
+.board_list li .img_box {margin: 0; aspect-ratio: 100/72;position: relative;}
+.board_list li .img_box img {width:100%; height:100%; display: block; object-fit: cover; position: absolute;}
+.board_list li .img_box + .tit {margin-top:30px;}
+.board_list li .img_box ~ .tit:before {content:none;}
+.board_list li .img_box ~ .date {margin-top:10px;}
+.board_list li .category ~ .tit:before {content:none;}
+.board_list li .category {display: inline-block;padding: 3px 12px; color:#0a1478; font-size:13px; border-radius: 15px;; text-align: center;background: #0a1478; color:#fff;margin-bottom: 5px }
+.board_list li .img_box ~ .category {margin-top: 20px}
+
+.notice {margin-top: 160px}
+
+.notice_top {display: flex; justify-content: space-between;align-items: flex-end; margin-bottom: 20px}
+.notice_top .inp_box {width:340px; height:60px; position: relative;}
+.notice_top .inp_box input {width:100%; height:100%; line-height:60px; font-size:14px; padding:0 70px 0 33px; background:#F5F5F6; border-radius: 27.5px; border:none; outline: none;}
+.notice_top .inp_box button {font-size:0; position: absolute; top:0; right:0; height:100%; padding:0 30px;}
+.notice_top .inp_box button i {font-size:20px;}
+.notice_top .text {font-size: 15px}
+.notice_top .btn {border: 1px solid #000 ; padding: 5px 15px; border-radius: 50px; font-size: 15px; transition: all .3s; flex-shrink: 0}
+
+
+.notice_top.type2 {justify-content: flex-end; }
+.notice_top.type2 > p {color:#555 ;font-size: 15px; margin-right: 20px}
+
+.notice_list { border-top:1px solid #000;}
+.notice_list > li {border-bottom:1px solid #c5c7cc;}
+.notice_list > li a {display: flex; align-items: center; justify-content: space-between; width:100%; padding:30px 20px;}
+.notice_list > li a > .left {display: flex; flex-grow: 1; min-width: 0 ;}
+.notice_list > li a > .right { width: 100px; text-align: right; font-size: 16px;margin-left:50px; flex-shrink: 0}
+.notice_list > li a > .right .name {margin-right: 30px; width: 45px}
+.notice_list > li .category {display: inline-block; width:75px; min-width:75px; height:30px; line-height:28px; color:#0a1478; font-size:13px; border-radius: 15px; border:1px solid #0a1478;; text-align: center; }
+.notice_list > li .category.end {background: #0a1478; color:#fff;}
+.notice_list > li .tit {margin-left:13px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;transition: all .3s;border-bottom: 1px solid transparent;}
+
+
+.list_none_box {border-bottom: none; padding: 80px 0; text-align: center; width: 100%;}
+.list_none_box .logo img {width: 180px; opacity: 0.3}
+.list_none_box p {color: rgba(0,0,0, 0.4); margin-top: 15px; font-weight: 500}
+.board_list .list_none_box { flex-basis: 100% !important; border: none !important; aspect-ratio: auto !important;}
+
+
+.notice_list.type2 > li a > .right {width: 185px}
+
+.notice_view .read_cont {margin-top: 130px}
+.notice_view .read_title_box { border-bottom: 1px solid #000; padding-bottom: 20px; display: flex; flex-wrap: wrap; justify-content: center}
+.notice_view .read_title_box .title {font-size: 24px; width: 100%; text-align: center}
+.notice_view .read_title_box .date {display: block ; margin-top: 10px }
+.notice_view .read_box {border-bottom: 1px solid #000}
+.notice_view .read_box .cont {padding: 60px 40px}
+.notice_view .read_box .cont img {width:auto !important; height:auto !important}
+.notice_view .read_box .file_box { border-top: 1px solid #c5c7cc;padding: 15px 20px 20px;}
+.notice_view .read_box .file_box li {display: flex; align-items: center}
+.notice_view .read_box .file_box .left {color: #555; flex-shrink: 0; font-size: 14px; width: 100px}
+.notice_view .read_box .file_box .right {    margin-left: -30px;margin-bottom: -10px; display: flex}
+.notice_view .read_box .file_box .right > a {font-size: 14px; color: #555; margin-left: 30px; margin-bottom: 10px ; display: inline-block}
+.notice_view .read_cont .btn_box {margin: 140px auto 0; text-align: center}
+
+
+
+.notice_view .read_box.type2 .answer_cont {padding: 40px 60px; border-top:1px solid #000; background-color: #f4f5f7;}
+
+.notice_view.review .read_box .cont {display: flex;flex-direction: column}
+.notice_view.review .read_title_box {flex-wrap: nowrap; justify-content: flex-start;}
+.notice_view.review .read_title_box .title {width: auto; flex-shrink: 0}
+.notice_view.review .read_title_box > p {font-size: 24px;margin-left: 10px }
+.notice_view.review .read_box .info {background-color: #f4f5f7; padding: 15px 40px; border-radius: 50px; text-align: center; font-size: 17px; font-weight: 500;margin: 0 auto 30px}
+
+
+
+.pagination {margin-top:125px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 0 15px;}
+.pagination > a.prev {margin-left:18px;}
+.pagination > a.next {margin-right:18px;}
+.pagination .num_list {display: flex; align-items: center; margin-left:30px; margin-right:30px;}
+.pagination .num_list li + li {margin-left:5px;}
+.pagination .num_list a { font-weight: 500; display: inline-block; text-align: center; border-bottom: 2px solid transparent;transition: color .2s , border .2s; padding: 0 7px}
+
+.pagination .num_list li.on a {  color: #0a1478; border-bottom: 2px solid #0a1478; }
+.pagination .num_list a + a {margin-left: 15px}
+
+
+
+.write {margin-top: 160px}
+.write_form_box .btn_box {margin-top: 120px ; text-align: center}
+.form_tit {font-size:20px; font-weight: 600; display: block;}
+.form_tit.mypage_tit {border-bottom: 1px solid #333333; padding-bottom:15px; margin-bottom: -20px; }
+.form_list {margin-top:70px;}
+.form_list > li {display: flex; }
+.form_list > li + li {margin-top:50px;}
+.form_list > li .left {min-width:75px; white-space: nowrap;}
+.form_list.type2 > li .left {min-width:115px;}
+.form_list.type3 > li .left {min-width:180px;}
+.form_list > li.label {justify-content: space-between; flex-wrap: wrap;}
+.form_list > li .right {margin-left:30px; flex:100;}
+.form_list > li .right.label {flex:none;}
+.form_list > li .right.label input:checked + label {color:#0a1478;}
+.form_list > li .right.label input:checked + label i {color:#0a1478;}
+.form_list > li .right .file_upload {border: 1px solid #c5c7cc; padding: 7px 15px; }
+
+.form_list > li .right .label_box {display: inline-block;}
+.form_list > li .right .label_box label {width:auto; background: #fff; height:auto; line-height: normal; display: inline-block; cursor: pointer}
+.form_list > li .right .label_box label i {margin-right: 10px}
+
+.form_list > li .term_box {margin-top:20px; background: #fafafa; width:100%; padding:20px 30px; color:#888; line-height: 1.6;}
+.form_list > li .term_box p {font-size:14px;}
+.form_list > li .term_box p span {display: block; margin-top: 15px}
+
+
+.form_list .input_tit { font-weight: 600;}
+.form_list .input_tit.required:after {content:'*';  font-weight: 600; color:#0a1478;;}
+.form_list input[type="text"], .form_list input[type="password"], .form_list input[type="tel"], .form_list input[type="email"] {border:none; border-bottom:1px solid #c5c7cc; width:100%; padding-bottom:21px;; outline: none; padding-top: 1px; font-size: 17px}
+.form_list input[type="text"].w450 {max-width: 450px;}
+.form_list input::placeholder {font-size: 17px}
+.form_list textarea {height:300px; padding:25px; border:1px solid #c5c7cc; width: 100%; resize: none; outline: none; font-size: 17px}
+.form_list .tip {font-size:15px; margin-top:10px; color: #555555;}
+.form_list input:disabled {border-bottom: none; background: none;}
+.form_list .tel_box {display: flex; align-items: center;}
+.form_list .tel_box .inp_box {flex:1; max-width: 135px; position: relative;}
+.form_list .tel_box .inp_box + .inp_box {margin-left:40px;}
+.form_list .tel_box .inp_box + .inp_box:before {content:''; display: flex; width:12px; height:1px; background:#333333; position: absolute; top:50%; transform: translateY(-50%); left:-30px;}
+.form_list .tel_box .inp_box input {text-align: center;}
+.form_list .email_box {display: flex; align-items: center;}
+.form_list .email_box .inp_box {position: relative; min-width: 272px;}
+.form_list .email_box .inp_box + .inp_box {margin-left:45px;}
+.form_list .email_box .inp_box + .inp_box:before {content:'@'; display: flex; position: absolute; left:-35px;}
+.form_list .inp_box {display: flex; align-items: center;}
+.form_list .inp_box input[type="checkbox"] {line-height: 1; cursor: pointer;font-size: 18px}
+.form_list .inp_box input[type="checkbox"]:before {content:'\f111'; font-family: 'Font Awesome 6 pro'; font-size: var(--info-font-size); color: #DBDBDB;}
+.form_list .inp_box input[type="checkbox"]:checked:before {content:'\f058'; font-family: 'Font Awesome 6 Pro'; color:#0a1478;}
+.form_list .inp_box input[type="checkbox"] + label {margin-left:6px; cursor: pointer;}
+.form_list .inp_box input[type="checkbox"] + label + .right_btn {margin-left:25px; color: #555; font-size: 15px}
+.form_list .fileList {display: flex; align-items: center; flex-wrap: wrap}
+.form_list .fileList .list {margin-left: 25px; font-size: 16px ; }
+.form_list .fileList .list span + span {margin-left: 15px}
+.form_list .fileList .list span i {color: #000; font-size: 18px; margin-left: 5px}
+
+.my_sect {margin-top: 160px}
+.my_sect .in2 {width: 1040px}
+.pw_change {border:1px solid #c5c7cc; border-radius: 30px; padding: 5px 12px;flex-shrink: 0}
+.change_box.show {display: flex; align-items: center}
+.change_box * + * {margin-left: 40px}
+.leave_btn_box {margin-top: 50px;border-top: 1px solid #D8D8D8;padding-top: 30px;display: flex;justify-content: space-between;align-items: start;}
+.leave_btn_box .right_btn { font-size: 15px;color: #555555;transition: 0.3s ease-in-out;}
+
+.sect_top .title_box.mark .title {font-size: 38px;font-family: 'Noto Serif KR', serif; font-weight: 700; display: block}
+.sect_top .title_box.mark .title span {display: block; margin-bottom: -15px}
+.sect_top .title_box.mark .text {margin-top:30px; line-height: 1.6 }
+.sect_top .title_box.mark .text + p {margin-top: 15px}
+
+.cataract .sect_top .img_wrap {
+    margin-top: 50px;
+    width: 100%;
+    height: 30vw;
+    margin: 50px auto 0;
+    text-align: center;
+    position: relative;
+    display: table;
+    position: relative;}
+
+.cataract .sect_top .img_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+    background: url('../img/cataract_sect_top.png') no-repeat center center;
+    background-size: cover;
+
+}
+.cataract .sect_top .img_box img {width: 100%}
+
+.examination .sect_title strong,
+.retinaAndglaucoma .sect_title strong,
+.zigzag .sect_title strong,
+.cataract .sect_title > strong,
+.xerophthalmia .sect_title strong{font-size: 38px}
+
+.examination .sect_title p,
+.retinaAndglaucoma .sect_title p,
+.zigzag .sect_title p,
+.xerophthalmia .sect_title p,
+.cataract .sect_title > p {margin-top:15px }
+
+.what_cataract {padding: 160px 0 200px}
+.what_cataract .what .img_wrap {display: flex; margin-top: 30px;}
+.what_cataract .what .img_wrap .box {width: 50%; background-color: #f4f5f7; padding: 70px 60px 40px ; position: relative}
+.what_cataract .what .img_wrap .box + .box:before {content: ""; position: absolute;left: 0; top:50%; transform: translateY(-50%);display: inline-block; height: 80%; width: 2px; background-color: #dcdddf; }
+.what_cataract .what .img_wrap .box .text {padding:13px 0; width:  210px; background-color: #fff; text-align: center; font-weight: 700; border-radius: 50px; margin: 35px auto 0}
+
+.sub_cont_tit > strong{font-size: 25px;}
+.sub_cont_tit > p {margin-top: 10px}
+
+.low_cont{ padding-left: 50px}
+.low_tit strong{font-size: 20px ;font-family: 'Noto Serif KR', serif;font-weight: 700;}
+.low_tit p {margin-top: 10px}
+
+.what_cataract .in2 > div + div {margin-top: 160px}
+
+.what_cataract .cause .cause_box {margin-top: 30px;}
+.what_cataract .cause .cause_box li {display: flex; align-items: center}
+.what_cataract .cause .cause_box li + li {margin-top: 15px}
+.what_cataract .cause .cause_box li .left{background-color: #f2f4f8;padding: 15px; text-align: center ;width: 220px; margin-right: 20px ; flex-shrink: 0}
+
+.what_cataract .cause .img_wrap  {margin-top: 25px; display: flex}
+.what_cataract .cause .img_wrap .box {width: 50%; background-color:#f5f6f9; display: flex; align-items: center; justify-content: center ; padding: 60px 20px}
+.what_cataract .cause .img_wrap .box + .box {margin-left: 40px}
+.what_cataract .cause .img_wrap .box .text p {font-weight: 700; margin-bottom: 30px; text-align: center}
+
+.what_cataract .symptom .img_wrap{display: flex; margin-top:30px }
+.what_cataract .symptom .img_wrap .box{width: 33.333%; }
+.what_cataract .symptom .img_wrap .box + .box {margin-left: 20px}
+.what_cataract .symptom .img_wrap .box .img img {width: 100%}
+.what_cataract .symptom .img_wrap .box .text {margin-top:10px;font-weight: 700;text-align: center }
+
+.what_cataract .old > .cont {margin-top: 60px;}
+.what_cataract .old .img_wrap{display: flex; margin-top: 15px}
+.what_cataract .old .img_wrap .box {width: 50%;}
+.what_cataract .old .img_wrap .box + .box {margin-left: 50px}
+.what_cataract .old .img_wrap .box .text {margin-top:10px;font-weight: 700;text-align: center }
+.what_cataract .old .img_wrap .box .img img {width: 100%}
+
+.cataract .operation {padding: 200px 0; background-color: #f5f6f9}
+.cataract .operation .insertion {margin-top: 90px}
+.cataract .operation .insertion > div {margin-top: 80px}
+.cataract .operation .insertion .cont_box .title p {margin-top: 7px; font-size: 14px; color: #777}
+.cataract .operation .insertion .circle_box {background-color: #e6e8ec; border-radius: 100px; display: flex;margin-top: 30px}
+.cataract .operation .insertion .circle_box.type1{align-items: center;justify-content: center; padding: 35px 40px; }
+.cataract .operation .insertion .circle_box.type1 .box {display: flex; align-items: center}
+.cataract .operation .insertion .circle_box.type1 .img {width: 100px; height: 100px; border-radius: 50%; background-color: #fff;display: flex; align-items: center; justify-content: center; flex-shrink: 0}
+.cataract .operation .insertion .circle_box.type1 .img img {max-width: 70px; height: 65px}
+.cataract .operation .insertion .circle_box.type1 .text {margin-left: 30px; }
+.cataract .operation .insertion .circle_box.type1 .text strong {font-size: 20px}
+.cataract .operation .insertion .circle_box.type1 .text p {margin-top: 5px}
+.cataract .operation .insertion .circle_box.type1 > p {margin: 0 140px}
+
+.cataract .operation .insertion .circle_box.type2 {align-items: center;}
+.cataract .operation .insertion .circle_box.type2 .text_box {width: 33.333%; text-align: center; font-weight: 700; position: relative; padding: 40px 0}
+.cataract .operation .insertion .circle_box.type2 .text_box + .text_box:before {position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 2px; height: 15px; background-color: #a1a2a5; content: ""}
+
+
+.cataract .operation .insertion .img_wrap {margin-top: 30px; display: flex}
+.cataract .operation .insertion .img_wrap .img_box {padding-bottom: 25px}
+.cataract .operation .insertion .img_wrap .img_box .img {height: 120px; display: flex; align-items: center; justify-content: center; margin-top: 20px; }
+.cataract .operation .insertion .img_wrap .img_box p {margin-top: 10px; font-size: 17px; text-align: center}
+.cataract .operation .insertion .img_wrap .img_box + .img_box {border-left:1px solid #f4f5f7 }
+.cataract .operation .insertion .img_wrap .left, .cataract .operation .insertion .img_wrap .right  {display: flex; flex-wrap: wrap ;background-color: #fff}
+.cataract .operation .insertion .img_wrap .bot_text {color: #fff; text-align: center; padding: 15px 0; width: 100% }
+.cataract .operation .insertion .img_wrap .left .bot_text {background-color: #7d7d7d; }
+.cataract .operation .insertion .img_wrap .right .bot_text {background-color: #39bb9d; }
+.cataract .operation .insertion .img_wrap .right .img_box:first-child {border-left:1px solid #f4f5f7 }
+
+.cataract .operation .insertion .img_wrap.type1 .left {width: 50%;}
+.cataract .operation .insertion .img_wrap.type1 .right {width: 50%;}
+.cataract .operation .insertion .img_wrap.type1 .img_box {width: 50%}
+
+.cataract .operation .insertion .img_wrap.type2 .left {width: 40%;}
+.cataract .operation .insertion .img_wrap.type2 .right {width: 60%;}
+.cataract .operation .insertion .img_wrap.type2 .left .img_box {width: 50%}
+.cataract .operation .insertion .img_wrap.type2 .right .img_box {width: 33.333%}
+
+.cataract .operation .check{margin-top: 160px}
+.cataract .operation .check .circle_box {background-color: #e6e8ec; border-radius: 200px; margin-top: 45px ; display: flex; align-items: center;padding: 60px}
+.cataract .operation .check .circle_box .text_box {width: 33.333%; position: relative; display: flex; align-items: center; justify-content: center; flex-wrap: wrap}
+.cataract .operation .check .circle_box .text_box .num {width: 30px;height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #0a1478; color: #fff; font-weight: 700;font-size: 13px}
+.cataract .operation .check .circle_box .text_box p {width: 100%; font-weight: 700; margin-top: 20px;text-align: center}
+.cataract .operation .check .circle_box .text_box + .text_box:before {position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 2px; height: 100%; background-color: #cfd0d4; content: ""}
+.cataract .operation .equ {margin-top: 90px;}
+.cataract .operation .equ .img_wrap {margin-top: 25px; display: flex}
+.cataract .operation .equ .img_wrap .img_box {width: 33.333%; }
+.cataract .operation .equ .img_wrap .img_box + .img_box{margin-left:40px }
+.cataract .operation .equ .img_wrap .img_box .img {width: 100%; padding-top: 90%; background-color:#000; position: relative}
+.cataract .operation .equ .img_wrap .img_box .img img {width: 100%; height: 100%; position: absolute; object-position: center; object-fit: cover; position: absolute; left: 0; top: 0}
+.cataract .operation .equ .img_wrap .img_box .text {margin-top: 15px}
+.cataract .operation .equ .img_wrap .img_box .text p {margin-top: 5px; font-size: 14px; color: #858585 }
+
+.zigzag {margin-top: 200px}
+.zigzag .sect_title strong {   font-family: 'Noto Serif KR', serif;font-weight: 700;}
+.zigzag ul { margin-top: 80px}
+.zigzag ul li {display: flex ; align-items: center}
+.zigzag ul li + li {margin-top: 70px}
+.zigzag ul li .img_box {width: 50%}
+.zigzag ul li .img_box img {width: 100%}
+.zigzag ul li .text_box {margin-left: 70px; width: 50%}
+.zigzag ul li .text_box strong {font-size: 23px}
+.zigzag ul li .text_box p {font-size: 16px; color: #858585; margin-top: 20px}
+.zigzag ul li .text_box .logo_img_box {display: flex; margin: 5px -60px 0; flex-wrap: wrap}
+.zigzag ul li .text_box .logo_img_box .img {width: 33.333%}
+
+
+.zigzag ul li.reverse {flex-direction: row-reverse}
+.zigzag ul li.reverse .text_box {margin-right: 70px; width: 50%; text-align: right}
+
+.intro_1 .hello .sub_top_title {font-size: 52px}
+.intro_1 .hello .sub_top_title strong span {color: #0a1478}
+.intro_1 .hello .cont_box {display: flex; justify-content: flex-end; margin-top: 160px}
+.intro_1 .hello .cont_box .left_wrap {width: 720px; max-width: 50%;padding: 0px 0px 0 20px}
+.intro_1 .hello .cont_box .left_wrap strong {font-size: 30px;display: block}
+.intro_1 .hello .cont_box .left_wrap ul {margin-top: 40px}
+.intro_1 .hello .cont_box .left_wrap ul li {line-height: 1.7}
+.intro_1 .hello .cont_box .left_wrap ul li + li {margin-top: 25px}
+.intro_1 .hello .cont_box .right_wrap {width: 50%; padding-left: 80px;}
+.intro_1 .hello .cont_box .right_wrap img {width: 850px}
+.intro_1 .hello .director {margin-top: 240px; }
+.intro_1 .hello .director .in2 {display: flex; align-items: flex-start}
+.intro_1 .hello .director .img_box {margin-right:70px; width: 40% }
+.intro_1 .hello .director .img_box img {width: 100%}
+.intro_1 .hello .director .right_wrap {padding-top: 20px; width: 60%}
+.intro_1 .hello .director .right_wrap .title {font-weight: 500; display:flex; align-items: center;}
+.intro_1 .hello .director .right_wrap .title span{font-size: 17px;}
+.intro_1 .hello .director .right_wrap .title p {font-size: 28px}
+.intro_1 .hello .director .right_wrap .title + ul {margin-top: 40px}
+.intro_1 .hello .director .right_wrap .title .img {width:45px; margin-left:15px}
+
+.intro_1 .hello .director .right_wrap ul {margin-top:45px}
+.intro_1 .hello .director .right_wrap ul li + li {margin-top: 7px}
+.intro_1 .hello .director .right_wrap ul li {position: relative}
+.intro_1 .hello .director .right_wrap ul li:before {content: ""; position: absolute; top: 50%; transform: translateY(-50%);left: -10px; width: 3px; height: 3px;background-color: #333; border-radius: 50% }
+.intro_1 .hello .director .right_wrap ul .no_dot:before {background-color: transparent}
+
+.intro_2 section {margin-top: 160px}
+.intro_2 .sect_title {font-size: 25px; margin-bottom: 30px}
+.intro_2 .time_sect .time_wrap{display: flex; flex-wrap: wrap; margin-left: -40px; margin-bottom: -30px}
+.intro_2 .time_sect .time_wrap .cont {width:calc(25% - 40px); margin-left: 40px; margin-bottom: 30px; border: 1px solid #777; text-align: center; display: flex; flex-direction: column;align-items: center;padding: 70px 30px}
+.intro_2 .time_sect .time_wrap .cont .img {width: 55px; height: 65px; display: flex; align-items: center; justify-content: center}
+.intro_2 .time_sect .time_wrap .cont .img img{width: 55px ; }
+.intro_2 .time_sect .time_wrap .cont .img i {font-size:46px }
+.intro_2 .time_sect .time_wrap .cont .day {margin-top: 15px; color: #000000}
+.intro_2 .time_sect .time_wrap .cont .day span {background-color: #f4f5f7; font-size: 14px; padding: 3px 13px; border-radius: 50px}
+.intro_2 .time_sect .time_wrap .cont .time {margin-top: 40px;  font-family:'Eulyoo1945'; font-size: 32px; color: #000}
+
+.intro_2 .time_sect .time_wrap .cont.em {border:2px solid #0a1478}
+.intro_2 .time_sect .time_wrap .cont.em .day span {background-color: #fff; border:1px solid #0a1478; color: #0a1478}
+.intro_2 .time_sect .time_wrap .cont.em .day span.night {color: #fff; background-color:#0a1478 }
+
+
+.intro_2 .banner_sect .banner_wrap{display: flex}
+.intro_2 .banner_sect .banner {width: 50%; padding: 50px 55px ; position: relative; overflow: hidden}
+.intro_2 .banner_sect .banner + .banner {margin-left:40px }
+.intro_2 .banner_sect .banner.left {background-color: #daede8}
+.intro_2 .banner_sect .banner.left .text span{font-size: 16px; font-weight: 500}
+.intro_2 .banner_sect .banner.left .text p{font-size: 33px;  font-family:'Eulyoo1945'; margin-top: 5px}
+.intro_2 .banner_sect .banner.right {background-color: #edeff4}
+.intro_2 .banner_sect .banner.right .text p {font-size: 33px;  font-family:'Eulyoo1945'; margin-bottom: 5px }
+.intro_2 .banner_sect .banner.right .text a {font-size:16px; font-weight: 500; }
+
+.intro_2 .banner_sect .banner .img {position: absolute;right: 80px;bottom: -20px;transform: translateY(50%) }
+
+.intro_2 .road_sect .map {padding-top: 45%; position: relative}
+.intro_2 .road_sect .map_btn {position: absolute; right: 20px; bottom: 20px;padding: 6px 12px; border: 1px solid #eee; background-color: #fff; z-index: 2; font-size: 16px}
+.intro_2 .road_sect .map_btn i {margin-left: 10px}
+.intro_2 .road_sect .traffic {margin-top: 40px; border-top :1px solid #000}
+.intro_2 .road_sect .traffic ul li {padding: 30px;border-bottom: 1px solid #c5c7cc; display: flex;align-items: center}
+.intro_2 .road_sect .traffic ul li .icon {width: 60px ;height: 60px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center
+; justify-content: center;font-size: 24px; flex-shrink: 0}
+.intro_2 .road_sect .traffic ul li .text_box {margin-left: 50px; }
+.intro_2 .road_sect .traffic ul li .text_box .title {font-size: 20px}
+.intro_2 .road_sect .traffic ul li .text_box .text {margin-top: 10px; font-size: 16px}
+.intro_2 .road_sect .traffic ul li .text_box .text p + p {margin-top: 7px}
+.intro_2 .road_sect .traffic ul li .text_box .text p .state {color: #fff; padding: 2px 13px; line-height: 1; border-radius: 30px; margin-right: 5px; font-size: 13px}
+.intro_2 .road_sect .traffic ul li .text_box .text p .state.type1 {background-color: #6ec75c}
+.intro_2 .road_sect .traffic ul li .text_box .text p .state.type2 {background-color: #addcea}
+.intro_2 .road_sect .traffic ul li .text_box .text p .state.type3 {background-color: #75d0ea}
+.intro_2 .road_sect .traffic ul li .text_box .text p .state.type4 {background-color: #dc4d4d}
+
+.dreamlens .sect_top .img_box {margin-top: 50px}
+.dreamlens .sect_top .img_box .img {text-align: center;}
+.dreamlens .sect_top .img_box .text {margin-top:50px }
+.dreamlens .sect_top .img_box .text p {text-align: center}
+.dreamlens .sect_top .parents {margin-top: 100px; background-color:#fafbfc; padding: 55px 0 60px;text-align: center}
+.dreamlens .sect_top .parents .img{margin-top: 40px}
+
+
+.dream_lens .sub_cont_tit {margin-bottom: 30px}
+.dream_lens .in2 > div {margin-top: 160px}
+.dream_lens .principle .img {}
+.dream_lens .principle .img img {width: 100%}
+
+.dream_lens .effect .circle_box {}
+.dream_lens .effect .circle_box {display: flex; flex-wrap: wrap; margin-left: -20px; margin-bottom: -20px}
+.dream_lens .effect .circle_box .cont {width: calc(50% - 20px); height: 200px;margin-right: 20px; margin-bottom: 20px;  border-radius: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center;     background-color: #e6e8ec;}
+.dream_lens .effect .circle_box .cont .num {width: 30px; height: 30px; background-color: #0a1478; border-radius: 50% ;display: flex; align-items: center; justify-content: center ;
+font-weight: 700; color: #fff; font-size: 13px; flex-shrink: 0}
+.dream_lens .effect .circle_box .cont .text {margin-top:15px; font-weight: 700; text-align: center}
+.dream_lens .effect .img_box {background-color:#f2f4f8;padding: 50px 60px;  display: flex;flex-direction: column; align-items: center; justify-content: center;margin-top: 40px}
+.dream_lens .effect .img_box .title {font-size: 25px;}
+.dream_lens .effect .img_box .img {width: 100%; max-width: 900px; background-color: #fff; text-align: center; margin-top: 40px; padding: 25px 0; border-radius: 25px}
+.dream_lens .effect .img_box .text {margin-top: 30px; text-align: center; line-height: 1.7}
+
+.dream_lens .process .step_box {display: flex; flex-wrap: wrap; margin-left: -20px; margin-bottom: -20px; line-height: 1.6; color: #000}
+.dream_lens .process .step_box .step {width: calc(20% - 20px); margin-left: 20px; margin-bottom: 20px;height: 300px; border: 1px solid #000; padding: 60px 30px 0px; display: flex; flex-direction: column ;align-items: center; }
+.dream_lens .process .step_box .step .num {background-color: #0a1478; height: 22px; line-height: 22px; width: 70px; border-radius: 50px ;font-size: 12px; color: #fff; text-align: center}
+.dream_lens .process .step_box .step strong {display: block; margin-top: 30px; text-align: center }
+.dream_lens .process .step_box .step p {margin-top: 10px; font-size: 16px; text-align: center}
+
+.check_box { display: flex; flex-wrap: wrap; margin-left: -20px; margin-bottom: -15px}
+.check_box .cont {width: calc(50% - 20px); margin-left: 20px; margin-bottom: 15px; background-color: #f2f4f8; border-radius: 5px; padding: 30px ; display: flex; align-items: center}
+.check_box .cont p {display: flex}
+
+.check_box .cont i { margin-right: 10px; color: #000; font-size: 19px; margin-top:3px}
+.check_box .cont span {font-weight: 500; color: #000}
+.dream_lens .review > a {position: relative}
+.dream_lens .review .img{width: 100%;}
+.dream_lens .review .img img {width: 100%}
+.dream_lens .review > a .hover_box i {transition: all .3s}
+.dream_lens .review > a:hover .hover_box i {transform: rotate(180deg)}
+
+.dreamlens .zigzag {background-color: #f7f8f9; padding: 200px 0}
+.dreamlens .zigzag .sect_title {text-align: center}
+
+.dreamlens .faq_sect {margin-top: 120px}
+
+.faq_sect .sect_title strong{font-size: 38px}
+.faq_sect .sect_title p{margin-top: 15px}
+
+.faq-list { border-top: 2px solid #000;margin-top: 65px }
+.faq-list .left { display: flex; align-items: center; width: 95%; }
+.faq-list .left .cont { font-weight: 700; width: 100%; min-width: 0; transition: color .3s; }
+.faq-list .left .cont strong { font-size: 18px;display: block; color: #000}
+.faq-list ul li .icon { margin-left: auto; font-size: 22px; color: #000; flex-shrink: 0; transition: transform .3s; }
+.faq-list .q-icon { font-weight: 700; color: #fff; width: 45px; height: 45px; border-radius: 50%; background-color: #39bb9d; flex-shrink: 0; text-align:center; font-size: 18px; line-height: 45px; margin-right: 15px}
+.faq-list .question { display: flex; align-items: center; padding: 20px 60px 20px 20px; border-bottom: 1px solid #ccc; cursor: pointer; }
+.faq-list .answer_box {display: none}
+.faq-list .answer { background-color: #f3f3f4;  border-bottom: 1px solid #ccc;  display: flex;align-items: flex-start; overflow: hidden ;padding: 25px 50px; }
+.faq-list .answer p {padding-top: 9px; min-height:100px; line-height: 1.6 ; word-break: keep-all }
+.faq-list .answer .q-icon {background-color: #000;}
+.faq-list li.on .icon { transform: rotate(180deg); }
+
+.xerophthalmia .sect_top .in2 > div + div {margin-top: 160px}
+.xerophthalmia .sect_top {padding-bottom: 180px}
+
+.xerophthalmia .sect_top .img_wrap {display: flex}
+.xerophthalmia .sect_top .img_wrap .img_box + .img_box {margin-left: 40px}
+.xerophthalmia .sect_top .img_wrap .img_box .text {text-align: center; margin-top: 10px; font-weight: 500}
+.xerophthalmia .sect_top .graph .img_box {margin-top: 25px;background-color: #f5f5f6; position: relative; padding:50px 20px 60px ; text-align: center}
+.xerophthalmia .sect_top .graph .img_box > span {position: absolute; right: 30px; bottom: 30px; color: #898989; }
+.xerophthalmia .sect_top .self_test .top {padding: 27px 0;width: 100%; background-color: #000; color: #fff; font-size: 20px; border-radius: 5px; text-align: center; margin-top: 40px}
+.xerophthalmia .sect_top .self_test .top i {margin-right: 5px; vertical-align: middle}
+.xerophthalmia .sect_top .self_test .top strong {vertical-align: middle}
+.xerophthalmia .sect_top .self_test .check_box {margin-top: 20px}
+.xerophthalmia .sect_top .self_test .result {margin-top: 80px; display: flex; align-items: center}
+.xerophthalmia .sect_top .self_test .result li {width: 33.333%; text-align: center; padding: 10px 0 30px}
+.xerophthalmia .sect_top .self_test .result li + li {border-left: 1px solid #cccccc}
+.xerophthalmia .sect_top .self_test .result li .num {font-size: 24px; }
+.xerophthalmia .sect_top .self_test .result li .num.type1 {color:#39bb9d}
+.xerophthalmia .sect_top .self_test .result li .num.type2 {color:#e76c2f}
+.xerophthalmia .sect_top .self_test .result li .num.type3 {color:#bd273c}
+.xerophthalmia .sect_top .self_test .result li .text {margin-top: 15px; font-weight: 500; color: #000}
+
+.xerophthalmia .what_sect {padding: 180px 0; background-color: #f5f6fa}
+.xerophthalmia .what_sect .in2 > div + div {margin-top: 160px}
+.xerophthalmia .what_sect .meaning .img_box{margin-top: 40px; background-color: #fff; padding: 60px 100px}
+.xerophthalmia .what_sect .meaning .img_box .img { }
+.xerophthalmia .what_sect .meaning .img_box .text_box {background-color: #f2f9f8; border-radius: 5px; text-align: center;padding: 45px 30px; margin-top: 55px}
+.xerophthalmia .what_sect .meaning .img_box .text_box p {font-size: 16px; margin-top: 15px; text-align: center; }
+
+.xerophthalmia .what_sect .symptom .circle_box{margin-top: 30px; display: flex}
+.xerophthalmia .what_sect .symptom .circle_box .cont {width: calc(33.33% + 16.666px ); display: flex; flex-direction: column; align-items: center}
+.xerophthalmia .what_sect .symptom .circle_box .cont + .cont {margin-left: -25px}
+.xerophthalmia .what_sect .symptom .circle_box .cont .circle {text-align: center; font-weight: 700; padding: 15px 0; border-radius: 50px; width: 100%}
+.xerophthalmia .what_sect .symptom .circle_box .cont.type1 .circle{background-color: rgba(57,187,157,0.3)}
+.xerophthalmia .what_sect .symptom .circle_box .cont.type2 .circle{background-color: rgba(221,108,47,0.3)}
+.xerophthalmia .what_sect .symptom .circle_box .cont.type3 .circle{background-color: rgba(189,39,60,0.3)}
+.xerophthalmia .what_sect .symptom .circle_box .cont ul {margin-top: 20px; color: #000}
+.xerophthalmia .what_sect .symptom .circle_box .cont ul li {position: relative;}
+.xerophthalmia .what_sect .symptom .circle_box .cont ul li:before {content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%); width: 3px ; height: 3px ; border-radius: 50% ; background-color: #000 }
+.xerophthalmia .what_sect .symptom .circle_box .cont ul li + li {margin-top: 10px}
+
+.xerophthalmia .what_sect .cause .sub_cont_tit .img_box{background-color:#e8eaf0; padding: 50px 20px;text-align: center ; margin-top: 45px}
+.xerophthalmia .what_sect .cause .sub_cont_tit .img_box > p {display: flex; justify-content: center; margin-top: 30px; font-size: 16px}
+
+.xerophthalmia .what_sect .disorder {margin-top:60px; background-color: #fff ; padding: 50px 120px 80px; text-align: center}
+.xerophthalmia .what_sect .disorder .title_box .title {font-size: 20px; border-bottom: 1px solid #959595; padding-bottom: 3px}
+.xerophthalmia .what_sect .disorder .title_box .text {margin-top:25px; }
+.xerophthalmia .what_sect .disorder .img_cont {display: flex ;margin-top: 40px}
+.xerophthalmia .what_sect .disorder .img_cont .img_box {width: 33.333%}
+.xerophthalmia .what_sect .disorder .img_cont .img_box + .img_box {margin-left: 50px}
+.xerophthalmia .what_sect .disorder .img_cont .img_box .text {margin-top: 20px}
+.xerophthalmia .what_sect .disorder .img_cont .img_box .text p {margin-top:5px;font-size: 16px }
+.xerophthalmia .what_sect .test .cont{ margin-top: 35px;display: flex; align-items: center }
+.xerophthalmia .what_sect .test .cont + .cont {margin-top: 30px; }
+.xerophthalmia .what_sect .test .cont .left {width: 35%}
+.xerophthalmia .what_sect .test .cont .left img {width: 100%}
+.xerophthalmia .what_sect .test .cont .right {margin-left: 65px; width: 65%;}
+.xerophthalmia .what_sect .test .cont .right .text_box .title{ font-size: 20px; color: #000}
+.xerophthalmia .what_sect .test .cont .right .text_box .text {margin-top: 10px}
+.xerophthalmia .what_sect .test .cont .right .img_box {margin-top: 40px; display: flex}
+.xerophthalmia .what_sect .test .cont .right .img_box ul {margin-left:30px;}
+.xerophthalmia .what_sect .test .cont .right .img_box ul li i{color: #0a1478; font-size: 20px; margin-right: 5px}
+.xerophthalmia .what_sect .test .cont .right .img_box ul li span {font-size: 16px;font-weight: 600}
+
+.xerophthalmia .cure_sect {padding: 160px 0 160px}
+.xerophthalmia .cure_sect .in2 > div + div {margin-top: 160px}
+.xerophthalmia .cure_sect .cure .cont_box{display: flex; flex-wrap: wrap; margin-top: 40px; margin-left: -50px; margin-bottom: -45px}
+.xerophthalmia .cure_sect .cure .cont {width: calc(33.333% - 50px); margin-left:50px; margin-bottom: 45px }
+.xerophthalmia .cure_sect .cure .cont .img {width: 100%;}
+.xerophthalmia .cure_sect .cure .cont .img img {width: 100%}
+.xerophthalmia .cure_sect .cure .cont .text {margin-top: 12px}
+.xerophthalmia .cure_sect .cure .cont .text p {margin-top: 5px; font-size: 16px}
+
+.xerophthalmia .cure_sect .porgram {background-color: #f5f6fa; padding: 80px 160px}
+.xerophthalmia .cure_sect .porgram .title {text-align: center}
+.xerophthalmia .cure_sect .porgram .title strong{font-size: 20px; padding-bottom: 3px; border-bottom: 1px solid #000}
+.xerophthalmia .cure_sect .porgram .title p {margin-top: 30px; }
+.xerophthalmia .cure_sect .porgram .circle_box {margin-top: 50px;}
+.xerophthalmia .circle_box.common {display: flex}
+.xerophthalmia .circle_box.common .circle {background-color: rgba(40,187,157,0.15); border-radius: 50%; width: calc(20% + 24px); padding-top: calc(20% + 24px); position: relative}
+.xerophthalmia .circle_box.common .circle + .circle {margin-left: -30px}
+.xerophthalmia .circle_box.common .circle .text {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); text-align: center; width: 100%; padding: 0 40px; font-weight: 700}
+
+.xerophthalmia .cure_sect .ipl .sub_cont_tit {display: flex}
+.xerophthalmia .cure_sect .ipl .sub_cont_tit p {margin-left: 55px; margin-top: 0}
+.xerophthalmia .cure_sect .ipl .check_box {margin-top:40px }
+.xerophthalmia .cure_sect .ipl .check_box .cont span strong {color: #0a1478}
+.xerophthalmia .cure_sect .ipl .img_box {margin-top:160px;  display: flex}
+.xerophthalmia .cure_sect .ipl .img_box .left {width: 45%}
+.xerophthalmia .cure_sect .ipl .img_box .right {width: 55%;margin-left: 60px;padding-top: 30px}
+.xerophthalmia .cure_sect .ipl .img_box .right .text .title {font-size: 20px}
+.xerophthalmia .cure_sect .ipl .img_box .right .text p {margin-top: 10px}
+.xerophthalmia .cure_sect .ipl .img_box .right .text p span {display: flex}
+.xerophthalmia .cure_sect .ipl .img_box .right .text p span > span {margin-right: 5px}
+.xerophthalmia .cure_sect .ipl .img_box .right .check_cont {margin-top: 40px}
+.xerophthalmia .cure_sect .ipl .img_box .right .check_cont p + p {margin-top: 5px}
+.xerophthalmia .cure_sect .ipl .img_box .right .check_cont i {color: #0a1478; margin-right: 5px}
+.xerophthalmia .cure_sect .ipl .img_box .right .check_cont span {font-size: 16px; font-weight: 600}
+
+.xerophthalmia .eyelids_sect {padding: 160px 0; background-color: #f5f6fa}
+.xerophthalmia .eyelids_sect .cont .title p {margin-top: 5px}
+.xerophthalmia .eyelids_sect .cont + .cont {margin-top: 80px}
+.xerophthalmia .eyelids_sect .cont .img_cont {margin-top: 40px; display: flex; flex-wrap: wrap; margin-left: -25px ;margin-bottom: -25px }
+.xerophthalmia .eyelids_sect .cont .img_cont .img_box {width:calc(25% - 25px); margin-left: 25px; margin-bottom: 25px }
+.xerophthalmia .eyelids_sect .cont .img_cont .img_box img {width: 100%}
+.xerophthalmia .eyelids_sect .cont .img_cont .img_box > p {margin-top:10px; text-align: center}
+.xerophthalmia .eyelids_sect .cont .img_cont .img_box .top_text {color: #fff; background-color: #000;padding: 10px 15px; font-size: 14px; text-align: center}
+.xerophthalmia .eyelids_sect .cont .img_cont .img_box .top_text.type2 {background-color: #014770}
+
+.xerophthalmia .way_sect {padding-top: 160px}
+.xerophthalmia .way_sect .in2 > div + div {margin-top: 160px}
+.xerophthalmia .way_sect .tears .img_box {margin-top: 40px; display: flex; background-color:#f5f6fa;padding: 40px 80px}
+.xerophthalmia .way_sect .tears .img_box .img {width: 100%; position: relative; padding-right: 80px}
+.xerophthalmia .way_sect .tears .img_box .num_box { width: 370px ; flex-shrink: 0 }
+.xerophthalmia .way_sect .tears .img_box .num_box li {width: 100%; padding: 20px 0 20px 40px; background-color:#000;color: #fff ; font-weight: 700}
+.xerophthalmia .way_sect .tears .img_box .num_box li + li {margin-top: 15px}
+
+.xerophthalmia .way_sect .eye_drops .img_box {margin-top: 40px;}
+.xerophthalmia .way_sect .eye_drops .img_box .img { background-color: #f4f5f8; padding:  30px 0; text-align: center}
+.xerophthalmia .way_sect .eye_drops .img_box .text {margin-top: 20px}
+.xerophthalmia .way_sect .eye_drops .circle_box {margin-top: 50px;background-color: #f5f6fa ; padding: 50px 160px}
+.xerophthalmia .way_sect .eye_drops .process {margin-top: 90px; }
+.xerophthalmia .way_sect .eye_drops .process .title p{margin-top: 10px}
+.xerophthalmia .way_sect .eye_drops .process .cont_box {display: flex; margin-top: 45px;align-items: center }
+.xerophthalmia .way_sect .eye_drops .process .cont_box .circle {width: 25%; border-radius: 50px; padding:25px 0; text-align: center; border: 1px solid #000; font-weight: 700}
+.xerophthalmia .way_sect .eye_drops .process .cont_box .circle + i {color: #000; margin: 0 15px}
+
+.xerophthalmia .home_sect { margin-top: 160px}
+.xerophthalmia .home_sect .img_cont {display: flex; margin-top: 50px}
+.xerophthalmia .home_sect .img_cont .img_box {width: 33.333%}
+.xerophthalmia .home_sect .img_cont .img_box + .img_box {margin-left:15px }
+.xerophthalmia .home_sect .img_cont .img_box img {width:100% }
+.xerophthalmia .home_sect .img_cont .text {margin-top: 20px}
+.xerophthalmia .home_sect .img_cont .text > strong {color: #000}
+.xerophthalmia .home_sect .img_cont .text > p {margin-top: 10px; word-break: keep-all}
+
+.retinaAndglaucoma .tab_box .in2 {display: flex; justify-content: center}
+.retinaAndglaucoma .tab_box .tab_btn {display: flex; align-items: center;justify-content: center;width: 350px; height: 85px; border: 1px solid #000; font-weight: 700; font-size: 23px; color: #000}
+.retinaAndglaucoma .tab_box .tab_btn.active {border-color: #0a1478; background-color: #0a1478; color:#fff;margin-left: -1px; margin-right: -1px; position: relative; z-index: 1 }
+.retinaAndglaucoma .tab_wrap {margin-top: 140px}
+.retinaAndglaucoma .tab_wrap.off {display: none}
+
+.retinaAndglaucoma .sect_title p {margin-top: 15px;}
+.retinaAndglaucoma .sect_title p + p{margin-top: 15px}
+.retinaAndglaucoma section + section {margin-top: 160px}
+.retinaAndglaucoma .sub_head strong {color: #000}
+.retinaAndglaucoma .sub_head p {margin-top: 10px}
+
+.retina .what_sect .img_box{margin-top: 40px;background-color: #f8f8f8; text-align: center ; padding: 60px 0}
+.retina .illness .in2 > div + div {margin-top: 160px}
+.retina .illness .in2 .aging {margin-top: 50px}
+.retina .illness .in2 .aging_class {margin-top: 80px}
+.retina .illness .aging_class .class_box {margin-top: 40px}
+.retina .illness .aging_class .cont + .cont {margin-top: 160px}
+.retina .illness .aging_class .cont .img_cont {display: flex;  margin-top: 30px}
+.retina .illness .aging_class .cont .img_cont .img_box {width: 50%;}
+.retina .illness .aging_class .cont .img_cont .img_box .img {border: 1px solid #e0e0e2; text-align: center}
+.retina .illness .aging_class .cont .img_cont .img_box + .img_box .img {border-left:none;background-color: #f8f8f8}
+.retina .illness .aging_class .cont .img_cont .img_box p {text-align: center; font-weight: 700; margin-top: 10px}
+.retina .illness .aging_class .cont .result {margin-top: 30px; text-align: center}
+.retina .illness .aging_class .cont .result i {font-size: 25px; color: #000}
+.retina .illness .aging_class .cont .result .circle_box {margin-top: 20px;display: flex; justify-content: center}
+.retina .illness .aging_class .cont .result .circle_box .circle {background-color: #0a1478; color: #fff;font-size: 20px; font-weight: 700; border-radius: 80px ;padding: 30px; width:600px;max-width: 80%}
+.retina .illness .aging_class .cont .result .circle_box .circle + .circle {margin-left: 15px}
+.retina .illness .self_test {background-color: #f7f8f9; padding: 80px 160px}
+.retina .illness .self_test .sub_cont_tit {text-align: center}
+.retina .illness .self_test .sub_cont_tit p {margin-top: 10px}
+.retina .illness .self_test .sub_cont_tit.bot {margin-top:50px }
+.retina .illness .self_test .sub_cont_tit.bot p {margin-top: 0; margin-bottom: 10px}
+.retina .illness .self_test .test_box {margin-top:50px; display: flex }
+.retina .illness .self_test .test_box .left {width: 40.5%; }
+.retina .illness .self_test .test_box .left img {width: 100%}
+.retina .illness .self_test .test_box .right {width: 58%;margin-left: 35px}
+.retina .illness .self_test .test_box .right ul li {background-color: #e8ebee; padding: 25px 35px;display: flex; align-items: center }
+.retina .illness .self_test .test_box .right ul li + li {margin-top: 20px}
+.retina .illness .self_test .test_box .right ul li .num {width: 30px; height: 30px; background-color: #0a1478; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center;font-size: 13px; font-weight:700; flex-shrink: 0; margin-right: 20px}
+.retina .illness .in2 .blood_class {margin-top: 80px}
+.retina .illness .blood_class .class_box {margin-top: 50px}
+.retina .illness .blood_class .class_box .cont + .cont {margin-top: 80px}
+.retina .illness .blood_class .img_box {display: flex; margin-top: 20px}
+.retina .illness .blood_class .img_box .left{width: 50%; }
+.retina .illness .blood_class .img_box .left img {width: 100%}
+.retina .illness .blood_class .img_box .right{width: 50%;margin-left: 60px}
+.retina .illness .blood_class .img_box .right.type1 {display: flex;align-items: center}
+.retina .illness .blood_class .img_box .right.type1 i {font-size: 25px; color: #000; margin-right: 60px}
+.retina .illness .blood_class .img_box .right.type1 ul li {background-color: #0a1478; color: #fff; font-weight: 700; border-radius: 80px; display: flex; align-items: center; justify-content: center;padding: 25px}
+.retina .illness .blood_class .img_box .right.type1 ul li + li {margin-top: 10px}
+.retina .illness .blood_class .img_box .right.type2 { line-height: 1.6; word-break: keep-all}
+
+.retina .illness .diabetes .img_box {display: flex; margin-top: 35px}
+.retina .illness .diabetes .img_box .left .img {background-color: #f2f2f2; padding: 70px 60px}
+.retina .illness .diabetes .img_box .left{width: 50%}
+.retina .illness .diabetes .img_box .left img {width: 100%}
+.retina .illness .diabetes .img_box .right{width: 50%;margin-left: 60px; line-height: 1.6; word-break: keep-all}
+.retina .illness .diabetes .img_box .right p + p {margin-top: 20px}
+
+.retina .illness .diabetes_class .class_box { margin-top: 50px}
+.retina .illness .diabetes_class .class_box .cont + .cont {margin-top: 65px}
+.retina .illness .diabetes_class .manage_box {margin-top: 35px}
+.retina .illness .manage_box {padding: 75px 100px 80px;background-color: #f7f8f9;}
+.retina .illness .manage_box .title {text-align: center}
+.retina .illness .manage_box .title strong{font-size: 23px; color: #39bb9d}
+.retina .illness .manage_box .title p{margin-top: 15px}
+.retina .illness .manage_box ul {margin-top: 50px}
+.retina .illness .manage_box ul li {background-color: #fff; border-radius: 200px; display: flex; align-items: center;padding: 25px 40px}
+.retina .illness .manage_box ul li + li {margin-top: 13px}
+.retina .illness .manage_box ul li .num {width: 30px;height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #0a1478; color: #fff; font-weight: 700;font-size: 13px; margin-right: 20px; flex-shrink: 0}
+.retina .illness .manage_box ul li p {font-weight: 700}
+
+.retina .illness .myodesopsia .img_cont { display: flex; margin-top: 40px}
+.retina .illness .myodesopsia .img_box {width: 50%}
+.retina .illness .myodesopsia .img_box + .img_box {margin-left: 30px}
+.retina .illness .myodesopsia .img_box p {font-weight: 700; text-align: center; margin-top: 10px}
+
+
+.retina .illness .myodesopsia_class .cont_box .sub_cont_tit {}
+.retina .illness .myodesopsia_class .cont_box .sub_cont_tit + .cont {margin-top: 50px}
+.retina .illness .myodesopsia_class .cont_box .cont + .cont {margin-top: 65px}
+
+/*.retina .illness .myodesopsia_class .cont_box .right {}*/
+/*.retina .illness .myodesopsia_class .cont_box .right li {border-top:1px solid #000; padding-top: 17px }*/
+/*.retina .illness .myodesopsia_class .cont_box .right li + li {margin-top: 60px}*/
+/*.retina .illness .myodesopsia_class .cont_box .right li strong {color: #000}*/
+/*.retina .illness .myodesopsia_class .cont_box .right li p {margin-top:10px }*/
+
+.retina .illness .myodesopsia_cure .circle_box{margin-top: 40px;display: flex}
+.retina .illness .myodesopsia_cure .circle_box .circle {border-radius: 80px; border: 1px solid #c4c5c8;width: calc(25% + 30px);height: 125px; display: flex; align-items: center; justify-content: center}
+.retina .illness .myodesopsia_cure .circle_box .circle + .circle { margin-left: -30px; }
+.retina .illness .myodesopsia_cure .circle_box .circle .text {text-align: center}
+.retina .illness .myodesopsia_cure .circle_box .circle i {font-size: 25px }
+.retina .illness .myodesopsia_cure .circle_box .circle p {font-size: 17px; margin-top: 5px; }
+.retina .illness .myodesopsia_cure .manage_box {margin-top: 50px}
+
+.glaucoma .sect_top .title {text-align: left; font-size: 35px}
+.glaucoma .sect_top .title strong{font-size: 20px}
+.glaucoma .sect_top .title p {margin-top: 20px}
+.glaucoma .glaucoma_sect .in2 > div + div {margin-top: 160px}
+.glaucoma .glaucoma_sect .what .img_cont {margin-top: 50px; display: flex}
+.glaucoma .glaucoma_sect .what .img_cont .img_box {width: 50%}
+.glaucoma .glaucoma_sect .what .img_cont .img_box + .img_box{margin-left: 40px}
+.glaucoma .glaucoma_sect .what .img_cont .img_box .tit {padding: 20px 0px; width: 100%; text-align: center;font-weight: 700 }
+.glaucoma .glaucoma_sect .what .img_cont .img_box .tit.type1 {background-color: #e0f5f1}
+.glaucoma .glaucoma_sect .what .img_cont .img_box .tit.type2 {background-color: #efcbbd}
+
+.glaucoma .glaucoma_sect .test .sub_cont_tit strong {color: #39bb9d}
+.glaucoma .glaucoma_sect .test .check_box {margin-top:25px;  }
+.glaucoma .glaucoma_sect .test .check_box i {color: #0a1478}
+
+.glaucoma .glaucoma_sect .class .cont_1 {margin-top: 50px}
+.glaucoma .glaucoma_sect .class .cont + .cont {margin-top: 90px}
+.glaucoma .glaucoma_sect .class .cont_2 .img_cont{display: flex; margin-top: 25px}
+.glaucoma .glaucoma_sect .class .cont_2 .img_cont .left {width: 35%}
+.glaucoma .glaucoma_sect .class .cont_2 .img_cont .left img {width: 100%}
+.glaucoma .glaucoma_sect .class .cont_2 .img_cont .right {width: 65%; margin-left: 45px; padding-top: 25px}
+
+.glaucoma .glaucoma_sect .cure .img_cont{display: flex; margin-top: 45px}
+.glaucoma .glaucoma_sect .cure .img_cont .left {width: 40%}
+.glaucoma .glaucoma_sect .cure .img_cont .left img {width: 100%}
+.glaucoma .glaucoma_sect .cure .img_cont .right {width: 60%; margin-left: 45px; padding-top: 25px}
+.glaucoma .glaucoma_sect .cure .img_cont .right .title {font-size: 20px}
+.glaucoma .glaucoma_sect .cure .img_cont .right p {margin-top: 20px }
+.glaucoma .glaucoma_sect .cure .img_cont .right p span {color:#0a1478 ; font-weight: 500; display: inline-block; margin-bottom: 5px}
+
+.glaucoma .glaucoma_sect .laser .operation {margin-top: 45px; background-color: #f7f8f9; padding: 80px 60px; display: flex; flex-direction: column; align-items: center}
+.glaucoma .glaucoma_sect .laser .operation .img_cont {margin-top: 35px; display: inline-flex}
+.glaucoma .glaucoma_sect .laser .operation .img_cont .img_box + .img_box {margin-left: 40px}
+.glaucoma .glaucoma_sect .laser .operation .img_cont .img_box p {text-align: center ; margin-top: 10px; font-weight: 700}
+.glaucoma .glaucoma_sect .laser .operation .text {margin-top: 50px; text-align: center}
+
+
+.examination .sect_top .img_box{margin-top: 35px;background-color: #f7f8fa; overflow: hidden; ; padding: 70px 0}
+.examination .sect_top .img_box .img {text-align: center}
+.examination .sect_top .img_box .img img {width: 50%}
+
+.examination .start_sect { padding: 160px 0; background-color: #f7f8fa}
+.examination .start_sect .sub_cont_tit {text-align: center}
+.examination .start_sect .img_wrap {display: flex; margin-top: 45px}
+.examination .start_sect .img_wrap .img_box {width: 25%}
+.examination .start_sect .img_wrap .img_box + .img_box {margin-left: 40px}
+.examination .start_sect .img_wrap .img_box p {margin-top: 10px; font-size: 16px; text-align: center; font-weight: 500}
+
+.examination .sect_title strong{font-size: 38px;}
+.examination .sect_title p{margin-top: 15px;}
+.examination  section  +section{margin-top: 160px}
+
+.examination .illness .circle_box {margin-top: 50px; display: flex}
+.examination .illness .circle_box .circle {border: 1px solid #000; border-radius: 100px; height: 200px; width: 33.333%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 50px; word-break: keep-all}
+.examination .illness .circle_box .circle + .circle {margin-left:20px }
+.examination .illness .circle_box .circle strong {font-size: 20px; color: #39bb9d}
+.examination .illness .circle_box .circle p {font-weight: 500; text-align: center; margin-top: 15px}
+
+.examination .program .img{margin-top: 30px}
+.examination .program .test {margin-top: 65px; display: flex}
+.examination .program .test .cont {width: 33.333%}
+.examination .program .test .cont + .cont {margin-left: 25px}
+.examination .program .test .cont .top_tit {padding: 20px 0 ; color: #fff; display: flex; align-items: center; justify-content: center;}
+.examination .program .test .cont .top_tit span {font-size: 15px; border: 1px solid #fff; padding: 4px 12px; border-radius: 30px; margin-right: 7px}
+.examination .program .test .cont .top_tit p{font-weight: 700}
+.examination .program .test .cont .top_tit.type1 {background-color: #b1b1b1}
+.examination .program .test .cont .top_tit.type2 {background-color: #ea8181}
+.examination .program .test .cont .top_tit.type3 {background-color: #0a1478}
+.examination .program .test .cont .text {background-color: #f7f8fa; height: 430px; display: flex; flex-direction: column;align-items: center; justify-content: center; font-weight: 500}
+.examination .program .test .cont .text li + li {margin-top: 7px}
+
+.examination .equ .img_wrap{display: flex; flex-wrap: wrap;margin-top: 35px}
+.examination .equ .img_wrap .img_box {width: 25%; height: 175px; position: relative}
+.examination .equ .img_wrap .img_box img {width: 100%;}
+.examination .equ .img_wrap .img_box:before {position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.04); left: 0; top: 0; content: ""}
+
+.examination .prevention {width: 100% ;padding-top:650px; background-position: center; background-size: cover; position: relative}
+.examination .prevention:before {content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);z-index: 1;}
+.examination .prevention .text_box {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff; z-index: 3}
+.examination .prevention .text_box .logo img{width: 220px}
+.examination .prevention .text_box strong {margin-top: 50px; font-size:36px ; display: block}
+.examination .prevention .text_box p {margin-top: 20px; }
+
+.equipment .sect_top {padding-bottom: 160px}
+.equipment .sect_top strong {font-size: 52px; }
+/*.equipment .sect_top strong span {color:#39bb9d }*/
+.equipment .equ_sect {background-color: #f2f4f8; padding: 200px 0}
+.equipment .equ_sect .img_wrap {display: flex; flex-wrap: wrap; margin-left: -40px; margin-bottom: -85px}
+.equipment .equ_sect .img_wrap .img_box {width: calc(33.33% - 40px); margin-left: 40px; margin-bottom: 85px ;cursor: pointer}
+.equipment .equ_sect .img_wrap .img_box .img {overflow: hidden}
+.equipment .equ_sect .img_wrap .img_box .img img {transition: all .3s}
+
+.equipment .equ_sect .img_wrap .img_box .text {margin-top: 25px; text-align: center}
+.equipment .equ_sect .img_wrap .img_box .text p {font-weight: 500}
+.equipment .equ_sect .img_wrap .img_box .text strong {display: block; margin-top: 4px; font-size: 24px}
+
+sign_up_wrap.equ_wrap {width: 750px}
+.equ_pop {background-color: #fff}
+
+.search_result_layout .search_box .input_box {width:460px; height:60px; position: relative; margin: 80px auto 0; max-width: 100%}
+.search_result_layout .search_box input {width:100%; height:100%; line-height:60px; font-size:14px; padding:0 70px 0 33px; background:#F5F5F6; border-radius: 27.5px; border:none; outline: none;}
+.search_result_layout .search_box button {font-size:0; position: absolute; top:0; right:0; height:100%; padding:0 30px;}
+.search_result_layout .search_box button i {font-size:20px;}
+
+.search-result-wrap {margin-top: 120px; padding-bottom:0px;}
+.search-result-wrap + .search-result-wrap {margin-top:150px;}
+.search-result-wrap > h3 {font-size: 30px; text-align: center; font-weight: 400;}
+.search-result-wrap > p {margin: 27px 0 11px;}
+.search-result-wrap > p > span {color:#4AB7B3 }
+.search-result {border-top: 1px solid #000;}
+.search-result > li {border-bottom: 1px solid #d7d7d7;}
+.search-result > li > a {font-size: var(--info-font-size); padding: 35px 25px; display: flex;}
+.search-result > li > a > p {white-space: nowrap; overflow: hidden; max-width: 80%; text-overflow: ellipsis;}
+.search-result > li > a > p + .location_box {margin-left:20px;}
+.search-result > li > a .location_box > span {font-weight: 700;}
+.search-result > li > a .location_box > i {margin: 0 7px;}
+.search-result.bbs-result > li > a > p {margin-right: 20px;}
+.search-result > li > a .location_box > p {display: inline-block;line-height: 1.4;}
+.search-result > li > a .location_box > p.bbs-directoty {display: inline-block;font-weight: 700;}
+.menu-result > li > a .location_box > span:last-of-type {color:#4AB7B3}
+.search-result > li > a .location_box > p.bbs-directoty span:last-of-type {color:#4AB7B3}
+
+.equ_pop .cont_box {padding-bottom: 40px}
+.equ_pop .img_box {text-align: center;}
+.equ_pop .text_box { margin-top: 10px; text-align: center; padding: 0 30px;}
+.equ_pop .text_box .sub_txt {color: #0a1478; display: block; font-weight: 700}
+.equ_pop .text_box .tit {font-size: 25px;color: #000 }
+.equ_pop .text_box .txt {margin-top:15px; line-height: 1.6 }
+.equ_pop ul { margin-top: 30px;padding: 0 30px 0px}
+.equ_pop ul li p {background-color: #f4f5f7; border-radius: 80px; padding: 20px 30px; text-align: center; font-size: 16px}
+.equ_pop ul li p + .cont {font-size: 16px; margin-top: 10px}
+.equ_pop ul li .sub_img {display: flex; justify-content: center}
+.equ_pop ul li p ~ .sub_img .img {margin-top: 20px}
+.equ_pop ul li .sub_img.type1 .img{max-width: 320px; }
+.equ_pop ul li .sub_img.type2 .img {width: 50%}
+.equ_pop ul li .sub_img.type2 .img img + img {margin-top: 10px}
+.equ_pop ul li .sub_img.type2 .img + .img {margin-left: 20px}
+.equ_pop ul li + li {margin-top:15px }
+
+.equ_pop ul.type2 {display: flex; flex-wrap: wrap; margin-left: -20px; margin-bottom: -20px}
+.equ_pop ul.type2 li {width: calc(50% - 20px); margin-left: 20px; margin-bottom: 20px}
+.equ_pop ul.type2 li + li {margin-top: 0}
+.equ_pop ul.type2 li p {padding: 15px 25px}
+
+
+
+
+    /*모달*/
+
+.modal {opacity: 0; pointer-events: none; transition: 0.3s ease-in-out; position: fixed; top:0; left:0; right:0; bottom:0; display: flex; align-items: center; justify-content: center; width:100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999;}
+.modal.open {opacity: 1; pointer-events: inherit; }
+.modal .tti {background:#000; text-align: center; padding:10px 0;}
+.modal .tti .notice {line-height:1.7; font-size:20px; ; color:#ffffff; font-weight: 400; }
+
+.modal_close {font-size:30px; color:#ffffff; position: absolute; top:-45px; right:20px;}
+.modal_close > i {color: #FFFFFF}
+
+.terms_wrap {position: relative; max-width: 100%; padding:  0 20px}
+.terms_box {max-width:100%;width: 800px;  background: #fff; padding:0;}
+
+.modal_terms_area {max-height: calc(100vh - 300px); overflow-y: auto; padding:36px 30px;  }
+.modal_terms_area > h5 {font-size:15px; color:#c0b09d; margin:20px 0 3px;}
+.modal_terms_area > h6 {font-size:14px; margin:9px 0 2px;}
+.modal_terms_area > h5:first-child {margin-top:0;}
+.modal_terms_area p.line {font-size:14px; line-height:1.6;}
+
+.modal.online .online_wrap {position: relative; padding: 0 20px; width: 600px; max-width: 100%}
+.modal.online .online_wrap .online_terms {background: #fff; padding: 30px; font-size: 15px}
+.modal.online .online_wrap .online_terms ul {margin-top: 15px}
+.modal.online .online_wrap .online_terms ul .txt {margin-top: 7px}
+.modal.online .online_wrap .online_terms > p {margin-top: 15px}
+
+.password_box {padding:58px 87px 40px; background: #fff; text-align: center;}
+.password_box .tit {font-size:23px; font-weight: 400;}
+.password_box input {width:100%; border:1px solid #c2c2c2; text-align: center; height:50px; margin-top:25px; outline: none; letter-spacing: 2px;}
+.password_box .tip {margin-top:10px; font-size:15px; color:#555;}
+.password_box .tip span {font-weight: 600;}
+.pass_modal_btn_box {margin-top:55px; display: flex;}
+.pass_modal_btn_box button + button {margin-left:11px;}
+.pass_modal_btn_box button {width:150px; height:45px; border-radius: 22.5px; border:1px solid #C2C2C2; transition: 0.3s ease-in-out;}
+
+
+.login_wrap {position: relative; padding:0 20px;}
+.login_box {max-width: 540px; min-width: 500px; background: #fff; padding:57px 50px 50px;}
+
+.login_box .login_tit {font-size:42px; font-weight: 500; display: block; text-align: center;}
+.login_box .logo {width: 160px; margin: 0 auto}
+.login_input_box {margin-top:40px;}
+.login_input_box > .label_check {position: relative;}
+.login_input_box > .label_check.checked:after {content:'\f00c';position: absolute; bottom:15px; right:20px; color: #2c9896;font-family: "Font Awesome 6 Pro";}
+.login_input_box > .label_check label {display: block; font-size:14px; margin-bottom:5px; color:#555555;}
+.login_input_box label.required:after {content:'*'; color: #2c9896;}
+.login_input_box > .label_check ~ .label_check {margin-top:15px;}
+.login_input_box > .label_check input {width: 100%; height:55px; border:1px solid #C6C6C6;  padding:0 65px 0 25px;  font-size:15px; outline: none; position: relative;}
+.login_input_box > input {width: 100%; height:55px; border:1px solid #C6C6C6; padding:0 65px 0 25px; font-size:15px; outline: none; position: relative;}
+.login_input_box > input.result {letter-spacing: 3px; border-color: #0a1478; text-align: center; padding:0 10px;}
+.login_input_box > input.checked:after {content:'어디'; display: inline-block; color: red;  position: absolute; top:50%; transform: translateY(-50%); right:20px;}
+.login_input_box > input + * {margin-top:15px;}
+.login_input_box > .label_check + * {margin-top:15px;}
+.login_member {display: flex; margin-top:25px; justify-content: center; font-size:15px; color:#555555}
+.login_member li + li:before {content:'ㅣ'; font-weight: 300; margin:0 20px;}
+.login_btn {width: 100%; height:55px; background-color: #0a1478;; text-align: center; color: #fff; font-size: 17px}
+.login_btn:disabled {opacity: 0.3}
+
+.sign_up_wrap {position: relative; padding:0 20px;}
+.sign_up_box {max-width: 600px; min-width: 500px; background: #fff; padding:0;}
+
+.sign_up_box .text_box {padding:45px 50px;}
+.sign_up_box .tit {font-size:25px;  font-weight: 500; font-family: 'Noto Serif KR', serif;}
+.sign_up_box .tit + .label_box {margin-top:35px;}
+.sign_next_btn {display: inline-block; width:150px; height:45px; border-radius: 22.5px; border:1px solid #C2C2C2;  transition: 0.3s ease-in-out;}
+
+.sign_up_box .right_box {margin-top: 30px; text-align: right;}
+.sign_up_box .btn_two_box {margin-top: 75px; display: flex;}
+.sign_up_box .btn_two_box .sign_next_btn {width: auto; flex:1;}
+.sign_up_box .btn_two_box .sign_next_btn + .sign_next_btn {margin-left:10px;}
+
+.no_flex {display: block; padding: 80px 0px; overflow: auto;}
+.no_flex .sign_up_wrap {display:table; vertical-align: middle; margin: 0 auto;width: 600px; max-width: 100%; height: 100%}
+.no_flex .scroll-box {display: table-cell; vertical-align: middle;}
+.no_flex .sign_up_box,.no_flex .equ_pop {min-width: auto;position: relative;}
+.no_flex .modal_close {right: 0}
+
+.modal .label_box label {display: block; width: 100%; height:60px; line-height: 60px; padding:0 21px; background: #F3F3F3; color: #555555; font-size: 16px; cursor: pointer;}
+.modal .label_box ~ .label_box {margin-top: 20px;}
+.modal .label_box label i {margin-right:10px;}
+.modal .label_box input:checked + label {background-color:#0a1478; color: #FFFFFF;}
+.modal .label_box input:checked + label i {color:#FFFFFF}
+.modal .label_box + .required_all_box {margin-top:0px; text-align: right;}
+.modal .required_all_box button {color: #7B7B7B; font-size:13px;}
+.modal .required_all_box button i {font-size:14px;}
+
+.menu_box {max-width: 840px; padding:0 20px; position: relative;}
+.menu_box.w500 {max-width: 540px;}
+
+
+
+
+
+.footer {background: #000; padding: 70px 0;  color: #7e7e7e}
+.footer .in  {display: flex; justify-content: space-between}
+.footer .left_wrap .foo_logo{width: 190px}
+.footer .left_wrap ul {margin-top: 15px}
+.footer .left_wrap ul li {display: flex; font-size: 17px;}
+.footer .left_wrap ul li.info strong {margin-left: 5px}
+.footer .left_wrap ul li p + p {margin-left: 15px}
+.footer .left_wrap ul li p strong {margin-right: 5px}
+.footer .left_wrap > p {margin-top: 25px; font-size: 16px}
+.footer .right_wrap ul {display: flex; font-size: 17px; position: relative}
+.footer .right_wrap ul .em {color: #fff; margin-right: 10px}
+.footer .right_wrap ul li + li {margin-left:25px }
+.footer .right_wrap .sns_box {display: flex; margin-top: 25px; justify-content: flex-end; align-items: center}
+.footer .right_wrap .sns_box .btn {width: 24px; opacity: 0.4; transition: all .3s}
+.footer .right_wrap .sns_box .btn + .btn {margin-left: 30px}
+
+
+.footer .top_btn {color:#fff ; display: flex; flex-direction: column; align-items: center; position: absolute; right: -30px; top: 0; transform: translateX(100%)}
+.footer .top_btn span {font-size: 24px; display: inline-block; margin-top: 5px}
+.footer .top_btn i {font-size: 26px; color: #000}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*메인 팝업*/
+.main-popup-slide {
+    margin: 15px 0 5px;
+}
+
+.main-popup-slide .swiper-slide {
+
+}
+
+.main-popup-slide .swiper-slide img {
+    /*min-width:350px;*/
+    /*max-height: 370px;*/
+    max-width: 100%;
+    width:100%;
+}
+
+.main-popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.main-popup-bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .65);
+}
+
+.main-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: calc(100vw - 30px);
+    width: 1100px;
+    max-width: calc(100vw - 30px);
+}
+
+.main-popup-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-popup-top h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-popup-nav {
+    display: flex;
+}
+
+.main-popup-nav li {
+    margin-left: 10px;
+}
+
+.main-popup-nav li:first-of-type {
+    margin-left: 0;
+}
+
+.main-popup-nav li > div {
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    /* 	display: flex; */
+    justify-content: center;
+    border: 1px solid #fff;
+    align-items: center;
+    font-size: 19px;
+    cursor: pointer;
+    text-align: center;
+}
+.main-popup-nav li > div i {
+    font-size: 19px;
+    line-height: 43px;
+}
+.main-popup-mid {
+    text-align: center;
+    color: #fff;
+}
+
+.swiper-pagination-popup {
+    width: auto;
+    color: #fff;
+    font-size: 13px;
+    background: #000;
+    padding: 0 12px;
+    height: 100%;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-pagination-popup>span {
+    color: #59508f;
+}
+
+.swiper-button-prev-popup {
+    font-size: 19px;
+    line-height: 1;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.swiper-button-prev-popup:focus {
+    outline: 2px solid #fcbc25;
+}
+
+.swiper-button-next-popup {
+    font-size: 19px;
+    line-height: 1;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.main-popup i {color:#fff;}
+
+.swiper-button-prev-popup:focus {
+    outline: 2px solid #fcbc25;
+}
+
+.main-popup-btm {
+    display: flex;
+    height: 32px;
+}
+
+.main-popup-close-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-popup-close-wrap>label {
+    cursor: pointer;
+    color: #fff;
+    height: 100%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main-popup-close-wrap>label>input {
+    margin-right: 3px;
+}
+
+.main-popup-close-wrap>label>i {
+    font-size: 1.2em;
+    margin: 0 3px -2px 0;
+    z-index: 1;
+}
+
+.main-popup-close-wrap>label>span {
+
+}
+
+.main-popup-close {
+    background:none;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    margin-left: auto;
+    color:#fff;
+}
+
+
+
+
+@media screen and (max-width:1800px) {
+    .cooking_swiper_box ul li .name {font-size: 20px}
+}
+
+@media screen and (max-width:1200px) {
+    .main-popup {
+        width: 700px;
+    }
+    .main-popup-top h1 {
+        font-size: 25px;
+    }
+    .main-popup-nav li {
+        margin-left: 7px;
+    }
+    .main-popup-nav li>div {
+        width: 33px;
+        height: 33px;
+        /* 		display: flex; */
+        font-size: var(--info-font-size);
+    }
+    .main-popup-btm {
+        height: 27px;
+    }
+    .main-popup-close {
+        border-radius: 19px;
+        font-size: 12px;
+        margin-left: 7px;
+    }
+    .main-popup-close-wrap>label {
+        border-radius: 19px;
+        font-size: 12px;
+    }
+    .swiper-pagination-popup {
+        border-radius: 19px;
+        font-size: 12px;
+    }
+    .main-popup-close-wrap>label>i {
+        font-size: 1.1em;
+        margin: 0 1px -2px 0;
+    }
+    .swiper-pagination-popup>span.swiper-pagination-total {
+        color: #fff;
+    }
+
+    .cooking_swiper_box ul {margin-left: -20px; margin-bottom: -30px}
+    .cooking_swiper_box ul li {width: calc(25% - 20px);     margin-left: 20px;
+        margin-bottom: 30px;}
+    .cooking_swiper_box ul li .name {font-size: 18px}
+    .cooking_swiper_box ul li .tip {font-size: 13px}
+
+
+}
+
+
+@media (max-width: 2200px){
+
+.main .visual .icon_box {left:100px;}
+.scroll_animation {left:100px}
+
+
+}
+
+@media (max-width: 2000px){
+.main .visual .icon_box {left:106px;transform:none; top:auto; bottom:200px}
+}
+
+
+@media (max-width: 1800px){
+    .header .logo {padding-left: 40px}
+    .header .logo img {width: 160px}
+    .header > .icon-box {padding-right: 40px}
+	.main .visual .icon_box a {padding:20px 0}
+
+    .header .nav .deps_1 > li {font-size: 17px}
+    .header .nav .deps_1 > li .deps_2 li > a {font-size: 15px}
+    .header .nav .deps_1 > li a {padding: 0 25px}
+    .main .visual .text_box {padding:0 30px}
+    .main .visual .text_box p {font-size: 56px; }
+    .main .visual .text_box span {font-size: 20px}
+    .scroll_animation {left:100px}
+    .main .visual .icon_box {left: 106px}
+    .main_bg_sect { padding-top: min(140%,2000px);}
+    .promise_sect > .bg_text_box {font-size: 180px}
+    .notice_sect .left_wrap {min-height: 520px}
+    .promise_sect .medical .swiper-button-prev , .promise_sect .medical .swiper-button-next  {display: none}
+}
+
+@media (max-width: 1600px){
+	.main .visual .text_box {left:50%; width:100%;padding: 0 80px}
+	.review_sect .cont_wrap .right_wrap {    padding: 0px 0 60px 80px;}
+    .intro_1 .hello .cont_box .right_wrap {padding-left: 80px; min-width: 0; display: flex; align-items: center}
+    .intro_1 .hello .cont_box .left_wrap {padding: 0 0 0 20px}
+    .main_bg_sect { padding-top: min(140%,1900px);}
+    .main .care_sect {background: #f4f5f7 url('../img/care-bg.png') no-repeat -350px 0 / contain;padding: 240px 0;}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text p {word-break: keep-all}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text p br {display: none;}
+    .map_sect .bg_text {display: none}
+    .main .visual .icon_box {bottom: 150px}
+
+    .scroll_animation {height: 140px}
+}
+
+@media (max-width: 1400px) {
+
+    .header .nav .close ,
+    .header > .icon-box button.ham,
+    .header .quick-text {display: block}
+
+
+    .header .nav .close {position: absolute; right:30px; top: 20px; color: #fff; font-size: 28px}
+    .header .nav {position: fixed; left:0%;right: auto ;top: 0; width: 100%; height: 100%; z-index: 10; display: block; background-color: #0a1478;
+        transform: translate(100%,0); padding: 20px 0px; transition: left .5s ease-in-out;overflow: auto; display: flex; flex-direction: column; align-items: flex-start;;}
+    .header.on .nav {left: -100%; }
+    .header .nav .quick-text{display: block; margin-top: 40px; width: 100%;}
+    .header .nav .quick-text > p {font-size: 24px; color: #fff; font-weight: 700; padding: 0 40px;}
+    .header .nav .quick-text .navi_bg {padding: 0; box-shadow: none; border-radius: 0; display: flex; margin-top: 20px;border-bottom: 10px solid rgba(255,255,255, 0.2) }
+    .header .nav .quick-text .navi_bg li {width: 20%; border: 1px solid rgba(255,255,255, 0.2); height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 15px;}
+    .header .nav .quick-text .navi_bg li + li {margin-top: 0; border-left: none;}
+    .header .nav .quick-text .navi_bg .icon_box {height:40px ; display: flex; align-items: center ; justify-content: center }
+    .header .nav .quick-text .navi_bg li .ico_tit {word-break: keep-all;}
+    .header .nav .quick-text .navi_bg li .ico_tit br {display: none;}
+
+    .header .nav .bot-text {display: block; display: flex; font-size: 15px; width: 100%; padding-left: 40px; padding-top: 15px;}
+    .header .nav .bot-text ul {display: flex; width: 100%;}
+    .header .nav .bot-text ul li {border: 1px solid rgba(255,255,255, 0.2); color: #fff; border-radius: 50px; padding: 0 15px; height: 35px; line-height: 33px; font-size: 13px;}
+    .header .nav .bot-text ul li + li {margin-left: 15px;}
+    .header .nav > ul {display: flex;flex-direction: column; align-items: flex-start; padding: 20px 0;}
+    .header.on > .right .spe .ham {display:none}
+    .header.on > .right .spe .close {display:flex; position: fixed; right: 0; top: 0px; width: 80px; height: 80px;}
+    .header .nav .deps_1 {padding: 0; margin-top: 10px; width: 100%; height: auto}
+    .header .nav .deps_1 > li {width: 100%; height: auto; font-weight: 500;  padding: 0 0px 0px;}
+    .header .nav .deps_1 > li > a {height: auto; padding: 0px;color: #fff !important; display: flex; align-items: center; justify-content: flex-start; padding:  20px 40px 0px;  padding-bottom:20px ;}
+    .header .nav .deps_1 li a::after {content: "\f078"; font-family: "Font Awesome 6 Pro";display: none; position: static; width: auto; height:auto; font-size: 15px; transform: translateX(0); vertical-align: middle; line-height: 1; margin-left: auto; font-weight: 500; width: auto; transition: all .3s;}
+    .header .nav .deps_1 > li,
+    .header .nav .deps_1 > li {cursor: pointer}
+    .header .nav .deps_1 > li > a,
+    .header .nav .deps_1 > li > a{pointer-events: none}
+    .header .nav .deps_1 > li > a:after,
+    .header .nav .deps_1 > li > a:after{display: inline-block}
+    .header .nav .deps_1 > li:first-child a{margin-top: 0; }
+    .header .nav .deps_1 > li.on {background-color: transparent; color: #fff;}
+    .header .nav .deps_1 > li.active > a::after {transform: rotate(180deg);     }
+
+    .header .nav .deps_1 > li .deps_2 {position: static; transform: none; opacity: 1;visibility: visible; transition: none; display: none}
+    .header .nav .deps_1 > li .deps_2 li > a {justify-content: flex-start; padding-left: 40px}
+
+    .navi_bg {border-radius: 55px; padding:45.5px 20px 42.5px; box-shadow:2px 1px 25px rgba(0,0,0,0.35);}
+    .navi_bg li + li {margin-top:40px;}
+    .navi_bg i {font-size:35px; color: rgba(255,255,255,0.3); display: block; text-align: center;}
+    .navi_bg .ico_tit {font-size:13px; font-weight: 400; margin:15px auto 0; color:#fff; display: block; text-align: center;}
+    .navi_bg a {display: block; width:100%; text-align: center;}
+    .navi_bg img {width:36px; opacity: 0.3;}
+    .navi_bg a i, .navi_bg a img {transition: 0.3s ease-in-out;}
+
+    .header .fix_btn_box .menu_btn_box {display: none}
+    .dream_lens .effect .img_box .title {font-size: 22px}
+    .xerophthalmia .way_sect .eye_drops .process .cont_box {margin-top: 30px}
+    .xerophthalmia .home_sect .img_cont {margin-top: 40px}
+
+    .examination .equ .img_wrap .img_box {height: auto}
+
+}
+
+
+@media (max-width: 1200px){
+    body {font-size: 15px}
+
+    .main .visual {padding-top: 80%; height: 0}
+    .main .visual .swiper-container {position: absolute; left: 50%; top: 50%; transform:translate(-50%,-50%)}
+
+
+    .view_btn {font-size: 15px; padding: 12px 32px}
+
+    .main .visual .text_box span {font-size: 18px; margin-bottom: 10px}
+    .main .visual .text_box p {font-size: 46px}
+    .main .visual .icon_box {left: 20px; bottom: 0;}
+    .scroll_animation {left: 20px}
+    .main .visual .swiper-button-prev, .main .visual .swiper-button-next {font-size: 18px; }
+
+    .main .visual.t2 .swiper-slide .video_box2 {padding-top: 70%; position: relative}
+    .main .visual.t2 .swiper-slide .video_box2 video {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); height: 100%; width: auto}
+
+
+    .scroll_animation {display: none}
+    .promise_sect {padding-top: 220px}
+    .promise_sect > .bg_text_box .bg_text {font-size: 160px}
+    .main .sect_title h3 {font-size: 76px}
+    .promise_sect .in {margin-top: -140px}
+    .promise_sect .promise_text {margin-top: 80px}
+    .promise_sect .promise_text .title {font-size: 32px}
+    .promise_sect .promise_text .text {margin-top: 40px}
+    .promise_sect .promise_text .text p + p {margin-top: 17px}
+    .promise_sect .medical {padding-top: 260px}
+    .promise_sect .medical .title .bg_text {font-size: 100px}
+    .promise_sect .medical .title strong {font-size: 32px}
+    .promise_sect .medical .title p {font-size: 16px;}
+    .promise_sect .medical .swiper-slide .text-box {margin-top: 25px}
+    .promise_sect .medical .swiper-slide .text-box strong {font-size: 28px; margin-top: 10px}
+    .promise_sect .medical .swiper-slide .text-box p {display: none;}
+    .main_bg_sect {padding-top: min(185%,1650px)}
+    .main_bg_sect .in {padding-bottom: 180px}
+    .main_bg_sect .img_cont {margin-top: 50px}
+    .main_bg_sect .img_cont .text_box {text-align: center}
+    .main_bg_sect .img_cont .text_box strong {font-size: 32px}
+    .main_bg_sect .img_cont .hover_box {width: 90px; height: 90px; line-height: 88px; opacity: 1; font-size: 28px}
+
+    .story_sect {padding: 180px 0}
+    .story_sect .right-wrap {width: 50%; margin-left: 40px}
+    .story_sect .left-wrap {width: 50%; padding-left: 30px}
+    .story_sect .right-wrap .text_box {margin-top: 70px; padding-right: 20px}
+    .story_sect .right-wrap .text_box .text {margin-top: 40px}
+    .story_sect .right-wrap .text_box .text p + p {margin-top: 17px}
+    .story_sect .right-wrap .btn_box {margin-top: 70px}
+    .story_sect .left-wrap .text > p {font-size: 15px;}
+    .story_sect .left-wrap .text > p span {font-size: 18px}
+    .story_sect .right-wrap .text_box > strong {font-size: 28px}
+
+    .main .care_sect {padding: 180px 0}
+    .main .care_sect .cont_wrap .left_wrap {padding-right: 48px;padding-top: 20px}
+    .main .care_sect .sect_title p {margin-top: 20px}
+    .main .care_sect .cont_wrap {margin-top: 120px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box {padding: 0 0px 0 40px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon {width:calc(50% - 25px)}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(2n) {margin-left: 50px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(n+3) {margin-top: 60px}
+    .main .care_sect .cont_wrap .left_wrap .txt {margin-top: 50px}
+    .main .care_sect .cont_wrap .left_wrap .txt span {font-size: 24px}
+    .main .care_sect .cont_wrap .left_wrap .txt P {margin-top: 15px}
+    .main .care_sect .cont_wrap .left_wrap .btn_box {margin-top: 60px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .img img {width: 60px; max-height: 50px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text span {font-size: 21px}
+
+    .review_sect {padding: 180px 0 180px}
+    .review_sect .cont_wrap {margin-top:80px}
+    .review_sect .cont_wrap .right_wrap {padding-left: 40px; padding-bottom: 0; justify-content: flex-start; min-height: 0; padding-top: 0px}
+    .review_sect .cont_wrap .right_wrap .btn_box { padding-top: 60px}
+    .review_sect .cont_wrap .right_wrap .text_box .title {font-size: 26px}
+    .review_sect .cont_wrap .right_wrap .text_box .text {margin-top: 20px}
+    .review_sect .cont_wrap .left_wrap .slick-slide {margin: 0 15px}
+
+    .notice_sect {padding: 0 0 180px}
+    .notice_sect .left_wrap {min-width: 0; width: 35%}
+    .notice_sect .left_wrap .btn_box {margin-top: 70px}
+    .notice_sect .right_wrap .swiper-slide {width: 35%; margin-right: 40px}
+    .notice_sect .right_wrap .swiper-slide .img_box img.logo {width: 160px}
+    .notice_sect .right_wrap .swiper-slide .text_box .title {font-size: 20px}
+    .notice_sect .right_wrap .swiper-slide .text_box .text {font-size: 14px; margin-top: 15px}
+
+    .map_sect .top_wrap .sect_title strong {font-size: 34px}
+    .map_sect .top_wrap .left {padding: 80px 20px 60px 0}
+    .map_sect .top_wrap .left_in {padding-right: 0}
+    .map_sect .top_wrap .call {flex-wrap: wrap;margin-top: 50px}
+    .map_sect .top_wrap .call strong {margin-right: 0; font-size: 32px}
+    .map_sect .top_wrap .call .btn {width: 120px; height: 40px; font-size: 13px; margin-left: 10px}
+
+
+    .map_sect .top_wrap .right {padding: 80px 0 60px; background: #85bddd url(../img/map_right_bg.png) no-repeat right bottom -150px / contain}
+    .map_sect .top_wrap .right_in {padding-left: 40px}
+    .map_sect .top_wrap .right_in .inp_list {margin-top: 50px}
+    .map_sect .right_in .inp_box input {padding: 0 15px; height: 52px; font-size: 15px}
+    .map_sect .right_in .inp_box input::placeholder {font-size: 15px}
+    .map_sect .right_in .inp_box .nice-select {font-size: 15px}
+    .map_sect .right_in .inp_box .nice-select {height: 52px; line-height: 52px}
+    .map_sect .right_in .text {flex-wrap: wrap; font-size: 14px}
+    .map_sect .right_in .btn_box {margin-top: 30px}
+    .map_sect .right_in .btn_box .btn {font-size: 17px; padding: 17px 0 }
+
+    .map_sect .top_wrap .info li .top strong {font-size: 17px}
+    .map_sect .top_wrap .info .map .bot {margin-top: 7px}
+    .map_sect .top_wrap .info A{margin-top: 35px}
+    .map_sect .top_wrap .info li + li {margin-top: 35px}
+    .map_sect .top_wrap .info .time .bot {font-size: 15px; margin-top: 7px}
+    .map_sect .top_wrap .sns_btn {margin-top: 80px}
+    .map_sect .top_wrap .sns_btn .btn + .btn {margin-left: 15px}
+    .map_sect .top_wrap .sns_btn .btn img {width: 24px; max-height: 24px}
+
+    .map_sect .bot_wrap .in .img_cont {margin-top: 30px}
+    .map_sect .bot_wrap .in .img_cont .img_box {width: 200px}
+    .map_sect .bot_wrap .in .img_cont .img_box .text {font-size: 13px; }
+    .map_sect .top_wrap .info .map .bot p:last-child {font-size: 15px}
+    .map_sect .right_in .text label span {font-size: 13px; padding: 4px 10px; margin-left: 20px}
+
+    .header {height: 90px; }
+    .main .visual {margin-top: -90px}
+    .main .visual .text_box {margin-top: 45px; padding: 0 20px}
+    .header .logo {padding-left: 20px}
+    .header > .icon-box {padding-right: 0}
+    .header > .icon-box button{padding: 20px 15px; font-size: 21px}
+    .header .logo img {width: 150px}
+
+    .footer {padding: 60px 0; position: relative}
+    .footer .left_wrap .foo_logo {width: 160px}
+    .footer .left_wrap ul li {font-size: 15px}
+    .footer .left_wrap ul li p span {display: block}
+    .footer .left_wrap > p {margin-top: 15px; font-size: 14px}
+    .footer .right_wrap ul {font-size: 15px}
+    .footer .right_wrap .sns_box .btn {width: 22px; opacity: 0.6}
+
+    .sub_visual .menu_location ul {font-size: 14px}
+    .sub_visual .menu_location ul li + li:before {width: 3px; height: 3px; margin: 0 8px}
+    .sub_visual .share_btn {font-size: 25px}
+    .sub .share_area {width: 55px; padding: 20px 15px}
+    .sub .share_area a.facebook {width:9px;}
+    .sub .share_area a.kakao {width: 19px;}
+    .sub .share_area a.blog {width: 21px;}
+    .sub .share_area a.youtube {width: 23px;}
+    .sub .share_area .a_box + .a_box {margin-top: 25px}
+    .sub .share_area a {font-size: 19px}
+    .sub .share_area.on {height: 245px}
+    .sub_visual .text_box {width: 100%; padding: 0 30px; margin-top:45px }
+    .sub_top .text_box p,
+    .sub_visual .text_box p {font-size: 48px}
+    .sub_visual {margin-bottom: 80px; height: 700px}
+    .intro_1 .hello .sub_top_title {font-size: 44px}
+    .intro_1 .hello .cont_box {margin-top: 120px}
+    .intro_1 .hello .cont_box .right_wrap {padding-left: 60px; align-items: flex-start}
+    .intro_1 .hello .cont_box .left_wrap ul li + li {margin-top: 18px}
+    .intro_1 .hello .cont_box .left_wrap ul {margin-top: 30px}
+    .intro_1 .hello .director {margin-top: 180px}
+    .intro_1 .hello .director .img_box {margin-right: 40px}
+
+    .header .fix_btn_box {right: 30px; bottom:30px; display: none}
+    .footer .top_btn_box {display: block}
+    .top_btn_box {width: 80px; height: 80px; position: absolute; right: 20px; top: 0;margin-top: 0; transform: translateY(-50%); z-index: 5}
+    .top_btn_box .top_btn {font-size: 28px; position: absolute;right: 0; transform: none; color: #000; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+
+    .sub_pb {padding-bottom: 160px}
+
+    .intro_2 .time_sect .time_wrap {margin-left: -30px; margin-bottom: -25px}
+    .intro_2 .time_sect .time_wrap .cont {width: calc(33.333% - 30px);margin-left: 30px;margin-bottom: 25px;padding: 50px 20px;}
+    .intro_2 .time_sect .time_wrap .cont .day span {font-size: 13px; }
+    .intro_2 .time_sect .time_wrap .cont .time {margin-top: 30px; font-size: 28px}
+    .intro_2 .banner_sect .banner {padding: 40px 20px}
+    .intro_2 .banner_sect .banner .img {right: 20px; width: 35%;}
+    .intro_2 .banner_sect .banner.right .text p,
+    .intro_2 .banner_sect .banner.left .text p {font-size: 28px}
+    .intro_2 .banner_sect .banner.right .text a {font-size: 15px}
+    .intro_2 .banner_sect .banner + .banner {margin-left: 30px}
+    .intro_2 section {margin-top: 120px}
+
+    .intro_2 .sect_title {font-size: 22px; margin-bottom: 25px}
+    .intro_2 .road_sect .traffic ul li {padding: 25px}
+    .intro_2 .road_sect .traffic ul li .icon {width: 55px; height: 55px; font-size: 22px}
+    .intro_2 .road_sect .traffic ul li .text_box {margin-left: 40px}
+    .intro_2 .road_sect .traffic ul li .text_box .title {font-size: 18px}
+    .intro_2 .road_sect .traffic ul li .text_box .text {margin-top: 7px}
+
+    .intro_2 .consult_sect .right_in .sect_title strong {font-size: 34px}
+    .intro_2 .consult_sect .right_in .sect_title p {font-size: 15px; margin-top: 12px}
+    .intro_2 .consult_sect .right_in .inp_list {margin-top: 50px}
+    .intro_2 .consult_sect .right_in .inp_box {max-width: 250px}
+    .intro_2 .consult_sect .right_in .inp_box .nice-select {height: 52px; line-height: 52px;font-size: 15px}
+    .intro_2 .consult_sect .right_in .inp_box input::placeholder { font-size: 15px}
+    .intro_2 .consult_sect .right_in .inp_box input {font-size:15px; height: 52px;  }
+    .intro_2 .consult_sect .right_in .text label span {font-size: 13px;padding: 4px 10px;margin-left: 20px;}
+    .intro_2 .consult_sect .right_in .text {font-size: 14px; flex-wrap: wrap}
+    .intro_2 .consult_sect .right_in .btn_box .btn {font-size: 17px;padding: 17px 0;}
+    .intro_2 .consult_sect .right_in .btn_box {margin-top: 30px}
+
+    .sub_top .menu_location ul {font-size: 14px}
+    .sub_top .share_btn {font-size:25px }
+
+    .sub_visual {margin-top: -90px}
+    .equipment .sect_top {padding-bottom: 120px}
+    .equipment .sect_top strong {font-size: 38px}
+    .equipment .equ_sect {padding: 120px 0}
+    .equipment .equ_sect .img_wrap {margin-left: -30px;  margin-bottom: -70px}
+    .equipment .equ_sect .img_wrap .img_box {width: calc(33.33% - 30px);margin-left: 30px;margin-bottom: 70px; }
+    .equipment .equ_sect .img_wrap .img_box .text {margin-top: 20px}
+    .equipment .equ_sect .img_wrap .img_box .text strong {font-size: 20px; }
+
+    .sub_cont_tit > strong {font-size: 22px}
+    .sub_cont_tit > p {margin-top: 10px}
+    .sub_cont_tit > p + p {margin-top: 15px}
+
+    .sect_top .title_box.mark .title {font-size: 34px}
+    .sect_top .title_box.mark .title span {}
+    .sect_top .title_box.mark .text {margin-top: 20px}
+    .cataract .sect_top .img_wrap {margin-top: 30px}
+    .what_cataract {padding: 120px 0 160px}
+
+    .examination .sect_title strong,
+    .retinaAndglaucoma .sect_title strong,
+    .zigzag .sect_title strong,
+    .xerophthalmia .sect_title strong,
+    .cataract .sect_title > strong {font-size: 32px}
+
+    .examination .sect_title p,
+    .retinaAndglaucoma .sect_title p,
+    .zigzag .sect_title p,
+    .xerophthalmia .sect_title p,
+    .cataract .sect_title > p {margin-top: 12px}
+
+    .what_cataract .what .img_wrap {margin-top: 25px}
+    .what_cataract .in2 > div + div {margin-top: 120px}
+    .what_cataract .cause .cause_box li .left {width: 190px; padding: 12px}
+    .what_cataract .cause .cause_box {margin-top: 25px}
+    .what_cataract .cause .img_wrap .box {padding: 45px 15px}
+    .what_cataract .cause .img_wrap .box + .box {margin-left: 30px}
+
+    .what_cataract .symptom .img_wrap {margin-top: 25px}
+    .what_cataract .old .img_wrap .box + .box {margin-left: 30px}
+
+    .cataract .operation {padding: 160px 0}
+    .cataract .sect_title > p {margin-top: 12px}
+    .cataract .sect_title > p br {display: none}
+    .cataract .operation .insertion {margin-top: 70px}
+    .cataract .operation .insertion > div {margin-top: 50px}
+    .cataract .operation .insertion .cont_box .title strong {font-size: 18px}
+    .cataract .operation .insertion .circle_box.type1 {padding: 30px 35px}
+    .cataract .operation .insertion .circle_box.type1 > p {margin: 0 80px}
+    .cataract .operation .insertion .circle_box.type1 .img {width: 90px; height: 90px}
+    .cataract .operation .insertion .circle_box.type1 .img img {max-width: 55px; height: 48px}
+    .cataract .operation .insertion .circle_box.type1 .text {margin-left: 20px}
+    .cataract .operation .insertion .circle_box.type1 .text strong {font-size: 18px}
+
+    .cataract .operation .insertion .img_wrap .img_box .img {margin-top: 15px; height: 90px; padding: 0 10px}
+    .cataract .operation .insertion .img_wrap .img_box {padding-bottom: 20px}
+    .cataract .operation .insertion .img_wrap .img_box p {font-size: 13px;}
+
+    .cataract .operation .check {margin-top: 120px}
+    .cataract .operation .check .circle_box {margin-top: 25px; padding: 45px 20px}
+    .cataract .operation .check .circle_box .text_box p {padding: 0 10px}
+
+    .cataract .operation .equ .img_wrap .img_box + .img_box {margin-left: 30px}
+    .cataract .operation .equ .img_wrap .img_box .text p {font-size: 14px}
+
+    .zigzag {margin-top: 160px}
+    .zigzag ul {margin-top: 60px}
+    .zigzag ul li + li {margin-top: 50px}
+    .zigzag ul li .text_box {margin-left: 40px}
+    .zigzag ul li .text_box strong {font-size: 19px}
+    .zigzag ul li .text_box p {font-size: 14px; margin-top: 10px}
+    .zigzag ul li .text_box p br {display: none}
+    .zigzag ul li.reverse .text_box {margin-right: 40px; margin-left: 0}
+
+    .dreamlens .sect_top .img_box {margin-top: 40px}
+    .dreamlens .sect_top .img_box .text {margin-top: 40px}
+    .dreamlens .sect_top .parents {margin-top: 80px; padding: 55px 20px 60px}
+    .dreamlens .sect_top .parents .img {margin-top: 30px}
+
+    .dream_lens .in2 > div {margin-top: 120px}
+    .dream_lens .sub_cont_tit {margin-bottom: 25px}
+    .dream_lens .effect .circle_box .cont {height: 180px}
+    .dream_lens .effect .circle_box .cont .text {padding: 0 20px; word-break: keep-all}
+    .dream_lens .effect .circle_box .cont .text br {display: none}
+
+    .dream_lens .effect .img_box .img {margin-top: 30px}
+    .dream_lens .process .step_box .step {width: calc(25% - 20px); height: 260px; padding: 40px 20px 0; word-break: keep-all}
+    .dream_lens .process .step_box .step br {display: none}
+    .dream_lens .process .step_box .step strong {margin-top: 20px}
+    .dream_lens .process .step_box .step p {font-size: 14px}
+
+
+    .check_box .cont {padding: 25px}
+    .check_box .cont i {font-size: 17px; margin-top: 2px}
+
+    .dream_lens .review .img + .hover_box {    width: 90px;height: 90px;line-height: 88px;opacity: 1;font-size: 28px;}
+    .zigzag .sect_title strong {font-size: 42px; }
+    .dreamlens .zigzag {padding: 120px 0}
+    .faq-list {margin-top: 50px}
+    .faq_sect .sect_title strong {font-size: 32px}
+    .faq_sect .sect_title p {margin-top: 12px }
+    .faq-list .left .cont strong {font-size: 17px}
+
+
+    .xerophthalmia .sect_top {padding-bottom: 120px;}
+    .xerophthalmia .sect_top .in2 > div + div {margin-top: 120px}
+    .xerophthalmia .sect_top .img_wrap .img_box + .img_box {margin-left: 30px}
+    .xerophthalmia .sect_top .self_test .top {padding: 22px 0; margin-top: 30px; font-size: 18px; }
+    .xerophthalmia .sect_top .self_test .result {margin-top: 60px}
+
+    .xerophthalmia .what_sect {padding: 120px 0}
+    .xerophthalmia .what_sect .meaning .img_box {margin-top: 30px; padding: 50px 80px}
+    .xerophthalmia .what_sect .meaning .img_box .text_box {padding: 35px 20px; margin-top: 40px}
+
+    .xerophthalmia .what_sect .in2 > div + div {margin-top: 120px}
+    .xerophthalmia .what_sect .symptom .circle_box .cont ul {margin-top: 15px}
+    .xerophthalmia .what_sect .symptom .circle_box .cont ul li + li {margin-top: 7px}
+    .xerophthalmia .what_sect .cause .sub_cont_tit .img_box {padding: 40px 20px; margin-top: 35px}
+    .xerophthalmia .what_sect .disorder {margin-top: 50px; padding: 50px 80px 60px}
+    .xerophthalmia .what_sect .disorder .img_cont {margin-top:30px }
+    .xerophthalmia .what_sect .disorder .img_cont .img_box + .img_box {margin-left: 40px}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box .text p {font-size: 14px; }
+    .xerophthalmia .what_sect .disorder .img_cont .img_box .text p br {display: none}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box .text {margin-top: 15px}
+
+    .xerophthalmia .what_sect .test .cont .right {margin-left: 50px}
+    .xerophthalmia .what_sect .test .cont .right .img_box .img{width:50% ; max-width: 340px}
+    .xerophthalmia .what_sect .test .cont .right .img_box {margin-top: 30px}
+    .xerophthalmia .what_sect .test .cont .right .text_box .title {font-size: 18px}
+    .xerophthalmia .what_sect .test .cont .right .text_box .text {margin-top: 7px}
+
+    .xerophthalmia .cure_sect {padding: 120px 0}
+    .xerophthalmia .cure_sect .in2 > div + div {margin-top: 120px}
+    .xerophthalmia .cure_sect .cure .cont_box{margin-left: -35px; margin-bottom: -35px; margin-top: 30px}
+    .xerophthalmia .cure_sect .cure .cont {margin-left: 35px; margin-bottom: 35px; width: calc(33.333% - 35px)}
+    .xerophthalmia .cure_sect .cure .cont .text p {font-size: 14px; margin-top: 0}
+
+    .xerophthalmia .cure_sect .porgram {padding: 40px 60px}
+    .xerophthalmia .circle_box.common .circle .text {padding:0 30px }
+    .xerophthalmia .circle_box.common .circle .text br {display: none}
+    .xerophthalmia .cure_sect .ipl .img_box {margin-top: 120px}
+    .xerophthalmia .cure_sect .ipl .img_box .right {margin-left: 50px; padding-top: 0}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont {margin-top: 20px}
+    .xerophthalmia .cure_sect .ipl .img_box .right .text .title {font-size: 18px}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont span {font-size: 14px}
+
+    .xerophthalmia .eyelids_sect {padding: 120px 0}
+    .xerophthalmia .eyelids_sect .cont .img_cont {margin-top: 30px}
+    .xerophthalmia .eyelids_sect .cont .img_cont .img_box .top_text {font-size: 12px}
+
+    .xerophthalmia .eyelids_sect .cont .img_cont {margin-left: -20px; margin-bottom: -20px}
+    .xerophthalmia .eyelids_sect .cont .img_cont .img_box {margin-left: 20px; margin-bottom: 20px ;}
+    .xerophthalmia .eyelids_sect .cont + .cont {margin-top: 60px}
+
+    .xerophthalmia .way_sect {padding-top: 120px}
+    .xerophthalmia .way_sect .tears .img_box {padding: 30px 40px}
+    .xerophthalmia .way_sect .tears .img_box .img {padding-right: 0; display: flex; align-items: center}
+    .xerophthalmia .way_sect .tears .img_box .num_box {width: 250px; margin-left: 40px}
+    .xerophthalmia .way_sect .tears .img_box .num_box li {padding: 18px 20px}
+
+    .xerophthalmia .way_sect .in2 > div + div {margin-top: 120px}
+    .xerophthalmia .way_sect .eye_drops .img_box {margin-top: 30px}
+    .xerophthalmia .way_sect .eye_drops .circle_box {padding: 40px 40px}
+
+    .xerophthalmia .way_sect .eye_drops .process {margin-top: 70px}
+    .xerophthalmia .what_sect .meaning .img_box .text_box p {font-size: 14px}
+
+    .xerophthalmia .home_sect {margin-top: 120px}
+
+    .retinaAndglaucoma .tab_wrap {margin-top: 120px}
+    .retinaAndglaucoma .tab_box .tab_btn {width: 300px; height: 70px; font-size: 21px}
+    .retinaAndglaucoma section + section {margin-top: 120px}
+    .retina .illness .in2 .aging {margin-top: 40px}
+    .retina .illness .blood_class,
+    .retina .illness .in2 .aging_class {margin-top: 60px}
+    .retina .illness .aging_class .class_box {margin-top: 30px}
+    .retina .illness .aging_class .cont .result i {font-size: 22px}
+    .retina .illness .aging_class .cont + .cont {margin-top: 120px}
+    .retina .illness .aging_class .cont .result .circle_box .circle {width: 35%; font-size: 16px ; padding: 23px; display: flex; align-items: center; justify-content: center; word-break: keep-all}
+    .retina .illness .in2 > div + div {margin-top: 120px;}
+    .retina .illness .self_test {padding: 60px 120px}
+    .retina .illness .self_test .test_box {flex-wrap: wrap; margin-top: 40px}
+    .retina .illness .self_test .test_box .left {width: 100%; }
+    .retina .illness .self_test .test_box .left .img {text-align: center}
+    .retina .illness .self_test .test_box .left img {max-width: 420px}
+    .retina .illness .self_test .test_box .right {width: 100%; margin-top: 30px}
+    .retina .illness .self_test .test_box .right ul li {padding: 20px 30px}
+    .retina .illness .self_test .test_box .right {margin-left: 0}
+    .retina .illness .self_test .sub_cont_tit.bot {margin-top: 40px}
+    .retina .illness .self_test .sub_cont_tit.bot p {margin-bottom:5px }
+
+    .retina .illness .blood_class .img_box .right.type1 i {margin-right: 40px}
+    .retina .illness .blood_class .img_box .right {margin-left: 40px}
+    .retina .illness .blood_class .img_box .right.type1 ul li {padding: 25px 15px}
+    .retina .illness .diabetes .img_box .right {margin-left: 40px}
+
+    .glaucoma .glaucoma_sect .class .cont + .cont {margin-top: 70px}
+    .glaucoma .glaucoma_sect .cure .img_cont .right {padding-top: 0; margin-left: 35px}
+    .glaucoma .glaucoma_sect .class .cont_2 .img_cont .right {padding-top: 0; margin-left: 35px}
+
+    .glaucoma .glaucoma_sect .in2 > div + div {margin-top: 120px}
+
+    .examination .start_sect {margin-top: 120px; padding: 120px 0}
+    .examination .start_sect .img_wrap .img_box + .img_box {margin-left: 25px}
+    .examination .start_sect .img_wrap .img_box p {font-size: 14px}
+    .examination section +section {margin-top: 120px}
+    .examination .illness .circle_box {margin-top: 40px}
+    .examination .illness .circle_box .circle strong {text-align: center; font-size: 18px}
+    .examination .illness .circle_box .circle {padding: 0 30px; }
+
+    .examination .program .test .cont .text {height: 380px; }
+    .examination .program .test .cont .top_tit span {font-size: 13px; padding: 3px 12px}
+
+    .examination .prevention {padding-top: 500px}
+    .examination .prevention .text_box {width: 100%}
+    .examination .prevention .text_box .logo img {width: 180px}
+    .examination .prevention .text_box strong {font-size: 32px; margin-top: 30px}
+    .examination .prevention .text_box p {margin-top: 26px}
+
+    .notice_top .text{font-size: 13px}
+
+    .board_list {padding-top: 30px}
+    .board_list li > a {padding: 0px}
+    .board_list li .img_box {margin: 0;}
+    .board_list_wrap {padding: 20px 20px 0;}
+    .board_list li {    flex-basis: calc(33.33% - 16.666px); height: 280px; aspect-ratio: auto}
+    .board_list li + li {margin-left: 25px;}
+    .board_list li:nth-of-type(n+4) {margin-top: 35px;}
+    .board_list li .img_box + .tit {margin-top: 15px;}
+    .board_list li .tit {font-size: 17px;}
+    .board_list li .tit:before {margin-bottom: 10px; width: 6px; height: 6px;}
+    .board_list li .content {margin-top: 15px; ;}
+    .board_list li .date {margin-top: 17px; font-size: 14px;}
+    .board_list li .img_box ~ .date {margin-top: 15px;}
+    .sub_top{margin-top: 120px}
+
+
+    .notice {margin-top: 120px}
+    .notice_list > li .category {width: 70px; min-width: 70px;font-size: 12px ;}
+    .notice_list > li a > .left {align-items: center; width: 75%; flex-basis: 75%;}
+    .link_tab_wrap.type2 {flex-direction: row;}
+    .link_tab_wrap.type2 .search_box {margin-top: 0;}
+    .board_write_btn {font-size: 18px;}
+    .notice_list > li a {padding: 25px 20px;}
+    .notice_list > li a > .right {margin-left: 20px; font-size: 14px; width: 145px}
+    .notice_list > li a > .right .name {margin-right: 20px}
+
+    .search_form_wrap {top: 89px}
+    .form_list textarea,
+    .form_list input::placeholder,
+    .form_list input[type="text"], .form_list input[type="password"], .form_list input[type="tel"], .form_list input[type="email"]{
+        font-size: 15px;
+    }
+    .form_list .tip{font-size: 13px}
+    .form_list > li .term_box p {font-size: 13px}
+    .form_list .fileList .list {font-size: 14px}
+    .write {margin-top: 120px}
+
+    .change_box * + * {margin-left: 20px}
+    .form_list.type3 > li .left {min-width: 120px}
+    .change_box.show {flex-direction: column; align-items: flex-start; justify-content: flex-start}
+    .change_box.show input{ width: 100%; max-width: 450px}
+    .change_box.show input + input {margin-left: 0; margin-top: 20px}
+    .change_box.show .pw_change {margin-top: 20px; margin-left: 0}
+
+    .form_list .inp_box input[type="checkbox"] + label + .right_btn{font-size: 13px;margin-left: 20px}
+    .form_list .inp_box input[type="checkbox"] {font-size: 16px}
+
+
+    .promise_sect .medical .btn_box{margin-top: 30px; font-size: 38px;}
+
+
+    .low_tit strong {font-size: 18px !important}
+    .low_cont {padding-left: 30px !important}
+
+    .zigzag ul li .text_box .logo_img_box {    margin: 15px -40px 0;}
+
+}
+
+@media (max-width: 768px){
+
+    body {font-size: 12px}
+
+    .header {height: 60px; }
+    .header .logo {padding-left: 15px}
+    .header .logo img {width: 120px}
+    .header > .icon-box button {padding: 12px; font-size: 17px}
+
+    .main .visual {margin-top: -60px; padding-top: min(86%,500px)}
+    .main .visual .text_box {margin-top: 15px;padding: 0 15px}
+    .main .visual .text_box span {font-size: 11px; margin-bottom: 5px}
+    .main .visual .text_box p {font-size: 20px}
+
+    .main .visual .swiper-slide .video_box {transform: translate(0); position: relative; left:auto; top:auto;}
+    .main .visual .swiper-slide .video_box video {height: auto; position: absolute; left:50%; top:auto; width:155%; transform: translateX(-50%);}
+
+    .main .visual.t2 .swiper-slide .video_box2 {padding-top: min(100%,600px); position: relative}
+    .scroll_animation {display: none}
+    .main .visual .icon_box {left: auto; transform: none; top: auto; bottom: 0px; right: 15px}
+    .main .visual .icon_box a img {width: 17px; max-height: 23px}
+    .main .visual .icon_box a {padding: 10px 0; opacity: 1}
+    .main .visual .swiper-button-prev, .main .visual .swiper-button-next {font-size: 13px}
+    .main .visual .swiper-button-prev {margin-right: 15px}
+    .main .visual .swiper-button-next {margin-left: 15px}
+    .main .visual .slide_move_box .swiper-pagination-current {font-size: 15px }
+    .main .visual .slide_move_box .swiper-pagination-total {font-size:13px }
+
+    .main .sect_title h3 {font-size: 52px; line-height: 1}
+    .view_btn {font-size: 13px; padding: 10px 30px}
+
+    .promise_sect {padding-top: 120px;position: relative;}
+    .promise_sect:before {content: ""; position: absolute; width: 100%; height: 340px; bottom: -50px; left: 0; z-index: 1}
+
+    .promise_sect > .bg_text_box .bg_text {display: none}
+    .promise_sect .in {padding: 100px 15px 50px}
+    .promise_sect .promise_text {margin-top: 20px;text-align: left}
+    .promise_sect .promise_text .title {font-size: 20px}
+    .promise_sect .promise_text .text {margin-top: 25px}
+    .promise_sect .promise_text .text p + p {margin-top: 12px}
+
+    .promise_sect .medical {padding-top: 80px; }
+
+    .promise_sect .medical .title .bg_text {display: none}
+    .promise_sect .medical .title strong {font-size: 24px}
+    .promise_sect .medical .title p {font-size: 13px; margin-top: 6px}
+    .promise_sect .medical .swiper-slide .text-box {color: #333; margin-top: 15px}
+    .promise_sect .medical .swiper-container {margin-top: 25px}
+    .promise_sect .medical .swiper-slide .text-box span {font-size: 11px}
+    .promise_sect .medical .swiper-slide .text-box strong {font-size: 18px}
+    .promise_sect .medical .swiper-slide .text-box p {padding-right: 0; margin-top: 10px; opacity: 1; font-weight: 400; color: #fff; line-height: 1.5; height: 90px}
+    .promise_sect .medical .btn_box{margin-top: 15px; font-size: 32px; color: #000}
+    .promise_sect .view_btn.type2 {color: #000; border-color: #000}
+
+
+    .main_bg_sect{margin-top: 0px; padding-top: 0}
+    .main_bg_sect .in {transform: none; left: 0; position: static; padding: 90px 15px 100px}
+    .main_bg_sect .img_cont .text_box strong {font-size: 20px}
+    .main_bg_sect .img_cont {margin-top: 15px}
+    .main_bg_sect .img_cont .img_box {margin-top: 30px}
+    .main_bg_sect .img_cont .hover_box {width: 50px; height: 50px; line-height: 48px; font-size: 18px}
+
+    .story_sect {padding: 90px 0 100px}
+    .story_sect .in {flex-wrap: wrap}
+    .story_sect .left-wrap {width: 100%; padding-left: 0;margin-top: 30px;}
+
+    .story_sect .left-wrap .text {bottom: -30px; position: static; margin-top: 7px}
+    .story_sect .left-wrap .text > p {font-size: 12px; text-align: left;}
+    .story_sect .left-wrap .text > p span {font-size: 13px}
+    .story_sect .right-wrap {width: 100%; margin-left: 0; }
+    .story_sect .right-wrap .text_box {margin-top: 20px; padding-right: 0}
+    .story_sect .right-wrap .text_box > strong {font-size: 20px}
+    .story_sect .right-wrap .text_box .text {margin-top: 20px}
+    .story_sect .right-wrap .text_box .text p + p {margin-top: 10px}
+    .story_sect .right-wrap .btn_box {margin-top: 40px}
+
+    .main .care_sect {padding: 90px 0 100px}
+    .main .care_sect .sect_title p {margin-top: 10px}
+    .main .care_sect .cont_wrap {flex-wrap: wrap; margin-top: 60px}
+    .main .care_sect .cont_wrap .left_wrap {width: 100%; padding-right: 0; padding-top: 0}
+    .main .care_sect .cont_wrap .left_wrap .top_txt > strong {font-size: 26px}
+    .main .care_sect .cont_wrap .left_wrap .top_txt > p {font-size: 12px; margin-top: 7px}
+    .main .care_sect .cont_wrap .left_wrap .txt {margin-top: 30px}
+    .main .care_sect .cont_wrap .left_wrap .txt span {font-size: 20px}
+    .main .care_sect .cont_wrap .left_wrap .txt P {margin-top: 7px}
+    .main .care_sect .cont_wrap .left_wrap .btn_box {display: none}
+
+    .main .care_sect .cont_wrap .right_wrap {width: 100%; border-left: none; padding-top: 0; margin-top: 60px}
+    .main .care_sect .cont_wrap .right_wrap .btn_box {text-align: center; margin-top: 40px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box {padding: 0}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon {width: calc(50% - 7.5px)}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(2n) {margin-left: 15px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .img {height: 45px; display: flex; align-items: center; justify-content: center}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .img img {width: 45px; max-height: 45px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text {margin-top: 15px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text span {font-size: 17px}
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon .text p {margin-top: 10px; font-size: 12px; }
+    .main .care_sect .cont_wrap .right_wrap .icon_box .icon:nth-child(n+3) {margin-top: 60px}
+
+    .review_sect {padding: 90px 0 100px}
+    .review_sect .cont_wrap {flex-wrap: wrap; margin-top: 40px}
+    .review_sect .cont_wrap .left_wrap {position: static; width: 100%; left: auto}
+    .review_sect .cont_wrap .left_wrap .slick-list {margin: 0 -7.5px}
+    .review_sect .cont_wrap .left_wrap .slick-slide {margin:0 7.5px }
+    .review_sect .cont_wrap .right_wrap {padding-left: 0; padding-top: 0; width: 100%}
+    .review_sect .cont_wrap .right_wrap .text_box {margin-top: 20px}
+    .review_sect .cont_wrap .right_wrap .text_box .title {font-size: 17px}
+    .review_sect .cont_wrap .right_wrap .text_box .text {margin-top: 10px}
+    .review_sect .cont_wrap .right_wrap .btn_box {padding-top: 0px; margin-top: 40px; text-align: center}
+
+    .notice_sect {padding: 0 0 100px}
+    .notice_sect .in {flex-wrap: wrap; padding: 0}
+    .notice_sect .left_wrap {width: 100%; min-height: 0; padding:  0 15px}
+    .notice_sect .left_wrap .btn_box {margin-top: 40px}
+    .notice_sect .right_wrap {width: 100%; position: static;margin-top: 30px; padding-left: 15px}
+    .notice_sect .right_wrap .swiper-slide {width: 50%; margin-right: 20px; max-width: none}
+    .notice_sect .right_wrap .swiper-slide .text_box {margin-top: 20px}
+    .notice_sect .right_wrap .swiper-slide .text_box .text {font-size: 13px; margin-top: 10px}
+    .notice_sect .right_wrap .swiper-slide .text_box .title {font-size: 17px}
+    .notice_sect .right_wrap .btn_box {margin-top: 40px; text-align: center}
+
+    .map_sect .top_wrap {flex-wrap: wrap;}
+    .map_sect .top_wrap .left {width: 100%; padding: 60px 0 ; }
+    .map_sect .top_wrap .right {width: 100%; padding: 60px 0}
+    .map_sect .top_wrap .sect_title strong {font-size: 28px}
+    .map_sect .top_wrap .sect_title p {margin-top: 10px}
+    .map_sect .top_wrap .call {margin-top: 25px}
+    .map_sect .top_wrap .call strong {font-size: 26px; }
+    .map_sect .top_wrap .call .btn {width: 100px; height: 30px; font-size: 11px; margin-left: 7px; margin-top: 0}
+    .map_sect .top_wrap .info {margin-top: 30px}
+    .map_sect .top_wrap .info li { display: flex}
+    .map_sect .top_wrap .info li + li {margin-top: 20px}
+    .map_sect .top_wrap .info .map .bot p:last-child {font-size: 13px}
+    .map_sect .top_wrap .info .map .top {align-items: flex-start;}
+    .map_sect .top_wrap .info li .top {margin-right: 20px; width: 60px;  flex-shrink: 0; align-items: flex-start; margin-top: 0}
+    .map_sect .top_wrap .info li .top strong {font-size: 15px}
+    .map_sect .top_wrap .info li .bot {margin-top: 0 !important}
+    .map_sect .top_wrap .info .time .bot {font-size: 13px; margin-top: 5px}
+    .map_sect .top_wrap .info .time .bot p .night {font-size: 10px; }
+    .map_sect .top_wrap .info .time .bot p > span{width: 45px}
+    .map_sect .top_wrap .sns_btn .btn {width: 55px; height: 55px; }
+    .map_sect .top_wrap .sns_btn .btn img {width: 20px; max-height: 20px}
+    .map_sect .top_wrap .sns_btn {margin-top: 40px; display: none}
+    .map_sect .top_wrap .left_in {padding: 0 15px}
+    .map_sect .top_wrap .right_in {padding: 0 15px}
+    .map_sect .top_wrap .right_in .sect_title p br {display: none}
+    .map_sect .top_wrap .right_in .inp_list {margin-top: 30px}
+    .map_sect .top_wrap .right_in .inp_list > li + li {margin-top: 10px}
+    .map_sect .right_in .inp_box + .inp_box {margin-left: 10px}
+    .map_sect .right_in .inp_box .nice-select {height: 45px; line-height: 45px; font-size: 13px; padding:  0 25px 0 15px}
+    .map_sect .right_in .inp_box input {height: 45px; font-size: 13px}
+    .map_sect .right_in .inp_box input::placeholder {font-size: 13px}
+    .map_sect .right_in .text {font-size: 13px; margin-top: 15px}
+    .map_sect .right_in .text label span {font-size: 12px; padding: 3px 10px; margin-left: 10px}
+    .map_sect .right_in .btn_box .btn {font-size: 15px; padding: 14px 0; max-width: 400px}
+    .map_sect .right_in .inp_box {max-width:200px }
+    .map_sect .right_in .inp_box + .inp_box {max-width: 300px}
+    .map_sect .bot_wrap .in .img_cont {height: auto; flex-wrap: wrap; margin-left: -15px; margin-bottom: -15px}
+    .map_sect .bot_wrap .in .img_cont .img_box {width: calc(50% - 15px);margin-left: 15px; margin-bottom: 15px}
+    .map_sect .bot_wrap .in .img_cont .img_box + .img_box {margin-left: 15px; margin-bottom: 15px}
+    .map_sect .bot_wrap .in .img_cont .img_box .text {font-size: 11px; padding: 7px 10px}
+    .map_sect .bot_wrap {padding-top: 600px}
+    .map_sect .bot_wrap .in .img_cont {margin-top: 15px}
+    .map_sect .bot_wrap .in .img_cont .img_box {max-width: 200px}
+
+    .footer {padding: 50px 0}
+    .footer .in {flex-wrap: wrap; }
+    .footer .left_wrap {width: 100%}
+    .footer .left_wrap > p {margin-top: 5px; font-size: 10px}
+    .footer .left_wrap ul li {font-size: 10px}
+    .footer .left_wrap ul li span.phone-only {display: inline !important;}
+    .footer .left_wrap ul li.info strong {margin-left: 0}
+    .footer .right_wrap {width: 100%; margin-top: 10px}
+    .footer .right_wrap .sns_box {margin-top: 15px; justify-content: flex-start}
+    .footer .right_wrap .sns_box .btn {width: 20px}
+    .footer .right_wrap ul {font-size: 12px}
+    .footer .right_wrap ul li + li {margin-left: 15px}
+
+    .sub_visual .line {p1dding: 0 15px}
+    .sub_visual .menu_location ul {font-size: 12px}
+    .sub_visual .share_btn {font-size: 18px}
+    .sub .share_area {width: 50px; padding: 20px 15px}
+    .sub .share_area.on {height:210px }
+    .sub .share_area a.facebook {width:9px;}
+    .sub .share_area a.kakao {width: 16px;}
+    .sub .share_area a.blog {width: 18px;}
+    .sub .share_area a.youtube {width: 20px;}
+    .sub .share_area .a_box + .a_box {margin-top: 20px}
+    .sub .share_area a {font-size: 17px}
+    .sub_top .text_box p {font-size: 38px}
+    .sub_top .menu_location ul {font-size: 12px}
+    .sub_top .share_btn {font-size:18px }
+    .sub_visual .text_box {margin-top: 40px; padding: 0 20px}
+    .sub_visual .text_box p {font-size: 32px}
+    .sub_visual {margin-bottom: 60px;margin-top: -80px; height: 0; padding-top: min(100%,600px)}
+    .sub_visual .in2 {position: absolute; left: 0; top: 0}
+    .sub_visual .line {top: 100px;}
+
+    .header .fix_btn_box {right: 15px; bottom:15px}
+    .footer .top_btn_box {width: 52px; height: 52px; }
+    .footer .top_btn_box .top_btn {font-size: 16px}
+    .footer .top_btn i {font-size: 18px}
+
+    .intro_1 .hello .cont_box {flex-wrap: wrap}
+    .intro_1 .hello .cont_box .left_wrap {max-width: none; width: 100%; padding: 0 15px; order: 1; margin-top: 30px}
+    .intro_1 .hello .cont_box .left_wrap ul {margin-top: 10px}
+    .intro_1 .hello .cont_box .left_wrap ul li + li {margin-top: 12px}
+    .intro_1 .hello .sub_top_title {font-size: 24px; word-break: keep-all}
+    .intro_1 .hello .sub_top_title br {display: none}
+    .intro_1 .hello .cont_box {margin-top: 40px}
+    .intro_1 .hello .cont_box .left_wrap strong {font-size: 20px}
+    .intro_1 .hello .cont_box .right_wrap {width: 100%;padding: 0}
+
+    .intro_1 .hello .director {margin-top: 80px}
+    .intro_1 .hello .director .in2 {flex-wrap: wrap}
+    .intro_1 .hello .director .img_box {width: 100%; margin-right: 0}
+    .intro_1 .hello .director .right_wrap {width: 100%; padding-top: 10px}
+
+    .intro_1 .hello .director .right_wrap .title span {font-size: 14px}
+    .intro_1 .hello .director .right_wrap .title p {font-size: 22px}
+    .intro_1 .hello .director .right_wrap ul {margin-top: 20px; padding-left: 12px}
+    .intro_1 .hello .director .right_wrap ul li + li {margin-top: 5px}
+    .intro_1 .hello .director .right_wrap .title + ul {margin-top: 25px}
+
+    .sub_pb {padding-bottom: 120px}
+
+    .sub_top .bot_line {margin-top: 60px}
+    .intro_2 section {margin-top: 80px}
+
+    .intro_2 .time_sect .time_wrap {margin-left: -15px; margin-bottom: -15px}
+    .intro_2 .time_sect .time_wrap .cont {width: calc(50% - 15px);margin-left: 15px;margin-bottom: 15px;padding: 30px 15px;}
+    .intro_2 .time_sect .time_wrap .cont .day span {font-size: 11px; padding: 2px 10px}
+    .intro_2 .time_sect .time_wrap .cont .time {margin-top: 10px; font-size: 18px}
+    .intro_2 .time_sect .time_wrap .cont .day {margin-top: 7px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start}
+    .intro_2 .time_sect .time_wrap .cont .day > span + span {margin-top: 5px}
+    .intro_2 .time_sect .time_wrap .cont .img img {width: 40px}
+
+
+    .intro_2 .banner_sect .banner_wrap {display: flex; flex-wrap: wrap}
+    .intro_2 .banner_sect .banner{width: 100%;}
+    .intro_2 .banner_sect .banner + .banner {margin-top: 20px; margin-left: 0}
+    .intro_2 .banner_sect .banner .img {right: 20px; width: auto; bottom: -40px}
+    .intro_2 .banner_sect .banner.right .text p,
+    .intro_2 .banner_sect .banner.left .text p {font-size: 24px}
+    .intro_2 .banner_sect .banner.left .text span {font-size: 14px}
+    .intro_2 .banner_sect .banner.right .text a {font-size: 14px}
+    .intro_2 .banner_sect .banner.left .text p {margin-top: 0}
+    .intro_2 .banner_sect .banner.right .text p {margin-bottom: 0}
+
+    .intro_2 .sect_title {font-size: 20px; margin-bottom: 20px}
+    .intro_2 .map {height: 300px}
+    .intro_2 .road_sect .traffic ul li {padding: 20px}
+    .intro_2 .road_sect .traffic ul li .text_box {margin-left: 20px}
+    .intro_2 .road_sect .traffic ul li .text_box .title {font-size: 16px}
+    .intro_2 .road_sect .traffic ul li .text_box .text {font-size: 13px}
+    .intro_2 .road_sect .traffic ul li .icon {width: 47px; height: 47px; font-size: 18px}
+    .intro_2 .road_sect .traffic ul li .text_box .text p .state {font-size: 11px; padding: 2px 10px}
+
+    .intro_2 .consult_sect .right {padding: 80px 0 80px}
+    .intro_2 .consult_sect .right_in .sect_title strong {font-size: 28px}
+    .intro_2 .consult_sect .right_in .sect_title p {font-size: 13px}
+    .intro_2 .consult_sect .right_in .sect_title p br {display: none}
+
+
+    .intro_2 .consult_sect .right_in .inp_list {margin-top: 30px}
+    .intro_2 .consult_sect  .right_in .inp_box .nice-select {height: 45px;line-height: 45px;font-size: 13px;padding: 0 25px 0 15px;}
+    .intro_2 .consult_sect  .right_in .inp_box input {height: 45px;font-size: 13px;padding: 0 15px}
+    .intro_2 .consult_sect  .right_in .inp_box input::placeholder {font-size: 13px}
+    .intro_2 .consult_sect .right_in .inp_list > li {flex-wrap: wrap}
+
+    .intro_2 .consult_sect .right_in .inp_list > li:first-child .inp_box:first-child{width: 100%; max-width: none}
+    .intro_2 .consult_sect .right_in .inp_box .nice-select {max-width: 200px;  width: calc(50% - 7.5px);margin-bottom: 10px}
+    .intro_2 .consult_sect .right_in .inp_box + .inp_box {margin-left: 0;  }
+    .intro_2 .consult_sect .right_in .inp_list > li:first-child .inp_box:nth-child(2) {width: 35% !important; max-width: 200px}
+    .intro_2 .consult_sect .right_in .inp_box:last-child {margin-left: 10px; width: calc(65% - 10px) !important; max-width: 300px}
+    .intro_2 .consult_sect .right_in .inp_list > li + li {margin-top: 10px}
+    .intro_2 .consult_sect .right_in .inp_box.hidden {display: none}
+    .intro_2 .consult_sect .right_in .inp_list > li:last-child .inp_box:nth-child(1) {max-width: 200px}
+    .intro_2 .consult_sect .right_in .inp_list > li:last-child .inp_box:nth-child(2) { width: calc(65% - 10px) !important; max-width: 300px; margin-left: 10px}
+
+    .intro_2 .consult_sect .right_in .text {font-size: 13px; margin-top: 15px}
+    .intro_2 .consult_sect .right_in .btn_box .btn {font-size: 15px;padding: 14px 0;max-width: 400px;}
+    .intro_2 .consult_sect .right_in .text label span {font-size: 12px; padding: 3px 10px}
+
+
+
+    .equipment .sect_top{padding-bottom: 80px}
+    .equipment .sect_top strong {font-size: 24px}
+    .equipment .equ_sect {padding: 80px 0}
+    .equipment .equ_sect .img_wrap {margin-left: -15px; margin-bottom: -40px}
+    .equipment .equ_sect .img_wrap .img_box {width: calc(50% - 15px);margin-left: 15px;margin-bottom: 40px; }
+    .equipment .equ_sect .img_wrap .img_box .text {margin-top: 10px}
+    .equipment .equ_sect .img_wrap .img_box .text strong {font-size: 15px; margin-top: 3px}
+
+    .equ_pop .text_box .tit {font-size: 20px}
+    .equ_pop .text_box .txt {margin-top: 10px}
+    .equ_pop ul {margin-top: 20px; padding: 0 20px 0}
+    .equ_pop ul li p {padding: 15px 20px; font-size: 12px}
+    .equ_pop ul.type2 li p {padding: 10px 15px}
+    .equ_pop ul li p br {display: none}
+    .equ_pop .cont_box {padding-bottom: 30px}
+    .equ_pop ul li p ~ .sub_img .img {margin-top: 10px}
+    .equ_pop ul li p + .cont {font-size: 12px}
+    .equ_pop ul li + li {margin-top: 10px}
+
+    .modal > div {padding: 0 15px}
+    .modal .tti .notice {font-size: 18px}
+    .equ_pop .text_box {padding: 0 15px}
+
+    .sect_top .title_box.mark .title {font-size: 22px; word-break: keep-all}
+    .sect_top .title_box.mark .text {margin-top: 15px}
+    .cataract .sect_top .img_wrap {margin-top: 20px}
+
+    .what_cataract {padding: 80px 0 100px}
+
+
+    .retinaAndglaucoma .sect_title strong,
+    .zigzag .sect_title strong,
+    .xerophthalmia .sect_title strong,
+    .cataract .sect_title > strong {font-size: 26px}
+
+    .examination .sect_title p,
+    .retinaAndglaucoma .sect_title p,
+    .zigzag .sect_title p,
+    .xerophthalmia .sect_title p,
+    .cataract .sect_title > p {margin-top: 10px !important}
+
+    .xerophthalmia .sect_title p br,
+    .cataract .sect_title > p br {display: none}
+
+    .what_cataract .what .img_wrap .box {padding: 30px 20px 30px}
+    .what_cataract .what .img_wrap .box .text {margin: 15px auto 0; width: 100%; max-width: 210px; padding:  10px 0}
+
+    .what_cataract .in2 > div + div {margin-top: 80px}
+    .what_cataract .cause .cause_box li {flex-wrap: wrap}
+    .what_cataract .cause .cause_box li .left {width: 100%; max-width: 180px; padding: 10px; margin-right: 0}
+    .what_cataract .cause .cause_box li .right {width: 100%; margin-top: 10px}
+    .what_cataract .cause .cause_box {margin-top: 15px}
+
+    .what_cataract .cause .img_wrap {}
+    .what_cataract .cause .img_wrap .box {width: 50%; padding: 30px 25px}
+    .what_cataract .cause .img_wrap .box + .box {margin-left: 15px ;margin-top: 0px}
+    .what_cataract .cause .img_wrap .box .text p {margin-bottom: 20px}
+    .what_cataract .cause .img_wrap .box .text .img {text-align: center;}
+    .what_cataract .cause .img_wrap .box .text .img img {width: 80%}
+
+
+    .sub_cont_tit > strong {font-size: 18px; word-break: keep-all}
+    .sub_cont_tit > p {margin-top: 8px}
+    .sub_cont_tit > p br {display: none}
+    .what_cataract .symptom .img_wrap {margin-top: 20px}
+    .what_cataract .symptom .img_wrap .box .text {margin-top: 8px}
+
+    .what_cataract {padding: 80px 0 80px}
+    .what_cataract .old > .cont {margin-top: 40px}
+
+    .what_cataract .old .img_wrap {margin-top: 10px}
+    .what_cataract .old .img_wrap .box + .box {margin-left: 15px}
+    .what_cataract .old .img_wrap .box .text {margin-top: 6px; font-size: 11px}
+
+    .cataract .operation {padding: 80px 0}
+    .cataract .operation .insertion {margin-top: 50px}
+    .cataract .operation .insertion .cont_box .title p {margin-top: 5px}
+    .cataract .operation .insertion .cont_box .title p br {display: none}
+    .cataract .operation .insertion > div {margin-top: 35px}
+    .cataract .operation .insertion > div:last-child {margin-top: 40px}
+
+    .cataract .operation .insertion .circle_box.type1 {padding: 0px; flex-direction: column; border-radius: 0px; margin-top: 20px; background-color: transparent}
+    .cataract .operation .insertion .circle_box.type1 > p {margin: 15px 0}
+    .cataract .operation .insertion .circle_box.type1 .box {justify-content: center; background-color: #e6e8ec; padding: 25px 0px; border-radius: 100px; width: 300px; max-width: 100%}
+    .cataract .operation .insertion .circle_box.type1 .text {margin-left: 15px}
+    .cataract .operation .insertion .circle_box.type1 .text strong {font-size: 15px}
+    .cataract .operation .insertion .circle_box.type1 .text p {margin-top: 3px}
+
+    .cataract .operation .insertion .circle_box.type1 .img {width: 60px; height:60px; }
+    .cataract .operation .insertion .circle_box.type1 .img img {max-width: 40px; height: 32px}
+
+    .cataract .operation .insertion .img_wrap {margin-top: 20px; flex-wrap: wrap}
+    .cataract .operation .insertion .img_wrap.type1 .left {width: 100%}
+    .cataract .operation .insertion .img_wrap.type1 .right {width: 100%; margin-top: 15px}
+    .cataract .operation .insertion .img_wrap .img_box .img {margin-top: 10px; height: 90px; position: relative}
+    .cataract .operation .insertion .img_wrap .img_box .img img {
+        position: absolute; object-fit: contain; width: 100%; height: 100%; object-position: center; }
+    .cataract .operation .insertion .img_wrap .img_box p {font-size: 11px; margin-top: 7px; padding: 0 5px}
+    .cataract .operation .insertion .img_wrap .img_box {padding-bottom: 15px; overflow: hidden}
+    .cataract .operation .insertion .img_wrap .bot_text {padding: 10px 0}
+
+    .cataract .operation .insertion .circle_box {margin-top: 20px}
+    .cataract .operation .insertion .circle_box.type2 .text_box {padding: 25px 0; font-size: 12px}
+
+    .cataract .operation .insertion .img_wrap.type2 .left {width: 100%;}
+    .cataract .operation .insertion .img_wrap.type2 .right {width: 100%; margin-top: 15px}
+    .cataract .operation .insertion .img_wrap.type2 .img_box .img {height: 75px}
+
+    .cataract .operation .check {margin-top: 80px}
+    .cataract .operation .check .circle_box {background-color: transparent; border-radius: 0; padding: 0 ; margin-top: 15px; flex-wrap: wrap}
+    .cataract .operation .check .circle_box .text_box {background-color: #e6e8ec; padding: 25px 20px; border-radius: 100px;width: 100% }
+    .cataract .operation .check .circle_box .text_box + .text_box {margin-top: 10px}
+    .cataract .operation .check .circle_box .text_box + .text_box:before {display: none}
+    .cataract .operation .check .circle_box .text_box .num {width: 25px; height: 25px; font-size: 11px}
+    .cataract .operation .check .circle_box .text_box p {margin-top: 10px ; }
+
+    .cataract .operation .equ .img_wrap {margin-top: 20px}
+    .cataract .operation .equ .img_wrap {flex-wrap: wrap}
+    .cataract .operation .equ .img_wrap .img_box {width: 100%}
+    .cataract .operation .equ .img_wrap .img_box + .img_box {margin-top: 25px;margin-left: 0}
+    .cataract .operation .equ .img_wrap .img_box .text {margin-top: 10px}
+    .cataract .operation .equ .img_wrap .img_box .text p {font-size: 12px; margin-top: 3px}
+
+    .zigzag {margin-top: 80px}
+    .zigzag ul {margin-top: 30px}
+    .zigzag ul li {flex-wrap: wrap}
+    .zigzag ul li + li {margin-top: 40px}
+    .zigzag ul li .img_box {width: 100%}
+    .zigzag ul li .text_box {margin-left: 0; width: 100%; margin-top: 10px}
+    .zigzag ul li.reverse .text_box {width: 100%; text-align: left; margin-right: 0}
+    .zigzag ul li .text_box strong {font-size: 16px}
+    .zigzag ul li .text_box p {font-size: 12px; margin-top: 5px}
+
+    .dreamlens .sect_top .img_box .text {margin-top: 20px}
+    .dreamlens .sect_top .parents {margin-top: 60px; padding: 40px 15px }
+    .dreamlens .sect_top .parents .img {margin-top: 20px}
+
+    .dream_lens .in2 > div {margin-top: 80px}
+    .dream_lens .sub_cont_tit {margin-bottom: 20px}
+    .dreamlens .sect_top .img_box .text br {display: none}
+    .dream_lens .effect .img_box .title {font-size: 18px}
+    .dream_lens .effect .img_box .text {margin-top: 25px}
+    .dream_lens .effect .img_box .text br {display: none}
+
+    .dream_lens .effect .circle_box { margin-left: 0; margin-bottom: 0}
+    .dream_lens .effect .circle_box .cont {width: 100%; height: 140px; margin-right: 0; margin-bottom: 0}
+    .dream_lens .effect .circle_box .cont + .cont {margin-top: 15px}
+    .dream_lens .effect .circle_box .cont .num {width: 25px; height: 25px;font-size: 11px;}
+    .dream_lens .effect .circle_box .cont .text {padding: 0 15px;margin-top: 10px}
+
+    .dream_lens .effect .img_box {padding: 30px 20px; margin-top: 30px}
+    .dream_lens .process .step_box {margin-left: -15px; margin-bottom: -15px}
+    .dream_lens .process .step_box .step {width: calc(50% - 20px); height: 180px; margin-left: 15px;margin-bottom: 15px; padding: 0px 10px 0;justify-content: center}
+    .dream_lens .process .step_box .step strong {margin-top: 10px}
+    .dream_lens .process .step_box .step p {margin-top: 0px; font-size: 12px}
+    .dream_lens .process .step_box .step .num {height: 20px; line-height: 20px; font-size: 10px; width: 60px}
+
+    .check_box {margin-bottom: -10px; margin-left: 0}
+    .check_box .cont {width: 100%; margin-left: 0; margin-bottom: 10px;padding: 20px}
+    .check_box .cont i {font-size: 15px; }
+
+    .dream_lens .review .img + .hover_box {width: 50px;height: 50px;line-height: 48px;font-size: 18px;}
+    .dreamlens .zigzag {padding: 80px 0}
+    .zigzag .sect_title {text-align: left}
+    .zigzag .sect_title strong {font-size: 26px; }
+
+    .dreamlens .faq_sect {margin-top: 80px}
+    .faq_sect .sect_title strong {font-size: 22px}
+    .faq_sect .sect_title p {margin-top: 10px}
+    .faq-list {margin-top: 30px}
+
+    .faq-list .question {padding: 15px }
+    .faq-list .q-icon { width: 30px; height: 30px; font-size: 14px; margin-right: 10px; line-height: 30px}
+    .faq-list .left .cont strong {font-size: 15px}
+    .faq-list ul li .icon {font-size: 18px;}
+    .faq-list .answer {padding: 15px 20px}
+    .faq-list .answer p {padding-top: 7px; min-height: 70px}
+
+    .sect_top .title_box.mark .title span {margin-bottom: -5px}
+    .xerophthalmia .sect_top .in2 > div + div {margin-top: 80px}
+    .xerophthalmia .sect_top .in2 .img_wrap {display: flex; flex-wrap: wrap; margin-top: 40px}
+    .xerophthalmia .sect_top .img_wrap .img_box {width: 100%}
+    .xerophthalmia .sect_top .img_wrap .img_box + .img_box {margin-left: 0; margin-top: 25px}
+    .xerophthalmia .sect_top .img_wrap .img_box .text {margin-top: 8px}
+
+    .xerophthalmia .sect_top .graph .img_box {margin-top: 20px; padding: 35px 15px}
+    .xerophthalmia .sect_top .graph .img_box > span {right: 15px; bottom: 15px; font-size: 11px}
+
+    .xerophthalmia .sect_top .self_test .top {margin-top: 20px; padding: 0px ; font-size: 15px; text-align: left; color: #000;    background-color: #fff;}
+    .xerophthalmia .sect_top .self_test .check_box {margin-top: 10px}
+    .xerophthalmia .sect_top .self_test .result {margin-top: 30px; flex-wrap: wrap}
+    .xerophthalmia .sect_top .self_test .result li {width: 100%; padding: 10px 0 20px}
+    .xerophthalmia .sect_top .self_test .result li + li {border-left: none ; border-top: 1px solid #cccccc;}
+    .xerophthalmia .sect_top .self_test .result li .num {font-size: 19px}
+    .xerophthalmia .sect_top .self_test .result li .text {margin-top: 5px}
+
+    .xerophthalmia .sect_top {padding-bottom: 80px}
+
+    .xerophthalmia .what_sect {padding: 80px 0}
+
+    .xerophthalmia .what_sect .meaning .img_box {padding: 30px 15px}
+    .xerophthalmia .what_sect .meaning .img_box .text_box {margin-top: 20px; padding: 20px 15px}
+    .xerophthalmia .what_sect .meaning .img_box .text_box p {font-size: 12px; margin-top: 7px}
+
+    .xerophthalmia .what_sect .in2 > div + div {margin-top: 80px}
+    .xerophthalmia .what_sect .symptom .circle_box .cont ul {padding: 0 25px}
+    .xerophthalmia .what_sect .cause .sub_cont_tit .img_box {margin-top: 25px; padding: 25px 15px}
+    .xerophthalmia .what_sect .cause .sub_cont_tit .img_box > p {font-size: 12px; margin-top: 15px}
+    .xerophthalmia .what_sect .disorder {margin-top: 30px; padding: 30px 15px 40px}
+    .xerophthalmia .what_sect .disorder .title_box .title {font-size: 18px}
+    .xerophthalmia .what_sect .disorder .title_box .text {margin-top: 15px; }
+    .xerophthalmia .what_sect .disorder .title_box .text br {display: none}
+    .xerophthalmia .what_sect .disorder .img_cont {margin-top: 20px}
+
+    .xerophthalmia .what_sect .disorder .img_cont .img_box + .img_box {margin-left: 15px}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box .text {margin-top: 10px}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box .text p {font-size: 12px;word-break: keep-all; margin-top: 0 }
+
+    .xerophthalmia .what_sect .test .cont {flex-wrap: wrap; margin-top: 20px}
+    .xerophthalmia .what_sect .test .cont + .cont {margin-top: 35px}
+    .xerophthalmia .what_sect .test .cont .left {width: 100%}
+    .xerophthalmia .what_sect .test .cont .right {width: 100%; margin-left: 0; margin-top: 15px}
+    .xerophthalmia .what_sect .test .cont .right .text_box .title {font-size: 16px}
+    .xerophthalmia .what_sect .test .cont .right .text_box .text {margin-top: 5px}
+    .xerophthalmia .what_sect .test .cont .right .img_box {margin-top: 15px}
+    .xerophthalmia .what_sect .test .cont .right .img_box .img {width: 40%}
+    .xerophthalmia .what_sect .test .cont .right .img_box ul{margin-left: 20px}
+    .xerophthalmia .what_sect .test .cont .right .img_box ul li i {font-size: 14px}
+    .xerophthalmia .what_sect .test .cont .right .img_box ul li span {font-size: 12px}
+
+    .xerophthalmia .cure_sect {padding: 80px 0}
+    .xerophthalmia .cure_sect .cure .cont_box {margin-left: -15px; margin-bottom: -20px; margin-top: 25px}
+    .xerophthalmia .cure_sect .cure .cont {width: calc(50% - 15px); margin-left: 15px; margin-bottom: 20px}
+    .xerophthalmia .cure_sect .cure .cont .text p{font-size: 12px}
+    .xerophthalmia .cure_sect .porgram {padding: 30px 30px}
+    .xerophthalmia .cure_sect .porgram .title strong {font-size: 18px}
+    .xerophthalmia .cure_sect .porgram .title p {margin-top: 20px}
+    .xerophthalmia .cure_sect .porgram .title p br {display: none}
+    .xerophthalmia .cure_sect .porgram .circle_box {margin-top: 30px; flex-wrap: wrap}
+    .xerophthalmia .circle_box.common .circle{width: 100%; border-radius: 100px; padding-top: 60px; }
+    .xerophthalmia .circle_box.common .circle + .circle {margin-left: 0 ; margin-top: 10px}
+    .xerophthalmia .circle_box.common .circle .text .num {display: none}
+
+    .xerophthalmia .cure_sect .in2 > div + div {margin-top: 80px}
+    .xerophthalmia .cure_sect .ipl .sub_cont_tit {flex-wrap: wrap}
+    .xerophthalmia .cure_sect .ipl .sub_cont_tit p {width: 100%; margin-left: 0; margin-top: 10px}
+    .xerophthalmia .cure_sect .ipl .check_box {margin-top: 20px}
+    .xerophthalmia .cure_sect .ipl .img_box {margin-top: 80px; flex-wrap: wrap}
+    .xerophthalmia .cure_sect .ipl .img_box .left {width: 100%}
+    .xerophthalmia .cure_sect .ipl .img_box .right {width: 100%; margin-top: 20px; margin-left: 0}
+    .xerophthalmia .cure_sect .ipl .img_box .right .text p > span {margin-top: 5px}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont i {font-size: 14px}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont span {font-size: 12px}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont p + p {margin-top: 0}
+    .xerophthalmia .cure_sect .ipl .img_box .right .check_cont {margin-top: 10px}
+
+    .xerophthalmia .eyelids_sect {padding: 80px 0}
+
+    .xerophthalmia .eyelids_sect .cont .img_cont {margin-left: -15px; margin-bottom: -15px; margin-top: 20px}
+    .xerophthalmia .eyelids_sect .cont .img_cont .img_box {margin-left: 15px; margin-bottom: 15px; width: calc(50% - 15px);}
+    .xerophthalmia .eyelids_sect .cont .img_cont .img_box .top_text{font-size: 10px; padding: 7px 10px}
+    .xerophthalmia .eyelids_sect .cont .title strong{font-size: 15px}
+
+    .xerophthalmia .way_sect {padding-top: 80px}
+    .xerophthalmia .way_sect .tears .img_box {flex-wrap: wrap; padding: 20px}
+    .xerophthalmia .way_sect .tears .img_box .num_box {width: 100%; margin-left: 0; flex-wrap: wrap; display: flex; margin-top: 15px}
+    .xerophthalmia .way_sect .tears .img_box .num_box li {width: 100%; padding: 15px 18px}
+    .xerophthalmia .way_sect .tears .img_box .num_box li + li {margin-top: 7px}
+
+    .xerophthalmia .way_sect .in2 > div + div {margin-top: 80px}
+    .xerophthalmia .way_sect .eye_drops .circle_box{flex-wrap: wrap; padding: 30px}
+
+    .xerophthalmia .way_sect .eye_drops .process {margin-top: 50px}
+    .xerophthalmia .way_sect .eye_drops .process .cont_box .circle {padding: 15px 0}
+    .xerophthalmia .way_sect .eye_drops .process .title p {margin-top: 5px}
+    .xerophthalmia .way_sect .eye_drops .process .cont_box {margin-top: 20px}
+    .xerophthalmia .way_sect .eye_drops .process .cont_box .circle + i {margin: 0 10px}
+
+    .xerophthalmia .home_sect {margin-top: 80px}
+    .retinaAndglaucoma .tab_box .tab_btn {width: 50%; max-width: 260px; height: 55px; font-size: 16px; }
+    .retinaAndglaucoma .tab_wrap {margin-top: 80px}
+    .retina .what_sect .img_box {margin-top: 25px; padding: 40px 0}
+    .retina .illness .in2 .aging {margin-top: 30px}
+    .retinaAndglaucoma .sub_head p br {display: none}
+    .retina .illness .aging_class .cont .img_cont {margin-top: 25px}
+    .retina .illness .aging_class .cont .result i {font-size: 18px}
+    .retina .illness .aging_class .cont .img_cont .img_box p {margin-top: 8px}
+    .retina .illness .aging_class .cont .result {margin-top: 20px}
+    .retina .illness .aging_class .cont .result .circle_box {margin-top: 20px}
+    .retina .illness .aging_class .cont .result .circle_box .circle {width: 100%; font-size: 14px; padding: 20px ; max-width: 400px}
+
+    .retina .illness .aging_class .cont + .cont {margin-top: 80px}
+    .retina .illness .aging_class .cont .result .circle_box {flex-wrap: wrap}
+    .retina .illness .aging_class .cont .result .circle_box .circle + .circle {margin-left: 0; margin-top: 10px}
+
+    .retina .illness .in2 > div + div {margin-top: 80px;}
+    .retina .illness .self_test {padding: 40px 20px}
+    .retina .illness .self_test .test_box .right ul li {padding: 15px 20px}
+    .retina .illness .self_test .test_box .right ul li .num {width: 25px; height: 25px; font-size: 11px; margin-right: 13px}
+    .retina .illness .self_test .test_box .right ul li + li {margin-top: 10px}
+    .retina .illness .self_test .sub_cont_tit.bot {margin-top: 20px; }
+    .retina .illness .self_test .test_box .right {margin-top: 25px}
+    .retina .illness .self_test .test_box {margin-top: 30px}
+
+    .retina .illness .blood_class .class_box {margin-top: 30px}
+    .retina .illness .blood_class .class_box .cont + .cont {margin-top: 60px}
+    .retina .illness .blood_class .img_box {flex-wrap: wrap;}
+    .retina .illness .blood_class .img_box .left {width: 100%}
+    .retina .illness .blood_class .img_box .right {margin-left: 0; width: 100%; margin-top: 20px;}
+    .retina .illness .blood_class .img_box .right br {display: none}
+    .retina .illness .blood_class .img_box .right.type1 {flex-direction: column; justify-content: center}
+    .retina .illness .blood_class .img_box .right.type1 ul {width: 100%; max-width: 300px}
+    .retina .illness .blood_class .img_box .right.type1 i {margin-right: 0 ; margin-bottom: 20px; font-size: 18px;transform: rotate(90deg)}
+    .retina .illness .blood_class .img_box .right.type1 ul li {padding: 20px 15px ; }
+    .retina .illness .blood_class .img_box .right.type2 {word-break: normal}
+
+
+    .retina .illness .diabetes .img_box {margin-top: 25px; flex-wrap: wrap}
+    .retina .illness .diabetes .img_box .left .img {padding: 40px 20px }
+    .retina .illness .diabetes .img_box .left {width: 100%; }
+    .retina .illness .diabetes .img_box .right {width: 100%; margin-left: 0; margin-top: 20px; word-break: normal}
+    .retina .illness .diabetes .img_box .right p br {display: none}
+    .retina .illness .diabetes .img_box .right p + p {margin-top: 10px}
+
+    .retina .illness .diabetes_class .class_box {margin-top: 30px}
+    .retina .illness .diabetes_class .class_box .cont + .cont {margin-top: 40px}
+
+    .retina .illness .manage_box {margin-top: 25px;padding: 40px 20px}
+    .retina .illness .manage_box .title strong {font-size: 18px; word-break: keep-all}
+    .retina .illness .manage_box .title p {margin-top: 10px}
+    .retina .illness .manage_box .title p br {display: none}
+    .retina .illness .manage_box ul {margin-top: 30px}
+    .retina .illness .manage_box ul li {padding: 20px 30px; flex-wrap: wrap;justify-content: center}
+    .retina .illness .manage_box ul li p {width: 100%; margin-top: 10px; text-align: center}
+    .retina .illness .manage_box ul li .num {width: 25px; height: 25px; font-size: 11px}
+    .retina .illness .myodesopsia .img_box p {margin-top: 8px}
+    .retina .illness .myodesopsia .img_box + .img_box {margin-left: 15px}
+    .retina .illness .myodesopsia .img_cont {margin-top: 20px}
+
+    .retina .illness .myodesopsia_class .cont_box .sub_cont_tit + .cont {margin-top: 30px}
+    .retina .illness .myodesopsia_class .cont_box .cont + .cont {margin-top: 30px}
+
+    .retina .illness .myodesopsia_cure .circle_box {margin-top: 20px}
+    .retina .illness .myodesopsia_cure .circle_box .circle i {font-size: 21px}
+    .retina .illness .myodesopsia_cure .circle_box .circle p {font-size: 14px}
+    .retina .illness .myodesopsia_cure .circle_box .circle {height: 100px}
+    .retina .illness .myodesopsia_cure .manage_box{margin-top: 25px}
+
+    .glaucoma .sect_top .title_box.mark .title br {display: none}
+    .retinaAndglaucoma section + section{margin-top: 80px}
+    .glaucoma .glaucoma_sect .what .img_cont {margin-top: 25px;}
+    .glaucoma .glaucoma_sect .what .img_cont .img_box + .img_box {margin-left: 15px}
+    .glaucoma .glaucoma_sect .what .img_cont .img_box .tit {padding: 15px 0}
+    .glaucoma .glaucoma_sect .in2 > div + div {margin-top: 80px}
+    .glaucoma .glaucoma_sect .test .check_box {margin-top: 20px}
+
+    .glaucoma .glaucoma_sect .class .cont_1 {margin-top: 30px}
+    .glaucoma .glaucoma_sect .class .cont + .cont {margin-top: 50px}
+    .glaucoma .glaucoma_sect .class .cont_2 .img_cont {margin-top: 20px; flex-wrap: wrap}
+
+    .glaucoma .glaucoma_sect .cure .img_cont {flex-wrap: wrap; margin-top: 60px}
+    .glaucoma .glaucoma_sect .cure .img_cont .left {width: 100%; order: 1; margin-top: 30px}
+    .glaucoma .glaucoma_sect .cure .img_cont .right {margin-left: 0px; width: 100%;}
+    .glaucoma .glaucoma_sect .cure .img_cont .right .title {font-size: 17px}
+    .glaucoma .glaucoma_sect .cure .img_cont .right p {margin-top: 10px}
+
+    .glaucoma .glaucoma_sect .in2 .laser {margin-top: 60px}
+    .glaucoma .glaucoma_sect .laser .operation {margin-top: 30px; padding: 40px 20px}
+    .glaucoma .glaucoma_sect .laser .operation .img_cont .img_box + .img_box {margin-left: 15px}
+    .glaucoma .glaucoma_sect .laser .operation .img_cont .img_box p {margin-top: 8px}
+    .glaucoma .glaucoma_sect .laser .operation .text br {display: none;}
+    .glaucoma .glaucoma_sect .laser .operation .img_cont {margin-top: 25px}
+    .glaucoma .glaucoma_sect .laser .operation .text {margin-top: 25px}
+
+    .examination .sect_title strong {font-size: 23px}
+    .sect_top .title_box.mark .text + p {margin-top: 10px}
+    .examination .sect_top .img_box {margin-top: 20px; padding: 30px 0}
+    .examination .sect_top .img_box .img img {width: 80%}
+    .examination .start_sect {margin-top: 80px; padding: 80px 0}
+    .examination .start_sect .img_wrap {margin-top: 30px ; flex-wrap: wrap; margin-left: -15px; margin-bottom: -20px}
+    .examination .start_sect .img_wrap .img_box {width: calc(50% - 15px); margin-left: 15px; margin-bottom: 20px}
+    .examination .start_sect .img_wrap .img_box + .img_box {margin-left: 15px}
+    .examination .start_sect .img_wrap .img_box p {font-size: 13px; margin-top: 8px}
+    .examination .start_sect .img_wrap .img_box p br {display: none}
+
+    .examination section +section {margin-top: 80px}
+    .examination .illness .circle_box {margin-top: 30px; flex-wrap: wrap ; justify-content: center}
+    .examination .illness .circle_box .circle {padding: 0 20px; height: 120px; width: 100%; max-width: 500px}
+    .examination .illness .circle_box .circle + .circle {margin-left: 0; margin-top: 15px}
+    .examination .illness .circle_box .circle strong {font-size: 16px}
+    .examination .illness .circle_box .circle p {margin-top: 8px}
+    .examination .program .img {margin-top: 20px}
+
+    .examination .program .test {margin-top: 40px; flex-wrap: wrap}
+    .examination .program .test .cont {width: 100%}
+    .examination .program .test .cont + .cont {margin-left: 0; margin-top: 20px}
+    .examination .program .test .cont .top_tit {padding: 15px 0}
+    .examination .program .test .cont .text li + li {margin-top: 5px}
+    .examination .program .test .cont .text {height: auto; padding: 30px 20px}
+    .examination .program .test .cont .top_tit span {font-size: 11px; padding: 3px 9px ;}
+
+    .examination .equ .img_wrap {margin-top: 25px}
+    .examination .equ .img_wrap .img_box {width: 33.333%}
+
+    .examination .prevention {padding-top: 350px}
+    .examination .prevention .text_box {padding: 0 15px}
+    .examination .prevention .text_box .logo img {width: 140px}
+    .examination .prevention .text_box strong {font-size: 24px; margin-top: 20px; word-break: keep-all}
+    .examination .prevention .text_box p {margin-top: 10px}
+
+    .board_list li {flex-basis: calc(50% - 10px ); height: auto}
+    .board_list li + li {margin-left: 20px;}
+    .board_list li > a {padding: 0px;}
+
+    .board_list li:nth-of-type(3n+1) {margin-left: 20px;}
+    .board_list li:nth-of-type(2n+1) {margin-left: 0;}
+    .board_list li:nth-of-type(n+4) {margin-top: 0;}
+    .board_list li:nth-of-type(n+3) {margin-top: 30px;}
+    .board_list li .img_box {margin:  0;aspect-ratio: 100/75;}
+    .board_list li .date {margin-top: 15px; font-size: 11px;}
+    .board_list li .tit {font-size: 15px;}
+    .board_list li .content {margin-top: 10px;}
+    .board_list li .img_box ~ .date {margin-top: 10px}
+
+    .board_list li .img_box ~ .category {padding: 3px 10px; font-size: 11px ; margin-top: 10px}
+    .notice_top {margin-bottom: 10px; }
+    .notice_top .inp_box {height: 45px; width: 100%; max-width: 200px}
+    .notice_top .inp_box input {line-height: 45px; padding:0 60px 0 25px; font-size: 13px}
+    .notice_top .inp_box input::placeholder {font-size: 13px}
+    .notice_top .inp_box button {padding: 0 30px; }
+    .notice_top .inp_box button i {font-size: 16px}
+    .notice_top .text {flex-shrink: 0; margin-left: 10px}
+
+    .pagination {margin-top: 60px}
+    .pagination .num_list {margin-left: 20px ;margin-right: 20px}
+
+    .sub_top {margin-top: 80px}
+
+    .notice_top .btn {font-size: 11px; padding: 3px 10px ; margin-left: 10px}
+
+    .notice_list.type2 > li a > .right {font-size: 12px; width: 120px; margin-left: 15px}
+    .notice_list > li a {padding: 20px 15px}
+    .notice_list > li a > .right .name {margin-right: 10px}
+    .notice_list > li .category {width: 60px;min-width: 60px;height: 22px;line-height: 20px;font-size: 11px;}
+    .notice_top.type2 > p {font-size: 11px; margin-right: 10px}
+
+    .notice_top.type2 {flex-direction: column; align-items: flex-end}
+    .notice_top.type2 > p {order: 1}
+    .notice_top.type2  .btn {margin-left: 0; margin-bottom: 5px; }
+
+    .search_form_wrap {top: 79px}
+    .search_form_wrap .search_box {height: 200px; padding: 0 20px}
+    .search_result_layout .search_box .input_box,
+    .search_form_wrap .search_box .input_box {width: 280px; height: 50px}
+    .search_result_layout .search_box input,
+    .search_form_wrap .search_box input {line-height: 50px; padding: 0 50px 0 20px; font-size: 13px}
+    .search_result_layout .search_box input::placeholder,
+    .search_form_wrap .search_box input::placeholder {font-size: 13px}
+    .search_form_wrap .search_box > .search_area_close {font-size: 18px}
+    .search_result_layout .search_box button i,
+    .search_form_wrap .search_box button i {font-size: 17px}
+
+
+    .search-result-wrap {margin-top: 80px}
+    .search-result-wrap > h3 {font-size: 22px}
+    .search-result-wrap > p {margin: 20px 0 7px; font-size: 11px;}
+    .search-result > li > a {padding: 20px 15px; flex-wrap: wrap;}
+    .search-result > li > a > p {max-width: none;width: 100%;}
+    .search-result > li > a > p + .location_box {margin-left: 0; margin-top: 5px; word-break: keep-all;}
+    .search-result > li > a .location_box > i {margin: 0 4px;}
+    .search_result_layout {margin-top: 60px;}
+    .search-result-wrap {margin-top: 60px;}
+    .search-result-wrap > h3 {font-size: 20px;}
+    .search-result-wrap + .search-result-wrap {margin-top: 80px;}
+
+    .login_box {width:100%; min-width: 0; max-width: 420px}
+    .login_box{padding: 50px 30px 45px}
+    .login_box .logo {width: 140px}
+    .login_input_box {margin-top: 30px}
+    .login_input_box > input {height: 50px; padding: 0 50px 0 15px; font-size: 13px}
+    .login_member li + li:before {margin: 0 10px}
+    .login_member {margin-top: 20px; font-size: 12px}
+    .login_btn {font-size: 15px; height: 50px}
+
+    .sign_up_box {min-width: 0; width: 100%}
+    .sign_up_box .text_box {padding: 30px 20px; }
+    .sign_up_box .tit {font-size: 18px}
+    .sign_up_box .tit + .label_box {margin-top: 20px}
+    .modal .required_all_box button {font-size: 11px}
+    .modal .label_box label {height: 50px; line-height: 50px; font-size: 12px; padding: 0 15px }
+    .sign_next_btn {width: 120px; height: 35px; font-size: 13px}
+
+    .login_input_box > .label_check label {font-size: 12px}
+    .login_input_box > .label_check + * {margin-top: 10px}
+    .login_input_box > .label_check input {height: 50px; padding: 0 50px 0 15px ; font-size: 13px}
+    .login_input_box > .label_check input::placeholder {font-size: 13px}
+
+    .sign_up_wrap {width: 100%; max-width: 500px}
+    .search_form_wrap .search_box button {padding: 0 20px}
+
+    .main_bg_sect .img_cont .text_box p {font-size: 13px; font-weight: 400}
+
+    .notice_view .read_cont {margin-top: 80px}
+    .notice_view .read_title_box {padding-bottom: 10px;}
+    .notice_view .read_title_box .title {font-size: 18px;}
+    .notice_view .read_title_box .name_date_box {margin-top: 5px;}
+    .notice_view .read_title_box .name_date_box .date {margin-left: 10px;}
+    .notice_view .read_box {padding-top: 20px;}
+    .notice_view .read_box .cont {padding:0 15px 20px;}
+    .notice_view .read_file_area {padding: 5px 10px 10px;}
+    .notice_view .read_box .read_info {padding-bottom: 15px; margin-bottom: 20px;}
+    .notice_view .read_box .read_info li .title,
+    .notice_view .read_box .read_info li .sub_tit {font-size: 12px; line-height: 1;}
+    .notice_view .read_cont .btn_box {margin-top: 60px}
+    .notice_view .read_box .file_box {padding: 10px 5px }
+    .notice_view .read_box .file_box .left {width:60px; font-size: 11px }
+    .notice_view .read_box .file_box .right {margin-left: -10px; margin-bottom: -5px}
+    .notice_view .read_box .file_box .right > a {margin-left: 10px ; margin-bottom: 5px; font-size: 11px}
+
+
+    .password_box {padding: 20px 40px}
+    .password_box .tit{font-size: 17px}
+    .pass_modal_btn_box {justify-content: center}
+    .password_box input {height: 45px; margin-top: 15px}
+    .password_box .tip {font-size: 12px}
+    .pass_modal_btn_box button {width: 50%; height: 40px; font-size: 12px; max-width: 120px}
+    .pass_modal_btn_box {margin-top: 40px}
+
+    .notice_view .read_box.type2 .answer_cont {padding: 30px 20px}
+    .notice_view.review .read_title_box > p{font-size: 18px}
+
+    .form_list.type2 > li .left {min-width: 60px; display: flex;}
+
+    .form_list textarea,
+    .form_list input::placeholder,
+    .form_list input[type="text"], .form_list input[type="password"], .form_list input[type="tel"], .form_list input[type="email"]{
+        font-size: 13px; padding-bottom: 10px;
+    }
+    .form_list .tip{font-size: 11px; margin-top: 6px}
+    .form_list > li .term_box p {font-size: 11px}
+
+    .form_list .fileList .list {font-size: 11px; margin-left: 0px;width: 100%; margin-left: -10px; margin-top: 10px; margin-bottom: -5px}
+    .form_list .fileList .list span {display: inline-block; margin-bottom: 5px; margin-left: 10px; }
+    .form_list .fileList .list span + span {margin-left: 10px}
+    .form_list .fileList .list span i {font-size: 14px}
+    .form_list > li .term_box{margin-top: 15px; padding: 15px 20px}
+    .form_list > li .right .file_upload {padding: 5px 12px; font-size: 11px}
+
+    .write_form_box .btn_box {margin-top: 60px}
+    .write {margin-top: 60px}
+    .form_list {margin-top: 40px}
+
+    .notice {margin-top: 60px}
+
+    .low_cont {padding-left: 0px !important}
+    .low_tit strong {font-size: 16px !important}
+    .low_tit p {margin-top: 7px !important}
+
+    .my_sect {margin-top: 60px}
+    .form_list .email_box .inp_box {min-width: 0; width: 50%}
+    .form_list > li + li{margin-top: 30px}
+
+    .form_list .inp_box input[type="checkbox"] {font-size: 13px; margin-top: -1px}
+    .leave_btn_box .right_btn {font-size: 13px}
+    .change_box.show .pw_change {font-size: 12px}
+
+
+
+    .change_box.show input{ width: 100%; max-width: 450px}
+    .change_box.show input + input {margin-left: 0; margin-top: 20px}
+    .change_box.show .pw_change {margin-top: 20px; margin-left: 0}
+    .form_list .inp_box input[type="checkbox"] + label + .right_btn{font-size: 11px;margin-left: 15px}
+
+	.review_sect .cont_wrap .right_wrap .text_box .text.no {font-size:12px; height:80px}
+    .intro_2 .road_sect .map_btn {right: 10px; bottom: 10px; font-size: 12px}
+
+
+    .modal_terms_area p.line {font-size: 12px}
+    .intro_1 .hello .director .right_wrap .title .img {width: 30px}
+
+        /*768*/
+}
+
+@media (max-width: 600px) {
+    .header .nav .deps_1 > li > a {padding: 15px 30px 15px}
+    .header .nav .deps_1 > li {font-size: 15px}
+    .header .nav .deps_1 > li .deps_2 {padding: 10px 0}
+    .header .nav .deps_1 > li .deps_2 li > a {font-size: 13px; padding: 8px 0; padding-left: 30px}
+    .header .nav .quick-text {margin-top: 20px}
+    .header .nav .quick-text .navi_bg {flex-wrap: wrap}
+    .header .nav .quick-text .navi_bg li {height: 100px}
+    .navi_bg img {width: 26px}
+    .navi_bg .ico_tit {margin-top: 5px; font-size: 12px}
+
+    .header .nav .quick-text .navi_bg li{width: 33.333%;}
+    .header .nav .quick-text .navi_bg li:nth-child(n+4) {border-top: none }
+    .navi_bg i {font-size: 24px; margin: 10px auto 0}
+    .header .nav .close{right: 20px; top: 15px; font-size: 24px}
+
+
+}
+
+
+@media (max-width: 500px) {
+
+    .form_list > li {flex-wrap: wrap}
+    .form_list > li .right {margin-left: 0; width: 100%; flex: auto; margin-top: 10px}
+
+    .form_list > li .right.label {flex-wrap: wrap}
+    .form_list > li .right.label .label_box {width: 100%}
+
+    .notice_list > li a {flex-wrap: wrap; justify-content: flex-start}
+    .notice_list > li a > .left {width: 100%; flex-wrap: wrap}
+    .notice_list > li .tit {width: 100%; margin-left: 0;margin-top: 7px}
+    .notice_list.type2 > li a > .right {width: 100%; text-align: left; margin-left: 0; margin-top:0px}
+
+    .glaucoma .glaucoma_sect .class .cont_2 .img_cont { flex-wrap: wrap}
+    .glaucoma .glaucoma_sect .class .cont_2 .img_cont .left {width: 100%}
+    .glaucoma .glaucoma_sect .class .cont_2 .img_cont .right {width: 100%; margin-left: 0; margin-top: 15px}
+
+    .glaucoma .glaucoma_sect .what .img_cont {flex-wrap: wrap}
+    .glaucoma .glaucoma_sect .what .img_cont .img_box {width: 100%; }
+    .glaucoma .glaucoma_sect .what .img_cont .img_box + .img_box {margin-left: 0px; margin-top: 20px}
+
+    .retina .illness .myodesopsia_cure .circle_box {flex-wrap: wrap; margin-left: -15px; margin-bottom: -15px}
+    .retina .illness .myodesopsia_cure .circle_box .circle {width: calc(50% - 15px);margin-left: 15px ; margin-bottom: 15px; height: 80px}
+    .retina .illness .myodesopsia_cure .circle_box .circle + .circle {margin-left: 15px ; margin-bottom: 15px}
+    .retina .illness .myodesopsia_cure .circle_box .circle p {font-size: 13px;}
+
+
+    .xerophthalmia .what_sect .symptom .circle_box {margin-top: 20px; flex-wrap: wrap}
+    .xerophthalmia .what_sect .symptom .circle_box .cont {width: 100%; }
+    .xerophthalmia .what_sect .symptom .circle_box .cont .circle {}
+    .xerophthalmia .what_sect .symptom .circle_box .cont + .cont {margin-left: 0; margin-top: 20px}
+    .xerophthalmia .what_sect .symptom .circle_box .cont ul {margin-top: 10px}
+    .xerophthalmia .what_sect .symptom .circle_box .cont ul li + li {margin-top: 5px}
+
+    .what_cataract .cause .cause_box li .left {max-width: none}
+    .what_cataract .symptom .img_wrap {flex-wrap: wrap}
+    .what_cataract .symptom .img_wrap .box {width: 100%}
+    .what_cataract .symptom .img_wrap .box + .box {margin-left: 0; margin-top: 25px}
+
+    .equipment .sect_top strong br {display: none}
+
+    .oxygen_therapy_list li .img_box {height: 135px;}
+    .meal_list > li .text {margin-top: 5px;}
+    .meal_list > li .text .category {width: 40px; font-size: 11px; height: 18px; line-height: 18px;}
+    .meal_list > li .date {font-size: 13px;}
+    .tab_table_box.type2 table {width: 500px;}
+    /*.board_list li {flex-basis: 100%;  aspect-ratio: auto;}*/
+    /*.board_list li:nth-of-type(n+2) {margin-top: 25px;}*/
+    /*.board_list li:nth-of-type(3n+1) {margin-left: 0px;}*/
+    /*.board_list li .img_box {margin: -5.7vw -25.1px 0;aspect-ratio: 100/75;}*/
+    /*.board_list li + li {margin-top: 25px; margin-left: 0;}*/
+    /*.board_list li .tit:before {display: none;}*/
+    .notice_top {align-items: flex-end}
+    .notice_top .text { text-align: right; margin-left: 0; margin-top: 10px}
+    .notice_top .btn {margin-left: auto; margin-top: 10px}
+
+
+}
+
+
+@media (max-width: 400px) {
+    .examination .equ .img_wrap .img_box {width: 50%}
+
+    .xerophthalmia .home_sect .img_cont {flex-wrap: wrap}
+    .xerophthalmia .home_sect .img_cont .img_box {width: 100%}
+    .xerophthalmia .home_sect .img_cont .img_box + .img_box {margin-top: 40px; margin-left: 0}
+    .xerophthalmia .home_sect .img_cont .text {margin-top: 15px}
+    .xerophthalmia .home_sect .img_cont .text > p {margin-top: 5px}
+
+    .xerophthalmia .way_sect .eye_drops .process .cont_box {flex-direction: column}
+    .xerophthalmia .way_sect .eye_drops .process .cont_box .circle {width: 70%; }
+    .xerophthalmia .way_sect .eye_drops .process .cont_box .circle + i {margin: 10px 0; transform: rotate(90deg)}
+    .xerophthalmia .what_sect .disorder .img_cont {flex-wrap: wrap; margin-left: -15px; margin-bottom: -15px}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box {width: calc(50% - 15px);margin-left: 15px; margin-bottom: 15px}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box + .img_box {margin-left: 15px;}
+    .xerophthalmia .what_sect .disorder .img_cont .img_box img {width: 100%}
+
+
+    .intro_2 .banner_sect .banner .img {width: 90px; bottom: 0}
+
+
+    .zigzag ul li .text_box .logo_img_box .img {width: 50%}
+}
+
+@media (min-width: 1400px){
+    .header .nav .deps_1 > li:hover a:before {opacity: 1; bottom: -5px; }
+    .header .nav .deps_1 > li:hover .deps_2 {opacity: 1; bottom: 0;   visibility:inherit}
+    .header .fix_btn_box .top_btn_box:hover {box-shadow: none; background: #000;}
+    .header .fix_btn_box .top_btn_box:hover i {color:#fff;}
+    .header .fix_btn_box .menu_btn_box:hover ul{max-height: 542px; opacity: 1}
+    .header .fix_btn_box .menu_btn_box:hover >i {opacity: 0;visibility: hidden}
+    .header .fix_btn_box .menu_btn_box ul li a:hover .icon {opacity: 1}
+
+
+}
+
+    @media (min-width: 1200px) {
+
+    .circle_btn:hover img { animation-play-state: paused; }
+    .view_btn:hover {background-color: #000; border-color: #000; color: #fff}
+    .promise_sect .medical .swiper-button-prev:hover {left: -70px;}
+    .promise_sect .medical .swiper-button-next:hover {right: -70px;}
+    .map_sect .top_wrap .call .btn:hover {background: #0a1478; }
+    .map_sect .right_in .nice-select .option:hover{    background-color: #0a1478;}
+    .map_sect .right_in .btn_box .btn:hover {background-color: #0a1478; color: #fff;}
+    .map_sect .bot_wrap .in .img_cont .img_box:hover .img_hover_box {opacity: 1}
+    .intro_2 .consult_sect .right_in .nice-select .option:hover{    background-color: #0a1478;}
+    .intro_2 .consult_sect .right_in .btn_box .btn:hover {background-color: #fff}
+    .sub .share_area a:hover {opacity: 1}
+    .notice_top .btn:hover {background-color: #000; color: #fff; }
+    .notice_list > li a:hover  .tit {border-bottom: 1px solid #000; }
+    .pagination .num_list a:hover { color: #0a1478; border-bottom: 2px solid #0a1478; }
+    .intro_2 .banner_sect .banner.right .text a:hover i {font-weight: 700}
+    .equipment .equ_sect .img_wrap .img_box:hover .img img {transform: scale(1.1)}
+    .pass_modal_btn_box button:hover {background-color: #000; border-color: #000; color: #fff}
+    .sign_next_btn:hover {background-color: #0a1478; color: #fff; border-color: #0a1478}
+    .footer .right_wrap .sns_box .btn:hover {opacity: 1}
+
+    .main .visual .icon_box a:hover {opacity: 1}
+    .main .visual .swiper-button-prev:hover i:before,
+    .main .visual .swiper-button-next:hover i:before{color: #0a1478; font-weight: 700}
+        .main_bg_sect .img_cont .img_box a:hover .hover_box i{ transition: all .3s}
+    .main_bg_sect .img_cont .img_box a:hover .hover_box i{ transform:rotate(180deg)}
+    .map_sect .top_wrap .sns_btn .btn:hover {background-color: #000}
+    .map_sect .top_wrap .sns_btn .btn:hover .hover {opacity: 1}
+
+}
+
