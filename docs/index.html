@@ -755,6 +755,515 @@
         </div>
 
     </section>
+    <div class="section" id="section6">
+        <div class="mcont star">
+            <div class="in">
+                <div class="title">
+                    <strong class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">SKY의 자랑스런 얼굴들</strong>
+                    <p class="wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">우리 가족의 건강을 최우선으로 하며 믿음을 주는 SKY 동물 메디컬 센터 의료진들입니다.</p>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper-container star-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_1.png" style="width:auto; height: 25rem;"/>
+                            </div>
+                            <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">대표원장 오이세</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_cheonwoojin.jpeg" style="width:auto; height: 25rem;"/>
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">대표원장 천우진</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_choisungjae.jpg" style="width:auto; height: 25rem;"/>
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">외과원장 최성재</p>
+                        </div><div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_gwonogyeong.png" style="width:auto; height: 25rem;"/>
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">외과고문 권오경</p>
+                        </div><div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_beakjooyea.png" style="width:auto; height: 25rem;"/>
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">내과원장 백주예</p>
+                        </div><div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_junghyeryoung.png" style="width:auto; height: 25rem;"/>
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">영상의학과장 정혜령</p>
+                        </div><div class="swiper-slide">
+                            <div class="mvCont">
+                                <img src="./resources/doc_kangsumyeong.png" style="width:auto; height: 25rem;" />
+                            </div>
+                                                                <div style="height: 10px;"></div>
+                            <p class="inner" style="color: #000; font-size: 18px; text-align: center;">진료과장 강수영</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <script>
+                var mySwiper = new Swiper('.star-container', {
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                  },
+                  speed: 1000,
+                  //autoplay: {
+                    //delay: 3000,
+                    //disableOnInteraction: false
+                  //},
+                  loop: true,
+                  grabCursor: true,
+                  spaceBetween: 10,
+                  slidesPerView: 4,
+                  slidesPerColumn: 1,
+                  breakpoints: {
+                    1436: {
+                      slidesPerView: 4,
+                      slidesPerColumn: 1
+                    },
+                    1023: {
+                      slidesPerView: 3,
+                      slidesPerColumn: 1
+                    },
+                    767: {
+                      slidesPerView: 2,
+                      slidesPerColumn: 1
+                    },
+                    363: {
+                      slidesPerView: 1,
+                      slidesPerColumn: 1      
+                    },
+                    0: {
+                      slidesPerView: 1,
+                      slidesPerColumn: 1    
+                    }
+                  }
+                });
+                var isWeb;
+                var isTabl;
+                var isMobile;
+
+                function starPop(){
+                    $("#starPop").show();
+                    $("html").addClass("mHidden");
+                }
+                function starPopClose(){
+                    $("#starPop").hide();
+                    $("html").removeClass("mHidden");
+                }
+                function lamPop(){
+                    $("#lamPop").show();
+                    $("html").addClass("mHidden");
+                }
+                function lamPopClose(){
+                    $("#lamPop").hide();
+                    $("html").removeClass("mHidden");
+                }
+                function coPop(){
+                    $("#coPop").show();
+                    $("html").addClass("mHidden");
+                }
+                function coPopClose(){
+                    $("#coPop").hide();
+                    $("html").removeClass("mHidden");
+                }
+
+                $(function(){
+                    var _height = window.innerHeight;
+                    var _width = window.innerWidth;
+                    var _hh = $("#header").height();
+                    $(".mainVisual .swiper-wrapper").height(_height - _hh);
+                    $(window).on("scroll", function(){
+                        var _width = window.innerWidth;
+                        var _ms1 = $("#section1").size() ? $("#section1").offset().top - _hh : 0;/*사업분야*/
+                        var _ms2 = $("#section2").size() ? $("#section2").offset().top - _hh : 0;/*인사말*/
+                        var _ms3 = $("#section3").size() ? $("#section3").offset().top - _hh : 0;/*라미네이트*/
+                        var _ms3_2 = $("#section3_2").size() ? $("#section3_2").offset().top - _hh : 0;/*라미네이트*/
+                        var _ms3_3 = $("#section3_3").size() ? $("#section3_3").offset().top - _hh : 0;/*라미네이트*/
+                        var _ms3_4 = $("#section3_4").size() ? $("#section3_4").offset().top - _hh : 0;/*라미네이트*/
+                        var _ms3_5 = $("#section3_5").size() ? $("#section3_5").offset().top - _hh : 0;/*라미네이트*/
+                        var _ms4 = $("#section4").size() ? $("#section4").offset().top - _hh : 0;/*교정*/
+                        var _ms4_2 = $("#section4_2").size() ? $("#section4_2").offset().top - _hh : 0;/*교정*/
+                        var _ms4_3 = $("#section4_3").size() ? $("#section4_3").offset().top - _hh : 0;/*교정*/
+                        var _ms4_4 = $("#section4_4").size() ? $("#section4_4").offset().top - _hh : 0;/*교정*/
+                        var _ms4_5 = $("#section4_5").size() ? $("#section4_5").offset().top - _hh : 0;/*교정*/
+                        var _ms5 = $("#section5").size() ? $("#section5").offset().top - _hh : 0;/*임플란트*/
+                        var _ms5_2 = $("#section5_2").size() ? $("#section5_2").offset().top - _hh : 0;/*임플란트*/
+                        var _ms5_3 = $("#section5_3").size() ? $("#section5_3").offset().top - _hh : 0;/*임플란트*/
+                        var _ms5_4 = $("#section5_4").size() ? $("#section5_4").offset().top - _hh : 0;/*임플란트*/
+                        var _ms5_5 = $("#section5_5").size() ? $("#section5_5").offset().top - _hh : 0;/*임플란트*/
+                        var _ms5_6 = $("#section5_6").size() ? $("#section5_6").offset().top - _hh : 0;/*임플란트*/
+                        var _ms6 = $("#section6").size() ? $("#section6").offset().top - _hh : 0;/*with스타*/
+                        var _ms7 = $("#section7").size() ? $("#section7").offset().top - _hh : 0;/*오시는길*/
+                        var _ms8 = $("#section8").size() ? $("#section8").offset().top - _hh : 0;/*영업시간*/
+                        var _ms9 = $("#section9").size() ? $("#section9").offset().top - _hh : 0;/*둘러보기*/
+                        if($(window).scrollTop() > _ms1*.5){
+                            $("#section1").addClass("active");
+                            $("#section1 .clinic li").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 50 * index);
+                            });
+                        };
+                        if($(window).scrollTop() > _ms1*1.5){
+                            $("#section2").addClass("active");
+                            $("#section2 .intro .doctor").addClass("on");
+                        };
+                        if($(window).scrollTop() > _ms3 - _height*.5){
+                            $("#section3").addClass("active");
+                            setTimeout(function() {
+                                $("#section3 .num").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section3 .mCopy1").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section3 .mCopy2").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section3 .mCopy1").addClass("on");
+                            }, 200*3);
+                            $("#section3 .point li").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 4));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms3_2 - _height*.5){
+                            $("#section3_2").addClass("active");
+                            setTimeout(function() {
+                                $("#section3_2 .img").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section3_2 .int").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section3_2 .intCont").addClass("on");
+                            }, 200*3);
+                            $("#section3_2 .cont dl").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 4));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms3_3 - _height*.5){
+                            $("#section3_3").addClass("active");
+                            setTimeout(function() {
+                                $("#section3_3 .int").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section3_3 .intCont").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section3_3 .step-container").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section3_3 .stepDes").addClass("on");
+                            }, 200*3);
+                        };
+                        if($(window).scrollTop() > _ms3_4 - _height*.5){
+                            $("#section3_4").addClass("active");
+                            setTimeout(function() {
+                                $("#section3_4 .int").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section3_4 .intCont").addClass("on");
+                            }, 200*2);
+                        };
+                        if($(window).scrollTop() > _ms3_5 - _height*.5){
+                            $("#section3_5").addClass("active");
+                        }else{
+                            $("#section3_5").removeClass("active");
+                        };
+                        if($(window).scrollTop() > _ms4 - _height*.5){
+                            $("#section3_5").removeClass("active");
+                            $("#section4").addClass("active");
+                            setTimeout(function() {
+                                $("#section4 .num").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section4 .mCopy1").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section4 .mCopy2").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section4 .mCopy3").addClass("on");
+                            }, 200*3);
+                            $("#section4 .point li").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 4));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms4_2 - _height*.5){
+                            $("#section4_2").addClass("active");
+                            setTimeout(function() {
+                                $("#section4_2 h3").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section4_2 .mark").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section4_2 .btmCont").addClass("on");
+                            }, 200*3);
+                            setTimeout(function() {
+                                $("#section4_2 .abClear div img").addClass("on");
+                            }, 200*4);
+                            setTimeout(function() {
+                                $("#section4_2 .abClear .cont h4").addClass("on");
+                            }, 200*5);
+                            $("#section4_2 .abClear dl").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 6));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms4_3 - _height*.5){
+                            setTimeout(function() {
+                                $("#section4_3").addClass("active");
+                            }, 600);
+                            $("#section4_3 .before").addClass("on");
+                            setTimeout(function() {
+                                $("#section4_3 .after").addClass("on");
+                            }, 300);
+                        };
+                        if($(window).scrollTop() > _ms4_4 - _height*.5){
+                            setTimeout(function() {
+                                $("#section4_4").addClass("active");
+                            }, 600);
+                            $("#section4_4 .after").addClass("on");
+                            setTimeout(function() {
+                                $("#section4_4 .before").addClass("on");
+                            }, 300);
+                        };
+                        if($(window).scrollTop() > _ms4_5 - _height*.7){
+                            $("#section4_5").addClass("active");
+                            setTimeout(function() {
+                                $("#section4_5 .int").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section4_5 .intCont").addClass("on");
+                            }, 200*2);
+                        };
+                        if($(window).scrollTop() > _ms5 - _height*.5){
+                            $("#section5").addClass("active");
+                            setTimeout(function() {
+                                $("#section5 .num").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section5 .mCopy1").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section5 .mCopy2").addClass("on");
+                            }, 200*3);
+                            setTimeout(function() {
+                                $("#section5 .mCopyLogo").addClass("on");
+                            }, 200*4);
+                            setTimeout(function() {
+                                $("#section5 .mCopy3").addClass("on");
+                            }, 200*5);
+                        };
+                        if($(window).scrollTop() > _ms5_2 - _height*.7){
+                            $("#section5_2").addClass("active");
+                            $("#section5_2 .int").addClass("on");
+                            setTimeout(function() {
+                                $("#section5_2 .intCont").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section5_2 .fl").addClass("on");
+                            }, 200*2);
+                            setTimeout(function() {
+                                $("#section5_2 .fr").addClass("on");
+                            }, 200*3);
+                        };
+                        if($(window).scrollTop() > _ms5_3 - _height*.7){
+                            $("#section5_3").addClass("active");
+                            $("#section5_3 .fl").addClass("on");
+                            setTimeout(function() {
+                                $("#section5_3 .fr .fimg").addClass("on");
+                            }, 200);
+                            $("#section5_3 .fr .fWrap div").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 2));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms5_4 - _height*.7){
+                            $("#section5_4").addClass("active");
+                            setTimeout(function() {
+                                $("#section5_4 .int").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section5_4 .intCont").addClass("on");
+                            }, 200*2);
+                            $("#section5_4 .fact li").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 3));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms5_5 - _height*.7){
+                            $("#section5_5").addClass("active");
+                            $("#section5_5 .fl").addClass("on");
+                            setTimeout(function() {
+                                $("#section5_5 .fr .fimg").addClass("on");
+                            }, 200);
+                            $("#section5_5 .fr .fWrap div").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 2));
+                            });
+                        };
+                        if($(window).scrollTop() > _ms5_6 - _height*.7){
+                            $("#section5_6").addClass("active");
+                            setTimeout(function() {
+                                $("#section5_6 .int").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section5_6 .intCont").addClass("on");
+                            }, 200*2);
+                            $("#section5_6 .fact li").each(function(index) {
+                            var that = this;
+                            setTimeout(function() {
+                                $(that).addClass("on");
+                            }, 200 * (index + 3));
+                            });
+                        };
+
+                        if($(window).scrollTop() > _ms6 - _height*.5){
+                            $("#section6").addClass("active");
+                            mySwiper.autoplay.start();
+                            setTimeout(function() {
+                                $("#section6 h2").addClass("on");
+                            }, 200);
+                            setTimeout(function() {
+                                $("#section6 .h2cont").addClass("on");
+                            }, 200*2);
+                        };
+                    });
+                });
+            </script>
+            <div class="btnPopStar"><a href="javascript:starPop();" class="btnPop">모든 수의사 보기</a></div>
+        </div>
+    </div>
+    <div class="starPop" id="starPop">
+		<div class="inner">
+			<h2>SKY의 자랑</h2>	
+			<div class="cont">
+				<ul>
+					<li><div class="sWrap"><img src="./resources/doc_1.png" /><div>대표원장 오이세</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_cheonwoojin.jpeg" /><div>대표원장 천우진</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_anjiyoung.png" /><div>원장 김현중</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_1 (1).png" /><div>원장 바다</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_1.png" /><div>원장 김성주</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_01.png" /><div>원장 윤세아</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_2.png" /><div>원장 신혜성</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_3.png" /><div>원장 에릭</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_5.png" /><div>원장 이민우</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_05.png" /><div>원장 전진</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_6.png" /><div>원장 추신수</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_7 (1).png" /><div>원장 김민준</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_7.png" /><div>원장 엄지원</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_9.png" /><div>원장 유인영</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_ansungjin.jpg" /><div>원장 윤세아</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_banjiyoung.jpg" /><div>원장 이동욱</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_beakjooyea.png" /><div>원장 이일화</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_chaeyoonyoung.jpg" /><div>원장 주상욱</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_cheonbyeonggyu.png" /><div>원장 슈</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_choisongsun.png" /><div>원장 김규종</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_choisungjae.jpg" /><div>원장 김형준</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_gwonogyeong.png" /><div>원장 박정민</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_honggueyeong.jpg" /><div>원장 허영생</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_hwanghojun.png" /><div>원장 길건</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_hwangyawon.png" /><div>원장 최창민</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_imgayoung.png" /><div>원장 리마리오</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_jangminhyuk.png" /><div>원장 조원석</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_jojungwoo.png" /><div>원장 김재덕</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_jowonhee.png" /><div>원장 최진이</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_junghyeryoung.png" /><div>원장 이영현</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kangminho.png" /><div>원장 이창명</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kangsumyeong.png" /><div>원장 김새롬</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimbeomsoo.jpg" /><div>원장 서유리</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimbyeongchul.jpg" /><div>원장 에바</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimdonguk.jpg" /><div>원장 찰스</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimheejeong.jpg" /><div>원장 김수정</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimhyunsoo.png" /><div>원장 왕석현</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimsatbyeol.jpg" /><div>언터쳐블 원장 디액션</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_kimtaehee.jpg" /><div>원장 강예빈</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leearim.jpg" /><div>원장 김세아</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leechanghee.jpg" /><div>원장 박은혜</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leechangyeop.jpg" /><div>원장 신다은</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leeeunji.png" /><div>원장 정수영</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leegunwoo.png" /><div>원장 최무성</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leeheesoo.png" /><div>원장 최민용</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_leejieun.jpg" /><div>카라 규리님 </div></li>
+					<li><div class="sWrap"><img src="./resources/doc_limseokbong.jpg" /><div>원장 솔비</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_moonjiwon.jpg" /><div>원장 화요비</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_moonjongsun.png" /><div>원장 현영</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_ohhyungseock.jpg" /><div>원장 기은세</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parkduhwan.png" /><div>원장 김규리</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parkjoonryang.jpg" /><div>원장 김현숙</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parkjunhwan.png" /><div>원장 김희정</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parksulki.png" /><div>원장 백진주</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parksungjun.jpg" /><div>원장 오민석</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_parksungyong.jpg" /><div>원장 박태양</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_seojueun.png" /><div>원장 배틀</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_seominsung.jpg" /><div>원장 숙희</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_sojaeseok.jpg" /><div>원장 예인</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_yoongihong.png" /><div>원장 우승민</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_yoonhyejin.png" /><div>원장 원웨이</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_yoonkookjin.jpg" /><div>원장 허니듀</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_yoonsuyoung.png" /><div>원장 김주연</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_younagyong.png" /><div>원장 류경진</div></div></li>
+					<li><div class="sWrap"><img src="./resources/doc_yunyongsil.jpg" /><div>원장 김엔젤라</div></div></li>
+					<!-- <li><div class="sWrap"><img src="./resources/" /><div>아역배우 안은정님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 김리나님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 김이든님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 민지아님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 민지오님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 백종민님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 오초희님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 이상보님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 이준혁님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 장선영님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 주아름님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>거북이 금비님</div></div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>영화감독 양익준</div></li>
+					<li><div class="sWrap"><img src="./resources/" /><div>연기자 최령님</div></div></li> -->
+				</ul>
+			</div>
+			<a href="javascript:starPopClose();" class="close">닫기</a>
+		</div>
+	</div>
     <section class="care_sect">
         <div class="in">
             <div class="sect_title">
@@ -868,7 +1377,7 @@
     </section>
     
     
-    <section class="review_sect" style="display:none;">
+    <section class="review_sect" style="display: none;">
         <div class="in">
             <div class="sect_title">
                 <h3 class=" wow fadeInUp animated" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">
@@ -893,30 +1402,41 @@
                 <div class="right_wrap wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                     <div class="slide_box">
                         <div class="slider_text slick-initialized slick-slider">
-                                                    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 0px;"></div></div></div>
+                            <div class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 0px;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+    <section class="youtube_sect">
+        <div class="in">
+            <div class="sect_title">
+                <h3 class="wow fadeInUp" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">Youtube</h3>
+                <p class="wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">24시 SKY 동물메디컬센터 유튜브입니다.</p>
+                <div style="margin-top: 10px;" class="btn_box wow fadeInUp phone-over" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <a class="view_btn" href="https://www.youtube.com/@skyskyamg8351/videos">유튜브 채널로 이동</a>
+                </div>
+            </div>
+            <div class="cont_wrap">
+                <iframe width="80%" height="600" src="https://www.youtube.com/embed/4BjX5bDf15s?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                <!-- <div class="slide_box">
+                    <div class="slider_text slick-initialized slick-slider">
+                        <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                            <div class="slick-track" style="opacity: 1;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                            <div class="slick-track" style="opacity: 1;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                            <div class="slick-track" style="opacity: 1;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                            <div class="slick-track" style="opacity: 1;">ㅁㅇㄴㄹㅁㅇㄹ</div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
 
     <section class="notice_sect">
         <div class="in">
@@ -1158,7 +1678,7 @@
 
                 </div>
             </div>
-            <div class="bot_wrap" id="map" style="overflow: hidden; background: url('./resources/map.png')">ddd
+            <div class="bot_wrap" id="map" style="overflow: hidden; background: url('./resources/map.png')">
                 <div class="in">
                     <div class="img_cont">
                         <div class="img_box num1">
@@ -1370,12 +1890,12 @@
 
     </section>
 
-    <div class="modal num1">
+    <!-- <div class="modal num1">
         <div class="video_pop">
             <div class="video_box">
                 <video muted="" loop="" playsinline="" preload="metadata" poster="" id="mainVdo1">
                     <source src="./inc/img/bot_map_1.mp4" type="video/mp4">
-<!--                    <img alt="" src="./inc/img/bot_map_1.png" srcset="">-->
+                    <img alt="" src="./resources/bot_map_1.png" srcset="">
                 </video>
                 <button type="button" class="modal_close" id="mainVdo1_modalClose">
                     <i class="fa-light fa-xmark"></i>
@@ -1388,7 +1908,7 @@
             <div class="video_box">
                 <video muted="" loop="" playsinline="" preload="metadata" poster="" id="mainVdo2">
                     <source src="./inc/img/bot_map_2.mp4" type="video/mp4">
-                    <!--                    <img alt="" src="./inc/img/bot_map_1.png" srcset="">-->
+                    <img alt="" src="./resources/bot_map_2.png" srcset="">
                 </video>
                 <button type="button" class="modal_close" id="mainVdo2_modalClose">
                     <i class="fa-light fa-xmark"></i>
@@ -1401,14 +1921,14 @@
             <div class="video_box">
                 <video muted="" loop="" playsinline="" preload="metadata" poster="" id="mainVdo3">
                     <source src="./inc/img/bot_map_3.mp4" type="video/mp4">
-                    <!--                    <img alt="" src="./inc/img/bot_map_1.png" srcset="">-->
+                    <img alt="" src="./resources/bot_map_3.png" srcset="">
                 </video>
                 <button type="button" class="modal_close" id="mainVdo3_modalClose">
                     <i class="fa-light fa-xmark"></i>
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="modal online">
         <div class="online_wrap">
